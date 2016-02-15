@@ -1,0 +1,5 @@
+[user]
+	email = gmarigliano93@gmail.com
+	name = Gary Marigliano
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
