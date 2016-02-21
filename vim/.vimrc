@@ -11,9 +11,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
+
+Plugin 'bling/vim-airline'
+set laststatus=2
+" enable modified detection
+let g:airline_detect_modified=1
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
