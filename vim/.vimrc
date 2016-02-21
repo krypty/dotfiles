@@ -27,6 +27,7 @@ filetype indent plugin on
 " enable syntax highlighting
 syntax on
 
+set background=dark
 colorscheme Tomorrow-Night
 
 " show line numbers
@@ -67,3 +68,8 @@ set mouse=a
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+
+" enable 256 colors mode in gnome-terminal
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
