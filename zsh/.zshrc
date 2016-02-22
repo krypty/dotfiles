@@ -97,4 +97,4 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias pls='sudo $(fc -ln -1)'
 alias git='LANG=en_US git'
 alias ll='ls -al'
-
+alias vimrc="vim ~/.vimrc"
