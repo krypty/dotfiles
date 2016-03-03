@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
+
 Plugin 'flazz/vim-colorschemes'
 
 Plugin 'bling/vim-airline'
@@ -20,6 +21,16 @@ set laststatus=2
 let g:airline_detect_modified=1
 
 Plugin 'airblade/vim-gitgutter'
+" always display the gutter, avoid window changing size
+let g:gitgutter_sign_column_always=1
+
+Plugin 'gabrielelana/vim-markdown'
+let g:markdown_enable_spell_checking=0
+
+" require livedown to be installed. yaourt livedown
+Plugin 'shime/vim-livedown'
+
+Plugin 'tpope/vim-sleuth'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
@@ -36,6 +47,9 @@ syntax on
 set background=dark
 colorscheme Tomorrow-Night
 
+" set leader key
+let mapleader=" "
+
 " show line numbers
 set number
 
@@ -50,6 +64,12 @@ set softtabstop=4
 
 " tabs are spaces
 set expandtab
+
+" enable smart indent
+set smartindent
+
+" enable auto indent
+set autoindent
 
 " show command in bottom bar
 set showcmd
@@ -69,6 +89,9 @@ set incsearch
 " highlight matches
 set hlsearch
 
+" ability to cancel a search with Esc
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+
 " enable mouse
 set mouse=a
 
@@ -79,3 +102,5 @@ nnoremap <leader><space> :nohlsearch<CR>
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
+
+set colorcolumn=90
