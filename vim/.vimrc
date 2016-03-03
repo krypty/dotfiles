@@ -89,8 +89,8 @@ set incsearch
 " highlight matches
 set hlsearch
 
-" ability to cancel a search with Esc
-nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+" ability to toogle search with F3
+nnoremap <F3> :set hlsearch!<CR>
 
 " enable mouse
 set mouse=a
