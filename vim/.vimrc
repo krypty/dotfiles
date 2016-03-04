@@ -48,8 +48,14 @@ set background=dark
 colorscheme Tomorrow-Night
 
 " custom font on gVim
-if has('gui_running')
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
   set guifont=Lucida_Console:h10
+  endif
 endif
 
 " set leader key
