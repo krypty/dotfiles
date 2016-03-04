@@ -47,6 +47,11 @@ syntax on
 set background=dark
 colorscheme Tomorrow-Night
 
+" custom font on gVim
+if has('gui_running')
+  set guifont=Lucida_Console:h10
+endif
+
 " set leader key
 let mapleader=" "
 
