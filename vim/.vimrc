@@ -12,6 +12,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 
 Plugin 'flazz/vim-colorschemes'
 
