@@ -125,4 +125,8 @@ set colorcolumn=90
 
 " store undo changes across files openings
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.vim/.undo//
+
+" do not store backup and swp file into current directory (git friendly)
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
