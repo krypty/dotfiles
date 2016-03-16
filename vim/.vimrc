@@ -122,3 +122,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 set colorcolumn=90
+
+" store undo changes across files openings
+set undofile
+set undodir=~/.vim/undodir
