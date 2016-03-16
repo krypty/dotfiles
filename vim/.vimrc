@@ -26,11 +26,11 @@ Plugin 'airblade/vim-gitgutter'
 " always display the gutter, avoid window changing size
 let g:gitgutter_sign_column_always=1
 
-Plugin 'gabrielelana/vim-markdown'
-let g:markdown_enable_spell_checking=0
-
 " require livedown to be installed. yaourt livedown
 Plugin 'shime/vim-livedown'
+
+Plugin 'tpope/vim-markdown'
+let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
 
 Plugin 'tpope/vim-sleuth'
 
