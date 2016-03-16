@@ -130,3 +130,6 @@ set undodir=~/.vim/.undo//
 " do not store backup and swp file into current directory (git friendly)
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swp//
+
+" ignore sh/bash error resulting ugly parenthesis highlighting
+let g:sh_no_error = 1
