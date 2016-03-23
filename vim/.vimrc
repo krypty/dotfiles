@@ -34,8 +34,6 @@ let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'jav
 
 Plugin 'tpope/vim-sleuth'
 
-Plugin 'Bronson/vim-trailing-whitespace'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
@@ -133,3 +131,10 @@ set directory=~/.vim/.swp//
 
 " ignore sh/bash error resulting ugly parenthesis highlighting
 let g:sh_no_error = 1
+
+" Removes trailing spaces
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+
+nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
