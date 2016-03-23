@@ -104,3 +104,8 @@ alias conda="/opt/anaconda/bin/conda"
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
 PATH=$PATH:/home/gary/workspace/xu3/buildroot/output/host/usr/bin
+
+# Virtualenv Python
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
+
