@@ -138,3 +138,7 @@ function! TrimWhiteSpace()
 endfunction
 
 nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
+
+" paste from clipboard using <Leader>p
+map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
+
