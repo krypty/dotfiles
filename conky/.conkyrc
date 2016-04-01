@@ -1,0 +1,130 @@
+######################
+# - Conky settings - #
+######################
+update_interval 5
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 1
+if_up_strictness link
+background no
+
+#imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+
+format_human_readable
+
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Arial:size=10
+override_utf8_locale yes
+text_buffer_size 2048
+
+#############################
+# - Window specifications - #
+#############################
+own_window_class Conky
+own_window yes
+own_window_type desktop
+own_window_argb_visual yes
+own_window_argb_value 0
+#own_window_colour 1D1D1D
+own_window_transparent yes
+own_window_hints undecorated, below, sticky, skip_pager
+
+alignment top_right
+gap_x 8
+gap_y 16
+minimum_size 250 600
+maximum_width 500
+border_width 5
+
+default_bar_size 60 8
+
+## Window Setting
+#own_window_argb_visual true
+#own_window_argb_value 0
+#own_window_type desktop
+#own_window yes
+#own_window_transparent yes
+#own_window_type normal
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+#########################
+# - Graphics settings - #
+#########################
+draw_shades no
+
+default_color 727272
+
+color0 727272
+color1 4a7581
+color2 4a7581
+color3 960050
+color4 262729
+color5 4a7581
+
+TEXT
+##############
+# -  TODOs - #
+#############
+
+#${voffset -4}${font Ostrich Sans:size=24}TODOs $stippled_hr${font}
+#${color1}${execi 30 task conky | tail -n +4 | head -n -2 | fmt -w 43 -s}
+#${color2}${execi 30 task conky due:today  | tail -n +4 | head -n -2 | fmt -w 43 -s}
+
+##############a
+# - SYSTEM - #
+##############
+${font Ostrich Sans:size=24}SYSTEM $stippled_hr${font}
+${voffset 21}${voffset -8}Kernel:  ${alignr}${color2}${kernel}${color}
+Uptime: ${alignr}${color2}${uptime}${color}
+
+# |--CPU
+CPU1: ${font Arial:size=10}${color1}${cpu cpu1}%${color}${font} ${alignr}${color2}${cpugraph cpu1 8,60 262729 4a7581}${color}
+CPU2: ${font Arial:size=10}${color1}${cpu cpu2}%${color}${font} ${alignr}${color2}${cpugraph cpu2 8,60 262729 4a7581}${color}
+CPU3: ${font Arial:size=10}${color1}${cpu cpu3}%${color}${font} ${alignr}${color2}${cpugraph cpu3 8,60 262729 4a7581}${color}
+CPU4: ${font Arial:size=10}${color1}${cpu cpu4}%${color}${font} ${alignr}${color2}${cpugraph cpu4 8,60 262729 4a7581}${color}
+
+# |--MEM
+RAM: ${font Arial:size=10}${color1}$memperc%${color}${font}${voffset -2}${offset 5}${voffset 2}${color0}${membar 4,18}${color}
+${voffset -2}F: ${font Arial:size=10}${color1}${memeasyfree}${color}${font}    U: ${font Arial:size=10}${color1}${mem}${color}${font}
+
+# |--BATTERY
+${if_existing /sys/class/power_supply/BAT0}${voffset -5}Battery: ${font Arial:size=10}${color1}${battery_percent BAT0}%${color}${font} ${alignr}${color2}${battery_bar BAT0 8,60}${color}${else}${color0}${font ConkyColors:size=13}6${font}${color}${goto 32}${voffset -5}Battery: ${font Arial:size=10}${color2}Unknown Status${color}${font}${endif}
+
+#############
+# - CLOCK - #
+#############
+${font Ostrich Sans:size=24}DATE AND TIME $stippled_hr${font}
+
+${voffset 4}${font Aldrich:style=Bold}${alignc}${time %d %B %Y}${font}
+${voffset 10}${color1}${font Aldrich:style=Bold:size=46}${alignc}${time %H:%M}${font}${color}
+
+###############
+# - NETWORK - #
+###############
+${voffset 4}${font Ostrich Sans:size=24}NETWORK $stippled_hr${font}
+# |--enp4s0
+${if_up enp4s0}
+${voffset -5}${color0}${font ConkyColors:size=17}s${font}${color}${goto 32}${voffset -5}Subida: ${font Arial:size=10}${color1}${upspeed enp4s0}${color}${font} ${alignr}${color2}${upspeedgraph enp4s0 8,60 262729 4a7581}${color}
+${goto 32}Total: ${font Arial:size=10}${color2}${totalup enp4s0}${color}${font}
+${voffset 2}${color0}${font ConkyColors:size=17}t${font}${color}${goto 32}${voffset -5}Bajada: ${font Arial:size=10}${color1}${downspeed enp4s0}${color}${font} ${alignr}${color2}${downspeedgraph enp4s0 8,60 262729 4a7581}${color}
+${goto 32}Total: ${font Arial:size=10}${color2}${totaldown enp4s0}${color}${font}
+${voffset 2}${color0}${font ConkyColors:size=14}k${font}${color}${goto 32}${voffset -2}Señal: ${font Arial:size=10}${color1}${wireless_link_qual_perc enp4s0}%${color}${font} ${alignr}${color2}${wireless_link_bar 8,60 enp4s0}${color}
+${voffset 2}${color0}${font ConkyColors:size=16}p${font}${color}${goto 32}${voffset -8}Red: ${alignr}${color2}${wireless_essid enp4s0}${color}
+${goto 32}IP Local: ${alignr}${color2}${addr enp4s0}${color}
+${goto 32}Public IP: ${alignr}${color2}${execi 10800 curl icanhazip.com}${color}
+
+# |--wlp3s0
+${else}${if_up wlp3s0}
+Up: ${font Arial:size=10}${color1}${upspeed wlp3s0}${color}${font} ${alignr}${color2}${upspeedgraph wlp3s0 8,60 262729 4a7581}${color}
+Total: ${font Arial:size=10}${color2}${totalup wlp3s0}${color}${font}
+
+Down: ${font Arial:size=10}${color1}${downspeed wlp3s0}${color}${font} ${alignr}${color2}${downspeedgraph wlp3s0 8,60 262729 4a7581}${color}
+Total: ${font Arial:size=10}${color2}${totaldown wlp3s0}${color}${font}
+
+Local IP: ${color2}${addr wlp3s0}${color}
+Public IP: ${color2}${execi 10800 curl icanhazip.com}${color}
