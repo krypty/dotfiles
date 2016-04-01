@@ -116,7 +116,6 @@ ${goto 32}Total: ${font Arial:size=10}${color2}${totaldown enp4s0}${color}${font
 ${voffset 2}${color0}${font ConkyColors:size=14}k${font}${color}${goto 32}${voffset -2}Señal: ${font Arial:size=10}${color1}${wireless_link_qual_perc enp4s0}%${color}${font} ${alignr}${color2}${wireless_link_bar 8,60 enp4s0}${color}
 ${voffset 2}${color0}${font ConkyColors:size=16}p${font}${color}${goto 32}${voffset -8}Red: ${alignr}${color2}${wireless_essid enp4s0}${color}
 ${goto 32}IP Local: ${alignr}${color2}${addr enp4s0}${color}
-${goto 32}Public IP: ${alignr}${color2}${execi 10800 curl icanhazip.com}${color}
 
 # |--wlp3s0
 ${else}${if_up wlp3s0}
@@ -127,4 +126,3 @@ Down: ${font Arial:size=10}${color1}${downspeed wlp3s0}${color}${font} ${alignr}
 Total: ${font Arial:size=10}${color2}${totaldown wlp3s0}${color}${font}
 
 Local IP: ${color2}${addr wlp3s0}${color}
-Public IP: ${color2}${execi 10800 curl icanhazip.com}${color}
