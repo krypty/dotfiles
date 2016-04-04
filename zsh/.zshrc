@@ -98,8 +98,6 @@ alias pls='sudo $(fc -ln -1)'
 alias git='LANG=en_US git'
 alias ll='ls -al'
 alias vimrc="vim ~/.vimrc"
-alias conda2="/opt/anaconda2/bin/conda"
-alias conda="/opt/anaconda/bin/conda"
 
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
@@ -109,3 +107,5 @@ PATH=$PATH:/home/gary/workspace/xu3/buildroot/output/host/usr/bin
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
+# anaconda
+export PATH=/home/gary/anaconda3/bin:$PATH
