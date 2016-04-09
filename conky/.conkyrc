@@ -95,6 +95,10 @@ ${voffset -2}F: ${font Arial:size=10}${color1}${memeasyfree}${color}${font}    U
 # |--BATTERY
 ${if_existing /sys/class/power_supply/BAT0}${voffset -5}Battery: ${font Arial:size=10}${color1}${battery_percent BAT0}%${color}${font} ${alignr}${color2}${battery_bar BAT0 8,60}${color}${else}${color0}${font ConkyColors:size=13}6${font}${color}${goto 32}${voffset -5}Battery: ${font Arial:size=10}${color2}Unknown Status${color}${font}${endif}
 
+# | --DISKS
+ROOT: ${font Arial:size=10}${color1}${fs_free /}${color}${font} ${alignr}${color2}${fs_bar /}${color}
+HOME: ${font Arial:size=10}${color1}${fs_free /home}${color}${font} ${alignr}${color2}${fs_bar /home}${color}
+
 #############
 # - CLOCK - #
 #############
