@@ -110,3 +110,6 @@ source /usr/bin/virtualenvwrapper.sh
 
 # anaconda
 export PATH=/home/gary/anaconda3/bin:$PATH
+
+# less utf-8
+ export LESSCHARSET=UTF-8
