@@ -98,6 +98,7 @@ alias pls='sudo $(fc -ln -1)'
 alias git='LANG=en_US git'
 alias ll='ls -al'
 alias vimrc="vim ~/.vimrc"
+alias xopen="xdg-open"
 
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
