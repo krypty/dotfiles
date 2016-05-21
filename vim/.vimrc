@@ -26,6 +26,7 @@ Plugin 'airblade/vim-gitgutter'
 " always display the gutter, avoid window changing size
 let g:gitgutter_sign_column_always=1
 
+" --- Markdown
 " require livedown to be installed. yaourt livedown
 Plugin 'shime/vim-livedown'
 
@@ -34,7 +35,10 @@ let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'jav
 
 Plugin 'tpope/vim-sleuth'
 
-" All of your Plugins must be added before the following line
+" Copy Cut Paste
+Plugin 'nlknguyen/copy-cut-paste.vim'
+
+" --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
 " Attempt to determine the type of a file based on its name and possibly its
@@ -114,10 +118,7 @@ set mouse=a
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
-" enable 256 colors mode in gnome-terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+set t_Co=256
 
 set colorcolumn=90
 
@@ -138,7 +139,4 @@ function! TrimWhiteSpace()
 endfunction
 
 nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
-
-" paste from clipboard using <Leader>p
-map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 
