@@ -38,6 +38,9 @@ Plugin 'tpope/vim-sleuth'
 " Copy Cut Paste
 Plugin 'nlknguyen/copy-cut-paste.vim'
 
+" Easymotion
+Plugin 'easymotion/vim-easymotion'
+
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
