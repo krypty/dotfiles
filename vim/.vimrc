@@ -1,6 +1,11 @@
 " be iMproved, required
 set nocompatible
 
+"Vundle bootstrap
+if !filereadable($HOME . '/.vim/bundle/vundle/.git/config') && confirm("Clone Vundle?","Y\nn") == 1
+    exec '!git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/vundle/'
+endif
+
 " required by Vundle
 filetype off
 
