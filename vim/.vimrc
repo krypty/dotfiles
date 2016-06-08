@@ -148,3 +148,5 @@ endfunction
 
 nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
 
+" Transparent background
+hi Normal ctermbg=none
