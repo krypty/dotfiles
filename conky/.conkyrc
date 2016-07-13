@@ -116,12 +116,12 @@ ${voffset 2}${color0}${font ConkyColors:size=14}k${font}${color}${goto 32}${voff
 ${voffset 2}${color0}${font ConkyColors:size=16}p${font}${color}${goto 32}${voffset -8}Red: ${alignr}${color2}${wireless_essid enp4s0}${color}
 ${goto 32}Local IP: ${alignr}${color2}${addr enp4s0}${color}
 
-# |--wlp3s0
-${else}${if_up wlp3s0}
-Up: ${font Arial:size=10}${color1}${upspeed wlp3s0}${color}${font} ${alignr}${color2}${upspeedgraph wlp3s0 8,60 262729 ffffff}${color}
-Total: ${font Arial:size=10}${color2}${totalup wlp3s0}${color}${font}
+# |--wlp4s0
+${else}${if_up wlp4s0}
+Up: ${font Arial:size=10}${color1}${upspeed wlp4s0}${color}${font} ${alignr}${color2}${upspeedgraph wlp4s0 8,60 262729 ffffff}${color}
+Total: ${font Arial:size=10}${color2}${totalup wlp4s0}${color}${font}
 
-Down: ${font Arial:size=10}${color1}${downspeed wlp3s0}${color}${font} ${alignr}${color2}${downspeedgraph wlp3s0 8,60 262729 ffffff}${color}
-Total: ${font Arial:size=10}${color2}${totaldown wlp3s0}${color}${font}
+Down: ${font Arial:size=10}${color1}${downspeed wlp4s0}${color}${font} ${alignr}${color2}${downspeedgraph wlp4s0 8,60 262729 ffffff}${color}
+Total: ${font Arial:size=10}${color2}${totaldown wlp4s0}${color}${font}
 
-Local IP: ${color2}${addr wlp3s0}${color}
+Local IP: ${color2}${addr wlp4s0}${color}
