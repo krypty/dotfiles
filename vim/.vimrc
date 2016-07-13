@@ -21,6 +21,7 @@ let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd = 'CtrlPBuffer'
 
 Plugin 'flazz/vim-colorschemes'
+Plugin 'w0ng/vim-hybrid'
 
 Plugin 'bling/vim-airline'
 set laststatus=2
@@ -46,6 +47,9 @@ Plugin 'nlknguyen/copy-cut-paste.vim'
 " Easymotion
 Plugin 'easymotion/vim-easymotion'
 
+" Fugitive
+Plugin 'tpope/vim-fugitive'
+
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
@@ -59,7 +63,9 @@ filetype indent plugin on
 syntax on
 
 set background=dark
-colorscheme Tomorrow-Night
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+colorscheme hybrid
 
 " custom font on gVim
 if has("gui_running")
