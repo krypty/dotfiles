@@ -49,7 +49,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dirhistory pip extract colored-man-pages z mvn)
+plugins=(git dirhistory pip extract colored-man-pages z mvn virtualenvwrapper)
 
 # User configuration
 
@@ -99,6 +99,7 @@ alias git='LANG=en_US git'
 alias ll='ls -al'
 alias vimrc="vim ~/.vimrc"
 alias xopen="xdg-open"
+alias Q='exit'
 
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
