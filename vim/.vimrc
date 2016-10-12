@@ -156,3 +156,7 @@ nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
 
 " Transparent background
 hi Normal ctermbg=none
+
+" Vim Regex Very Magic
+noremap / /\v
+cnoremap %s/ %s/\v
