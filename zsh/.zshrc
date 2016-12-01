@@ -101,6 +101,10 @@ alias vimrc="vim ~/.vimrc"
 alias xopen="xdg-open"
 alias Q='exit'
 
+# tmux aliases
+alias ts="tmux new -s"
+alias ta="tmux a -t"
+
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
 PATH=$PATH:/home/gary/workspace/xu3/buildroot/output/host/usr/bin
