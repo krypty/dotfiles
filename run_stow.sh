@@ -9,3 +9,6 @@ TODO create folder structure into each "stow app"
 
 rm ~/.zshrc
 stow -v zsh -t ~
+
+# tmux
+stow -v -t ~ tmux
