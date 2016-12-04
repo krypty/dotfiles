@@ -12,3 +12,9 @@ stow -v zsh -t ~
 
 # tmux
 stow -v -t ~ tmux
+
+# redshift
+stow -v redshift -t ~/.config
+
+# git
+stow -v git -t ~ 
