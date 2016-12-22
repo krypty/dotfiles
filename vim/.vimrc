@@ -18,7 +18,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map='<c-p>'
-let g:ctrlp_cmd = 'CtrlPBuffer'
 
 Plugin 'flazz/vim-colorschemes'
 Plugin 'w0ng/vim-hybrid'
@@ -33,12 +32,13 @@ Plugin 'airblade/vim-gitgutter'
 let g:gitgutter_sign_column_always=1
 
 " --- Markdown
-" require livedown to be installed. yaourt livedown
-Plugin 'shime/vim-livedown'
+" require some packages, see: https://github.com/suan/vim-instant-markdown
+Plugin 'suan/vim-instant-markdown'
 
 Plugin 'tpope/vim-markdown'
 let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
 
+" Detect shiftwidth and expandtab automatically
 Plugin 'tpope/vim-sleuth'
 
 " Copy Cut Paste
@@ -49,6 +49,12 @@ Plugin 'easymotion/vim-easymotion'
 
 " Fugitive
 Plugin 'tpope/vim-fugitive'
+
+" Loupe (better search defaults)
+Plugin 'wincent/loupe'
+
+" JSON
+Plugin 'elzr/vim-json'
 
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
@@ -114,12 +120,6 @@ set lazyredraw
 " highlight matching [{()}]
 set showmatch
 
-" search as characters are entered
-set incsearch
-
-" highlight matches
-set hlsearch
-
 " allow switching unsaved files in buffers
 set hidden
 
@@ -128,9 +128,6 @@ nnoremap <F3> :set hlsearch!<CR>
 
 " enable mouse
 set mouse=a
-
-" turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
 
 set t_Co=256
 
@@ -157,6 +154,3 @@ nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
 " Transparent background
 hi Normal ctermbg=none
 
-" Vim Regex Very Magic
-noremap / /\v
-cnoremap %s/ %s/\v
