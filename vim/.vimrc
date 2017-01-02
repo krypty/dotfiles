@@ -158,3 +158,13 @@ hi Normal ctermbg=none
 " Use the system clipboard
 set clipboard=unnamed,unnamedplus
 
+" make j and k keys go up normally instead of to the previous line number
+nnoremap j gj
+nnoremap k gk
+
+" Manage tabs with shorter keymaps
+nnoremap tn :tabnew<Space>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
+nnoremap th :tabfirst<CR>
+nnoremap tl :tablast<CR>
