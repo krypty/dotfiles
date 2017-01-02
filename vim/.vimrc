@@ -53,6 +53,10 @@ Plugin 'wincent/loupe'
 " JSON
 Plugin 'elzr/vim-json'
 
+" Nerdtree
+Plugin 'scrooloose/nerdtree'
+nnoremap <leader>o :NERDTreeToggle<cr>
+
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
