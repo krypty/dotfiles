@@ -41,9 +41,6 @@ let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'jav
 " Detect shiftwidth and expandtab automatically
 Plugin 'tpope/vim-sleuth'
 
-" Copy Cut Paste
-Plugin 'nlknguyen/copy-cut-paste.vim'
-
 " Easymotion
 Plugin 'easymotion/vim-easymotion'
 
@@ -153,4 +150,7 @@ nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
 
 " Transparent background
 hi Normal ctermbg=none
+
+" Use the system clipboard
+set clipboard=unnamed,unnamedplus
 
