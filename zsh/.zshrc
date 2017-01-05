@@ -100,6 +100,8 @@ alias ll='ls -al'
 alias vimrc="vim ~/.vimrc"
 alias xopen="xdg-open"
 alias Q='exit'
+alias rm='rm -i'
+alias mv='mv -i'
 
 # tmux aliases
 alias ts="tmux new -s"
