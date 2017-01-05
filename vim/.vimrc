@@ -92,6 +92,9 @@ endif
 " set leader key
 let mapleader=" "
 
+" Save one keystroke
+nnoremap , :
+
 " show line numbers
 set number
 
