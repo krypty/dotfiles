@@ -3,7 +3,7 @@ set nocompatible
 
 "Vundle bootstrap
 if !filereadable($HOME . '/.vim/bundle/Vundle.vim/.git/config') && confirm("Clone Vundle?","Y\nn") == 1
-    exec '!git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim'
+  exec '!git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim'
 endif
 
 " required by Vundle
@@ -56,6 +56,9 @@ Plugin 'elzr/vim-json'
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 nnoremap <leader>o :NERDTreeToggle<cr>
+" vim-autoformat
+Plugin 'Chiel92/vim-autoformat'
+noremap <F4> :Autoformat<CR>
 
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
@@ -81,7 +84,7 @@ if has("gui_running")
   elseif has("gui_macvim")
     set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
-  set guifont=Lucida_Console:h10
+    set guifont=Lucida_Console:h10
   endif
 endif
 
@@ -147,7 +150,7 @@ let g:sh_no_error = 1
 
 " Removes trailing spaces
 function! TrimWhiteSpace()
-    %s/\s\+$//e
+  %s/\s\+$//e
 endfunction
 
 nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
