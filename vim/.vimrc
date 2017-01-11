@@ -107,6 +107,8 @@ set tabstop=4
 " number of spaces in tab when editing
 set softtabstop=4
 
+set smarttab
+
 " tabs are spaces
 set expandtab
 
@@ -139,7 +141,7 @@ set mouse=a
 
 set t_Co=256
 
-set colorcolumn=90
+set colorcolumn=80
 
 " store undo changes across files openings
 set undofile
@@ -175,3 +177,24 @@ nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
+
+" show invisibles chars
+set list
+set listchars=nbsp:⦸                  " CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
+set listchars+=tab:▷┅                 " WHITE RIGHT-POINTING TRIANGLE (U+25B7, UTF-8: E2 96 B7)
+" + BOX DRAWINGS HEAVY TRIPLE DASH HORIZONTAL (U+2505, UTF-8: E2 94 85)
+set listchars+=extends:»              " RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
+set listchars+=precedes:«             " LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
+set listchars+=trail:•                " BULLET (U+2022, UTF-8: E2 80 A2)
+
+if has('linebreak')
+  let &showbreak='↳ '                 " DOWNWARDS ARROW WITH TIP RIGHTWARDS (U+21B3, UTF-8: E2 86 B3)
+endif
+
+" start scrolling 5 lines before edge of viewport
+set scrolloff=5
+set sidescrolloff=5
+
+" shell-like autocomplete to unambiguous portion
+set wildmenu
+set wildmode=longest:full,full
