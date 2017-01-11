@@ -61,6 +61,8 @@ noremap <leader>o :NERDTreeToggle<cr>
 Plugin 'Chiel92/vim-autoformat'
 noremap <F4> :Autoformat<CR>
 
+Plugin 'tomtom/tcomment_vim'
+
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
