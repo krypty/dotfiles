@@ -34,6 +34,7 @@ let g:gitgutter_sign_column_always=1
 " --- Markdown
 " require some packages, see: https://github.com/suan/vim-instant-markdown
 Plugin 'suan/vim-instant-markdown'
+let g:instant_markdown_autostart = 0
 
 Plugin 'tpope/vim-markdown'
 let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
