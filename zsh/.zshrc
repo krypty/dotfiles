@@ -107,6 +107,11 @@ alias mv='mv -i'
 alias ts="tmux new -s"
 alias ta="tmux a -t"
 
+# youtube-dl aliases
+alias youtube-dl-playlist="youtube-dl --all-subs -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "
+alias youtube-dl-mp3="youtube-dl -t -x --audio-format mp3 --audio-quality 0 "
+
+
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
 PATH=$PATH:/home/gary/workspace/xu3/buildroot/output/host/usr/bin
@@ -119,7 +124,7 @@ source /usr/bin/virtualenvwrapper.sh
 export PATH=/home/gary/anaconda3/bin:$PATH
 
 # less utf-8
- export LESSCHARSET=UTF-8
+export LESSCHARSET=UTF-8
 
 # show screen session in prompt
 if [ -n "$STY" ]; then export PS1="(screen) $PS1"; fi
