@@ -82,7 +82,7 @@ export HADOOP_HOME=/usr/local/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
 
 # Force GTK theme for Qt based applications
-export QT_STYLE_OVERRIDE=gtk
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 export EDITOR=vim
 
