@@ -24,10 +24,10 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|pyc)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+      \ 'file': '\v\.(exe|so|dll|pyc)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
 
 Plugin 'flazz/vim-colorschemes'
 Plugin 'w0ng/vim-hybrid'
@@ -71,6 +71,11 @@ noremap <leader>o :NERDTreeToggle<cr>
 " vim-autoformat
 Plugin 'Chiel92/vim-autoformat'
 noremap <F4> :Autoformat<CR>
+
+" vim-expand-region
+Plugin 'terryma/vim-expand-region'
+
+Plugin 'tomtom/tcomment_vim'
 
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
