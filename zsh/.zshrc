@@ -53,7 +53,7 @@ plugins=(git dirhistory pip extract colored-man-pages z mvn virtualenvwrapper)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/local/hadoop/bin"
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/local/hadoop/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -102,6 +102,7 @@ alias xopen="xdg-open"
 alias Q='exit'
 alias rm='rm -i'
 alias mv='mv -i'
+alias :q="exit"
 
 # tmux aliases
 alias ts="tmux new -s"
