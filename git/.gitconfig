@@ -3,6 +3,7 @@
 	name = Gary Marigliano
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	stash-all = stash save --include-untracked
 [credential]
 	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
 [color]
