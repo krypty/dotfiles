@@ -103,6 +103,7 @@ alias Q='exit'
 alias rm='rm -i'
 alias mv='mv -i'
 alias :q="exit"
+alias run-jupyter="bash ~/run-jupyter.sh"
 
 # tmux aliases
 alias ts="tmux new -s"
