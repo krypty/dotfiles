@@ -80,6 +80,11 @@ export LANG=en_US.UTF-8
 ## Vi Mode source: https://github.com/gotbletu/dotfiles/blob/master/zshrc/.zshrc
 export KEYTIMEOUT=1 # kill the lag after pressing ESC
 
+# history search in vim mode
+# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
+
 ## HADOOP
 # Set Hadoop-related environment variables
 export HADOOP_HOME=/usr/local/hadoop
