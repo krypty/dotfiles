@@ -85,6 +85,7 @@ if [ $KEYMAP = vicmd ]; then
 else
     printf "\033[6 q"
 fi
+zle reset-prompt # avoid going back to insert mode when typing ciW-like commands
 }
 zle -N zle-keymap-select
 
