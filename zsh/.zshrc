@@ -74,6 +74,39 @@ export LANG=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Vi Mode source: https://github.com/gotbletu/dotfiles/blob/master/zshrc/.zshrc
+bindkey -v
+export KEYTIMEOUT=1 # kill the lag after pressing ESC
+
+# show vim status source: https://unix.stackexchange.com/a/344028
+zle-keymap-select () {
+if [ $KEYMAP = vicmd ]; then
+    printf "\033[2 q"
+else
+    printf "\033[6 q"
+fi
+}
+zle -N zle-keymap-select
+
+zle-line-init () {
+zle -K viins
+printf "\033[6 q"
+}
+zle -N zle-line-init
+
+# add missing vim hotkeys
+# fixes backspace deletion issues
+# http://zshwiki.org/home/zle/vi-mode
+bindkey -a u undo
+#bindkey -a '^R' redo   # conflicts with history search hotkey
+bindkey -a '^T' redo
+bindkey '^?' backward-delete-char #backspace
+
+# history search in vim mode
+# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
+
 ## HADOOP
 # Set Hadoop-related environment variables
 export HADOOP_HOME=/usr/local/hadoop
