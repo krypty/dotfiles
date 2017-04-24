@@ -1,11 +1,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/gary/.oh-my-zsh
 
+# set a custom directory for the plugins/themes in order to use stow
+ZSH_CUSTOM=$HOME/.zsh_custom
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bureau"
+ZSH_THEME="bureau-gary"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,7 +52,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dirhistory pip extract colored-man-pages z mvn virtualenvwrapper)
+plugins=(git dirhistory pip extract colored-man-pages z mvn virtualenvwrapper vi-mode)
 
 # User configuration
 
@@ -74,39 +77,8 @@ export LANG=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Vi Mode source: https://github.com/gotbletu/dotfiles/blob/master/zshrc/.zshrc
-bindkey -v
+## Vi Mode source: https://github.com/gotbletu/dotfiles/blob/master/zshrc/.zshrc
 export KEYTIMEOUT=1 # kill the lag after pressing ESC
-
-# show vim status source: https://unix.stackexchange.com/a/344028
-zle-keymap-select () {
-if [ $KEYMAP = vicmd ]; then
-    printf "\033[2 q"
-else
-    printf "\033[6 q"
-fi
-zle reset-prompt # avoid going back to insert mode when typing ciW-like commands
-}
-zle -N zle-keymap-select
-
-zle-line-init () {
-zle -K viins
-printf "\033[6 q"
-}
-zle -N zle-line-init
-
-# add missing vim hotkeys
-# fixes backspace deletion issues
-# http://zshwiki.org/home/zle/vi-mode
-bindkey -a u undo
-#bindkey -a '^R' redo   # conflicts with history search hotkey
-bindkey -a '^T' redo
-bindkey '^?' backward-delete-char #backspace
-
-# history search in vim mode
-# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
-bindkey -M viins '^r' history-incremental-search-backward
-bindkey -M vicmd '^r' history-incremental-search-backward
 
 ## HADOOP
 # Set Hadoop-related environment variables
