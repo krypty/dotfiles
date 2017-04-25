@@ -18,3 +18,6 @@ stow -v redshift -t ~/.config
 
 # git
 stow -v git -t ~ 
+
+# ranger 
+stow -v -t ~/.config/ranger ranger
