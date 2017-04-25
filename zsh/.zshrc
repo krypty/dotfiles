@@ -84,6 +84,11 @@ export KEYTIMEOUT=1 # kill the lag after pressing ESC
 # http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
+# map Home and End to move at the beginning and at the end of the line
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+bindkey -M vicmd "${terminfo[khome]}" beginning-of-line
+bindkey -M vicmd "${terminfo[kend]}" end-of-line
 
 ## HADOOP
 # Set Hadoop-related environment variables
