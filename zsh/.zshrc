@@ -114,7 +114,7 @@ alias pls='sudo $(fc -ln -1)'
 alias git='LANG=en_US.utf-8 git'
 alias ll='ls -al'
 alias vimrc="vim ~/.vimrc"
-alias xopen="xdg-open"
+alias xopen="gio open"
 alias Q='exit'
 alias rm='rm -i'
 alias mv='mv -i'
