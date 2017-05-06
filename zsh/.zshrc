@@ -99,6 +99,7 @@ export PATH=$PATH:$HADOOP_HOME/bin
 
 # Force GTK theme for Qt based applications
 export QT_QPA_PLATFORMTHEME=qt5ct
+unset QT_STYLE_OVERRIDE
 
 export EDITOR=vim
 
