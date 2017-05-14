@@ -121,6 +121,8 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias :q="exit"
 alias run-jupyter="bash ~/run-jupyter.sh"
+alias vpn="sudo openconnect remote.heig-vd.ch  --servercert sha256:37fb600e2df69cd181801741a4992232a924550378f86660ead5e76a30ac76e9 --authgroup All_Users --user gary.mariglia"
+alias orphan="sudo pacman -Rns $(pacman -Qtdq)"
 
 # tmux aliases
 alias ts="tmux new -s"
@@ -137,6 +139,9 @@ alias gd="git difftool"
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
 PATH=$PATH:/home/gary/workspace/xu3/buildroot/output/host/usr/bin
+
+# added by Anaconda2 4.3.1 installer
+PATH="/home/gary/anaconda2/bin:$PATH"
 
 # Virtualenv Python
 export WORKON_HOME=~/.virtualenvs
