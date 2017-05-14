@@ -157,5 +157,5 @@ export LESSCHARSET=UTF-8
 if [ -n "$STY" ]; then export PS1="(screen) $PS1"; fi
 
 # setup dircolors
-eval `dircolors ~/.dircolors`
+eval `dircolors ~/.dir_colors`
 
