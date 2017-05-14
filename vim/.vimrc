@@ -29,8 +29,14 @@ let g:ctrlp_custom_ignore = {
       \ 'link': 'some_bad_symbolic_links',
       \ }
 
-Plugin 'flazz/vim-colorschemes'
-Plugin 'w0ng/vim-hybrid'
+" Plugin 'flazz/vim-colorschemes'
+" Plugin 'w0ng/vim-hybrid'
+Plugin 'arcticicestudio/nord-vim'
+let g:nord_italic_comments = 1
+augroup nord-overrides
+  autocmd!
+  autocmd ColorScheme nord highlight Comment ctermfg=14
+augroup END
 
 Plugin 'bling/vim-airline'
 set laststatus=2
@@ -90,9 +96,9 @@ filetype indent plugin on
 syntax on
 
 set background=dark
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-colorscheme hybrid
+" let g:hybrid_custom_term_colors = 1
+"let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+colorscheme nord
 
 " custom font on gVim
 if has("gui_running")
