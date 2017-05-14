@@ -32,7 +32,7 @@ let g:ctrlp_custom_ignore = {
 " Plugin 'flazz/vim-colorschemes'
 " Plugin 'w0ng/vim-hybrid'
 Plugin 'arcticicestudio/nord-vim'
-let g:nord_italic_comments = 1
+" let g:nord_italic_comments = 1
 augroup nord-overrides
   autocmd!
   autocmd ColorScheme nord highlight Comment ctermfg=14
