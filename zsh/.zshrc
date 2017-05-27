@@ -122,7 +122,6 @@ alias mv='mv -i'
 alias :q="exit"
 alias run-jupyter="bash ~/run-jupyter.sh"
 alias vpn="sudo openconnect remote.heig-vd.ch  --servercert sha256:37fb600e2df69cd181801741a4992232a924550378f86660ead5e76a30ac76e9 --authgroup All_Users --user gary.mariglia"
-alias orphan="sudo pacman -Rns $(pacman -Qtdq)"
 
 # tmux aliases
 alias ts="tmux new -s"
@@ -159,3 +158,8 @@ if [ -n "$STY" ]; then export PS1="(screen) $PS1"; fi
 # setup dircolors
 eval `dircolors ~/.dir_colors`
 
+
+# source distro-specific commands
+if [[ "Arch Linux" == "`lsb_release -d | cut -f2`" ]]; then
+        source ~/dotfiles/zsh/.archlinux.zshrc
+fi
