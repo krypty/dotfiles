@@ -19,3 +19,5 @@
 	prompt = false
 [difftool "icdiff"]
 	cmd = /usr/bin/icdiff --line-numbers --show-all-spaces $LOCAL $REMOTE
+[core]
+	excludesfile = /home/gary/.gitignore_global
