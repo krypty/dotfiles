@@ -22,3 +22,4 @@ stow -v git -t ~
 # ranger 
 stow -v -t ~/.config/ranger ranger
 stow -v dircolors -t ~
+stow -t ~/.config/Code/User vscode

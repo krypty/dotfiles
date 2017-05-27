@@ -1,5 +1,20 @@
 // Place your settings in this file to overwrite the default settings
 {
+
+    ////////////////////////////////////
+    ////////////// Extensions //////////////
+    ////////////////////////////////////
+    "extension-manager.extensions": [
+        "HookyQR.beautify",
+        "PKief.material-icon-theme",
+        "arcticicestudio.nord-visual-studio-code",
+        "donjayamanne.githistory",
+        "donjayamanne.python",
+        "magicstack.MagicPython",
+        "naumovs.color-highlight",
+        "vscodevim.vim"
+    ],
+
     ////////////////////////////////////
     ////////////// Editor //////////////
     ////////////////////////////////////
@@ -109,5 +124,8 @@
 
     // Enable the EasyMotion plugin for Vim.
     "vim.easymotion": true,
-    "workbench.colorTheme": "Nord"
+    "workbench.colorTheme": "Nord",
+
+    // disable vim msgs
+    "vim.disableAnnoyingNeovimMessage": true
 }
