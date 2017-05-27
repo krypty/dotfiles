@@ -158,6 +158,10 @@ if [ -n "$STY" ]; then export PS1="(screen) $PS1"; fi
 # setup dircolors
 eval `dircolors ~/.dir_colors`
 
+# make xz use all threads
+n_proc_minus_one=`nproc`
+let "n_proc_minus_one-=1"
+export XZ_OPT="--threads=$n_proc_minus_one"
 
 # source distro-specific commands
 if [[ "Arch Linux" == "`lsb_release -d | cut -f2`" ]]; then
