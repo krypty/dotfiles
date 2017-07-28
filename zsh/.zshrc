@@ -168,3 +168,6 @@ export XZ_OPT="--threads=$n_proc_minus_one"
 if [[ "Arch Linux" == "`lsb_release -d | cut -f2`" ]]; then
         source ~/dotfiles/zsh/.archlinux.zshrc
 fi
+
+# set extended glob
+setopt extended_glob
