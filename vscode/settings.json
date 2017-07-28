@@ -124,8 +124,19 @@
 
     // Enable the EasyMotion plugin for Vim.
     "vim.easymotion": true,
-    "workbench.colorTheme": "Nord",
+    "workbench.colorTheme": "Zenburn",
 
     // disable vim msgs
-    "vim.disableAnnoyingNeovimMessage": true
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.disableAnnoyingGcMessage": true,
+
+
+    ////////////////////////////////////
+    //////////// Easy SASS /////////////
+    ////////////////////////////////////
+
+    "easysass.formats": [{
+        "format": "expanded",
+        "extension": ".css"
+    }]
 }
