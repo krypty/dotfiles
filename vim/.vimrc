@@ -46,6 +46,9 @@ Plugin 'airblade/vim-gitgutter'
 " always display the gutter, avoid window changing size
 let g:gitgutter_sign_column_always=1
 
+" Better python highlighting
+Plugin 'hdima/python-syntax'
+let python_highlight_all = 1
 
 
 Plugin 'felixhummel/setcolors.vim'
