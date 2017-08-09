@@ -123,6 +123,7 @@ alias :q="exit"
 alias run-jupyter="bash ~/run-jupyter.sh"
 alias vpn="sudo openconnect remote.heig-vd.ch  --servercert sha256:37fb600e2df69cd181801741a4992232a924550378f86660ead5e76a30ac76e9 --authgroup All_Users --user gary.mariglia"
 alias calc="loffice --calc"
+alias ztic="/home/gary/ZTIC/zticproxy -mount:/media/gary/BCN-NETKEY/"
 
 # tmux aliases
 alias ts="tmux new -s"
