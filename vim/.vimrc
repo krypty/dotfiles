@@ -44,7 +44,7 @@ let g:airline_detect_modified=1
 
 Plugin 'airblade/vim-gitgutter'
 " always display the gutter, avoid window changing size
-let g:gitgutter_sign_column_always=1
+set signcolumn=yes
 
 " Better python highlighting
 Plugin 'hdima/python-syntax'
