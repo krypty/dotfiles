@@ -28,14 +28,14 @@ let g:ctrlp_custom_ignore = {
       \ 'link': 'some_bad_symbolic_links'
       \ }
 
-Plugin 'flazz/vim-colorschemes'
+" Plugin 'flazz/vim-colorschemes'
 " Plugin 'w0ng/vim-hybrid'
-" Plugin 'arcticicestudio/nord-vim'
-" " let g:nord_italic_comments = 1
-" augroup nord-overrides
-"   autocmd!
-"   autocmd ColorScheme nord highlight Comment ctermfg=14
-" augroup END
+Plugin 'arcticicestudio/nord-vim'
+" let g:nord_italic_comments = 1
+augroup nord-overrides
+  autocmd!
+  autocmd ColorScheme nord highlight Comment ctermfg=14
+augroup END
 
 Plugin 'bling/vim-airline'
 set laststatus=2
@@ -44,7 +44,7 @@ let g:airline_detect_modified=1
 
 Plugin 'airblade/vim-gitgutter'
 " always display the gutter, avoid window changing size
-set signcolumn=yes
+let g:gitgutter_sign_column_always=1
 
 " Better python highlighting
 Plugin 'hdima/python-syntax'
