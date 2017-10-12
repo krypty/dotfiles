@@ -44,7 +44,7 @@ let g:airline_detect_modified=1
 
 Plugin 'airblade/vim-gitgutter'
 " always display the gutter, avoid window changing size
-let g:gitgutter_sign_column_always=1
+set signcolumn=yes
 
 " Better python highlighting
 Plugin 'hdima/python-syntax'
@@ -104,7 +104,7 @@ syntax on
 set background=dark
 " let g:hybrid_custom_term_colors = 1
 "let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-colorscheme elflord
+colorscheme nord
 
 " custom font on gVim
 if has("gui_running")
