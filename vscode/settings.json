@@ -23,7 +23,7 @@
     "editor.fontSize": 15,
 
     // Controls the font family.
-    "editor.fontFamily": "'Bitstream Vera Sans Mono Roman', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Bitstream Vera Sans Mono', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
 
     // Controls if lines should wrap. The lines will wrap at min(editor.wrappingColumn, viewportWidthInColumns).
     "editor.wordWrap": "on",
@@ -138,8 +138,7 @@
     "easysass.formats": [{
         "format": "expanded",
         "extension": ".css"
-    }
-],
-"editor.minimap.enabled": false,
-"material-icon-theme.showUpdateMessage": false
+    }],
+    "editor.minimap.enabled": false,
+    "material-icon-theme.showUpdateMessage": false
 }
