@@ -53,7 +53,7 @@ font pango:Noto Sans, monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
 # bindsym $mod+Return exec termite
 
 # kill focused window
@@ -203,10 +203,12 @@ bindsym $mod+Shift+0 move container to workspace 10
 # }
 
 # Applications au démarrage
-exec --no-startup-id compton --config /home/gary/.config/compton.conf
 exec --no-startup-id redshift-gtk # -l 46.930745:6.815189 -t 6500:3400 -l manual
-exec --no-startup-id dropbox start
-exec --no-startup-id insync start
+# exec --no-startup-id dropbox start
+# exec --no-startup-id insync start
+exec --no-startup-id nm-applet
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id "xfce4-panel -d"
 
 
 # I3 Gaps
@@ -218,4 +220,5 @@ smart_gaps on
 
 # Redémarre polybar quand on redémarre i3
 # exec_always --no-startup-id "killall polybar;polybar -r center & polybar -r left & polybar -r right"
-exec_always --no-startup-id "killall polybar;polybar -r example"
+# exec_always --no-startup-id "killall polybar;polybar -r example"
+exec_always --no-startup-id "killall compton; compton --config /home/gary/.config/compton.conf"
