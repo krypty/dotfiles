@@ -26,8 +26,9 @@ text_buffer_size 2048
 # - Window specifications - #
 #############################
 own_window_class Conky
+own_window_title Conky
 own_window yes
-own_window_type desktop
+own_window_type override
 own_window_argb_visual yes
 own_window_argb_value 0
 #own_window_colour 1D1D1D
@@ -56,6 +57,7 @@ default_bar_size 60 8
 # - Graphics settings - #
 #########################
 draw_shades no
+draw_borders no
 #draw_outline yes
 default_outline_color black
 default_color white
@@ -79,17 +81,21 @@ Uptime: ${alignr}${color2}${uptime}${color}
 
 # |--CPU
 CPU1: ${font Arial:size=10}${color1}${cpu cpu1}%${color}${font} ${alignr}${color2}${cpugraph cpu1 8,60 262729 ffffff}${color}
-CPU2: ${font Arial:size=10}${color1}${cpu cpu2}%${color}${font} ${alignr}${color2}${cpugraph cpu2 8,60 262729 ffffff}${color}
-CPU3: ${font Arial:size=10}${color1}${cpu cpu3}%${color}${font} ${alignr}${color2}${cpugraph cpu3 8,60 262729 ffffff}${color}
-CPU4: ${font Arial:size=10}${color1}${cpu cpu4}%${color}${font} ${alignr}${color2}${cpugraph cpu4 8,60 262729 ffffff}${color}
+# CPU2: ${font Arial:size=10}${color1}${cpu cpu2}%${color}${font} ${alignr}${color2}${cpugraph cpu2 8,60 262729 ffffff}${color}
+# CPU3: ${font Arial:size=10}${color1}${cpu cpu3}%${color}${font} ${alignr}${color2}${cpugraph cpu3 8,60 262729 ffffff}${color}
+# CPU4: ${font Arial:size=10}${color1}${cpu cpu4}%${color}${font} ${alignr}${color2}${cpugraph cpu4 8,60 262729 ffffff}${color}
 
 # |--MEM
 RAM: ${font Arial:size=10}${color1}$memperc%${color}${font}${voffset -2}${offset 5}${voffset 2}${color2}${alignr}${membar 8, 60}${color}
 ${voffset -2}F: ${font Arial:size=10}${color1}${memeasyfree}${color}${font}    U: ${font Arial:size=10}${color1}${mem}${color}${font}
 
 # |--BATTERY
-${if_existing /sys/class/power_supply/BAT0}${voffset -5}Battery 1: ${font Arial:size=10}${color1}${battery_percent BAT0}%${color}${font} ${alignr}${color2}${battery_bar BAT0 8,60}${color}${else}${color0}${font ConkyColors:size=13}6${font}${color}${goto 32}${voffset -5}Battery 1: ${font Arial:size=10}${color2}Unknown Status${color}${font}${endif}
-${if_existing /sys/class/power_supply/BAT1}${voffset -0}Battery 2: ${font Arial:size=10}${color1}${battery_percent BAT1}%${color}${font} ${alignr}${color2}${battery_bar BAT1 8,60}${color}${else}${color0}${font ConkyColors:size=13}6${font}${color}${goto 32}${voffset -5}Battery 2: ${font Arial:size=10}${color2}Unknown Status${color}${font}${endif} 
+${if_existing /sys/class/power_supply/BAT0}
+${voffset -5}Battery 1: ${font Arial:size=10}${color1}${battery_percent BAT0}%${color}${font} ${alignr}${color2}${battery_bar BAT0 8,60}${color}${else}${color0}${font ConkyColors:size=13}6${font}${color}${goto 32}${voffset -5}Battery 1: ${font Arial:size=10}${color2}Unknown Status${color}${font}
+${endif}
+${if_existing /sys/class/power_supply/BAT1}
+${voffset -5}Battery 2: ${font Arial:size=10}${color1}${battery_percent BAT1}%${color}${font} ${alignr}${color2}${battery_bar BAT1 8,60}${color}
+${endif}
 
 # | --DISKS
 ROOT: ${font Arial:size=10}${color1}${fs_free /}${color}${font} ${alignr}${color2}${fs_bar /}${color}

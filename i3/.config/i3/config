@@ -222,3 +222,4 @@ smart_gaps on
 # exec_always --no-startup-id "killall polybar;polybar -r center & polybar -r left & polybar -r right"
 # exec_always --no-startup-id "killall polybar;polybar -r example"
 exec_always --no-startup-id "killall compton; compton --config /home/gary/.config/compton.conf"
+exec_always --no-startup-id "killall conky; /usr/bin/conky -d -p10 -c /home/gary/.conkyrc"
