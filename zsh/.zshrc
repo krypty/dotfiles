@@ -117,7 +117,6 @@ alias ll='ls -al'
 alias vimrc="vim ~/.vimrc"
 alias xopen="gio open"
 alias Q='exit'
-alias rm='rm -i'
 alias mv='mv -i'
 alias :q="exit"
 alias run-jupyter="bash ~/run-jupyter.sh"
@@ -175,3 +174,6 @@ fi
 
 # set extended glob
 setopt extended_glob
+
+# safe rm
+source ~/dotfiles/zsh/safe_rm.sh
