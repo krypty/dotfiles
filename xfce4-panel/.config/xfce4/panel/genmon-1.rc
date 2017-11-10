@@ -1,0 +1,6 @@
+Command=python /home/gary/scripts/current_track_spotify.py
+UseLabel=0
+Text=(genmon)
+UpdatePeriod=5000
+Font=Bitstream Vera Sans 14
+

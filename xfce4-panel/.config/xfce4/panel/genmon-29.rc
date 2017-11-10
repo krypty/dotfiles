@@ -1,6 +1,0 @@
-Command=bash /home/gary/Desktop/yolo.sh
-UseLabel=0
-Text=(genmon)
-UpdatePeriod=3000
-Font=Bitstream Vera Sans 12
-
