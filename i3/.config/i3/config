@@ -171,6 +171,10 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%- # decrease screen brigh
 # External monitors controls
 bindsym $mod+p exec ~/.screenlayout/external_vga.sh
 bindsym $mod+Shift+p exec ~/.screenlayout/single_laptop_monitor.sh
+
+# Launch lockscreen
+bindsym $mod+$alt+l exec ~/scripts/i3lock-fancy/lock.sh
+
 ###############################
 #          SOURIS             #
 ###############################
