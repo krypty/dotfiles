@@ -1,4 +1,4 @@
-Command=python /home/gary/scripts/current_track_spotify.py
+Command=python /home/gary/dotfiles/.scripts/current_track_spotify.py
 UseLabel=0
 Text=(genmon)
 UpdatePeriod=5000
