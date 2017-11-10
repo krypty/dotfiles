@@ -36,19 +36,19 @@
 
 ! rofi
 ! =================
-#define background #1D1D26
-#define text       #B3B3D4
-#define active     #FFCC66
+rofi.font:              "Bitstream Vera Sans" medium 20
+rofi.fullscreen: true
+rofi.color-enabled: true
+rofi.color-window: argb:e81d1d26,argb:00292f37,#259E83
+rofi.color-normal: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#259E83
+rofi.color-active: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#B3B3AD
+rofi.color-urgent: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#B3B3AD
 
-rofi.fullscreen:        true
-rofi.color-enabled:       true
-rofi.separator-style:   solid
-rofi.color-window:      argb:e81d1d26, active, active
-rofi.color-normal:      argb:0baa263, #535172, argb:01d1d26, argb:01d1d26, text
-rofi.color-active:      active, background, active, active, background
-rofi.color-urgent:      #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
-rofi.font:                    "Bitstream Vera Sans" medium 16
-rofi.bw:                0
-rofi.padding:           200
-rofi.hide-scrollbar:    true
-rofi.lines: 15
+rofi.eh: 1
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.lines: 10
+rofi.width: 100
+rofi.padding: 200
+rofi.bw: 0
+rofi.show-icons: true
