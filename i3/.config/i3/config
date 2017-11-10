@@ -161,6 +161,9 @@ bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2
 # Capture d'écran
 bindsym Print exec xfce4-screenshooter
 
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- # decrease screen brightness
 ###############################
 #          SOURIS             #
 ###############################
