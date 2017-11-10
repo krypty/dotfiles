@@ -167,6 +167,10 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%- # decrease screen brigh
 
 # # Touchpad controls
 # bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+
+# External monitors controls
+bindsym $mod+p exec ~/.screenlayout/external_vga.sh
+bindsym $mod+Shift+p exec ~/.screenlayout/single_laptop_monitor.sh
 ###############################
 #          SOURIS             #
 ###############################
