@@ -8,6 +8,9 @@
 set $mod Mod4
 set $alt Mod1
 
+set $monleft HDMI-2
+set $monright DP-1
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -170,7 +173,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%- # decrease screen brigh
 
 # External monitors controls
 bindsym $mod+p exec ~/.screenlayout/external_vga.sh
-bindsym $mod+Shift+p exec ~/.screenlayout/single_laptop_monitor.sh
+bindsym $mod+$alt+p exec ~/.screenlayout/single_laptop_monitor.sh
 
 # Launch lockscreen
 bindsym $mod+$alt+l exec ~/dotfiles/.scripts/i3lock-fancy/lock.sh
@@ -180,6 +183,18 @@ bindsym $mod+$alt+l exec ~/dotfiles/.scripts/i3lock-fancy/lock.sh
 ###############################
 # Quand le focus change d'écran, ne pas déplacer la souris
 # mouse_warping none
+
+# odd numbers to mon left and even to mon right
+workspace 1 output $monleft
+workspace 2 output $monleft
+workspace 3 output $monleft
+workspace 4 output $monleft
+workspace 5 output $monleft
+workspace 6 output $monright
+workspace 7 output $monright
+workspace 8 output $monright
+workspace 9 output $monright
+workspace 0 output $monright
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -209,7 +224,9 @@ bindsym $mod+Shift+0 move container to workspace 10
 #   APPLICATION SPECIFIC      #
 ###############################
 
+# tip: use xprop to find out the class (WM_CLASS)
 for_window [class="Gitg"] floating enable
+for_window [class="Thunderbird"] floating enable
 
 ###############################
 #            MISC             #
