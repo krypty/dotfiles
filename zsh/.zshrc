@@ -124,7 +124,7 @@ alias vpn="sudo openconnect remote.heig-vd.ch  --servercert sha256:37fb600e2df69
 alias calc="loffice --calc"
 alias jp="jupyter-notebook"
 alias ztic="/home/gary/ZTIC/zticproxy -mount:/media/gary/BCN-NETKEY/"
-alias dotfiles="cd ~/dotfiles"
+alias dots="cd ~/dotfiles"
 alias fd="fd -H"
 alias i3c="vim ~/.config/i3/config"
 

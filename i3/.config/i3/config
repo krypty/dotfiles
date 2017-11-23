@@ -194,7 +194,7 @@ workspace 6 output $monright
 workspace 7 output $monright
 workspace 8 output $monright
 workspace 9 output $monright
-workspace 0 output $monright
+workspace 10 output $monright
 
 # switch to workspace
 bindsym $mod+1 workspace 1
