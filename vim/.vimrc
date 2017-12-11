@@ -203,3 +203,9 @@ nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
+
+
+" Set color syntax for specific extensions
+augroup filetypedetect
+    au BufRead,BufNewFile *.ffs set filetype=xml
+augroup END
