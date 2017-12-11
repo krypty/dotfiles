@@ -64,6 +64,9 @@
         "**/*.pyc": true
     },
 
+    "files.associations": {
+        "*.ffs": "xml"
+    },
 
     ////////////////////////////////////
     //////////////// CSS ///////////////
@@ -140,5 +143,8 @@
         "extension": ".css"
     }],
     "editor.minimap.enabled": false,
-    "material-icon-theme.showUpdateMessage": false
+    "material-icon-theme.showUpdateMessage": false,
+    "editor.renderControlCharacters": false,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "extensions.ignoreRecommendations": false
 }
