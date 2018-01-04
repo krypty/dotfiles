@@ -178,3 +178,8 @@ setopt extended_glob
 
 # safe rm
 source ~/dotfiles/zsh/safe_rm.sh
+
+## Custom functions
+function ff() {
+        find $1 -type f -print0 | xargs -0 grep -E $2
+}
