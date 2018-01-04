@@ -38,7 +38,11 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 Plugin 'airblade/vim-gitgutter'
 " always display the gutter, avoid window changing size
-set signcolumn=yes
+if exists('&signcolumn')  " Vim 7.4.2201
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif
 
 " Better python highlighting
 Plugin 'hdima/python-syntax'
