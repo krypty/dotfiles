@@ -25,11 +25,16 @@ Plugin 'chriskempson/base16-vim'
 "   autocmd ColorScheme nord highlight Comment ctermfg=14
 " augroup END
 
-
-Plugin 'bling/vim-airline'
+Plugin 'mkitt/tabline.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
 " enable modified detection
 let g:airline_detect_modified=1
+let g:airline_theme='base16'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 Plugin 'airblade/vim-gitgutter'
 " always display the gutter, avoid window changing size
