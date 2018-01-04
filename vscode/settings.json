@@ -127,7 +127,7 @@
 
     // Enable the EasyMotion plugin for Vim.
     "vim.easymotion": true,
-    "workbench.colorTheme": "Zenburn",
+    "workbench.colorTheme": "Base16 Dark Ocean",
 
     // disable vim msgs
     "vim.disableAnnoyingNeovimMessage": true,

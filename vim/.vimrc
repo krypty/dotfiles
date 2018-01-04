@@ -28,14 +28,15 @@ let g:ctrlp_custom_ignore = {
       \ 'link': 'some_bad_symbolic_links'
       \ }
 
-" Plugin 'flazz/vim-colorschemes'
-" Plugin 'w0ng/vim-hybrid'
-Plugin 'arcticicestudio/nord-vim'
+" Color scheme
+Plugin 'chriskempson/base16-vim'
+" Plugin 'arcticicestudio/nord-vim'
 " let g:nord_italic_comments = 1
-augroup nord-overrides
-  autocmd!
-  autocmd ColorScheme nord highlight Comment ctermfg=14
-augroup END
+" augroup nord-overrides
+"   autocmd!
+"   autocmd ColorScheme nord highlight Comment ctermfg=14
+" augroup END
+
 
 Plugin 'bling/vim-airline'
 set laststatus=2
@@ -49,9 +50,6 @@ set signcolumn=yes
 " Better python highlighting
 Plugin 'hdima/python-syntax'
 let python_highlight_all = 1
-
-
-Plugin 'felixhummel/setcolors.vim'
 
 " --- Markdown
 " require some packages, see: https://github.com/suan/vim-instant-markdown
@@ -100,11 +98,6 @@ filetype indent plugin on
 
 " enable syntax highlighting
 syntax on
-
-set background=dark
-" let g:hybrid_custom_term_colors = 1
-"let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-colorscheme nord
 
 " custom font on gVim
 if has("gui_running")
@@ -204,8 +197,15 @@ nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
+" Color scheme
+set background=dark
+" let g:hybrid_custom_term_colors = 1
+"let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+colorscheme base16-ocean
+let base16colorspace=256
+set termguicolors
 
 " Set color syntax for specific extensions
 augroup filetypedetect
-    au BufRead,BufNewFile *.ffs set filetype=xml
+  au BufRead,BufNewFile *.ffs set filetype=xml
 augroup END
