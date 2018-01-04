@@ -16,18 +16,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'kien/ctrlp.vim'
-let g:ctrlp_map='<c-p>'
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-      \ 'file': '\v\.(exe|so|dll|pyc)$',
-      \ 'link': 'some_bad_symbolic_links'
-      \ }
-
 " Color scheme
 Plugin 'chriskempson/base16-vim'
 " Plugin 'arcticicestudio/nord-vim'
