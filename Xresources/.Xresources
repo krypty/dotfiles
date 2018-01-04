@@ -1,7 +1,7 @@
-! =================
-! ============
-!   Couleurs
-! ============
+! ! =================
+! ! ============
+! !   Couleurs
+! ! ============
 *background: #1D1D26
 *foreground: #B3B3D4
 *secondary:  #535172
@@ -32,6 +32,43 @@
 *color15: #B3B3AD
 
 
+! Base16 Ocean
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #2b303b
+#define base01 #343d46
+#define base02 #4f5b66
+#define base03 #65737e
+#define base04 #a7adba
+#define base05 #c0c5ce
+#define base06 #dfe1e8
+#define base07 #eff1f5
+#define base08 #bf616a
+#define base09 #d08770
+#define base0A #ebcb8b
+#define base0B #a3be8c
+#define base0C #96b5b4
+#define base0D #8fa1b3
+#define base0E #b48ead
+#define base0F #ab7967
+
+
+*base00:      base00
+*base01:      base01
+*base02:      base02
+*base03:      base03
+*base04:      base04
+*base05:      base05
+*base06:      base06
+*base07:      base07
+*base08:      base08
+*base09:      base09
+*base0A:      base0A
+*base0B:      base0B
+*base0C:      base0C
+*base0D:      base0D
+*base0E:      base0E
+*base0F:      base0F
 
 
 ! rofi
