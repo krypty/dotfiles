@@ -183,3 +183,6 @@ source ~/dotfiles/zsh/safe_rm.sh
 function ff() {
         find $1 -type f -print0 | xargs -0 grep -E $2
 }
+
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
