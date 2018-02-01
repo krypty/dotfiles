@@ -102,7 +102,7 @@ filetype indent plugin on
 " enable syntax highlighting
 syntax on
 
-custom font on gVim
+" custom font on gVim
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
