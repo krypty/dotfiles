@@ -89,3 +89,75 @@ rofi.width: 100
 rofi.padding: 200
 rofi.bw: 0
 rofi.show-icons: true
+
+
+! urxvt
+! ==================
+
+URxvt.scrollstyle: rxvt
+URxvt.termName: rxvt-256color
+URxvt.urgentOnBell: true
+! URxvt.cursorBlink: true
+
+! Disable urxvt ISO14755 mode yellow box on ctrl+shift
+URxvt.iso14755: false
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! font
+! URxvt*.font: xft:Bitstream Vera Sans Mono:size=10.5,xft:powerlinesymbols
+! URxvt*.font: xft:SourceCodePro-Light:size=12.5:antialias=true,\
+! xft:sazamani mincho:size=10:antialias=true,\
+! xft:ar pl ukai cn:size=10:antialias=true
+
+! URxvt*.italicFont: xft:dejavu sans mono:style=italic:size=16:antialias=true
+! URxvt*font: xft:Monospace:pixelsize=14
+! URxvt*boldFont: xft:Monospace:pixelsize=14
+! URxvt*italicFont: xft:Monospace:ixelsize=14
+
+URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=15.5:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15.5:antialias=true:hinting=true
+URxvt*boldFont: xft:Source\ Code\ Pro\ SemiBold:pixelsize=15.5:antialias=true:hinting=true,xft:Source\ Code\ Pro\ SemiBold:pixelsize=15.5:antialias=true:hinting=true
+
+URxvt.letterSpace: -2
+URxvt.lineSpace: 1
+! URxvt.letterSpace: -1
+
+! Clickable URLs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! Larger history limit
+URxvt.saveLines: 1000000
+
+! Disable scrollbar
+URxvt.scrollBar: false
+
+! Copy paste selection key bindings
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt*color0: #101010
+URxvt*color1: #f13a21
+URxvt*color2: #93f91d
+URxvt*color3: #ffd00a
+URxvt*color4: #004f9e
+URxvt*color5: #ec0048
+URxvt*color6: #2aa7e7
+URxvt*color7: #f2f2f2
+URxvt*color8: #1d202f
+URxvt*color9: #ff361e
+URxvt*color10: #ffc005
+URxvt*color11: #93ff00
+URxvt*color12: #0071ff
+URxvt*color13: #ef0051
+URxvt*color14: #4bb8fd
+URxvt*color15: #a020f0
+

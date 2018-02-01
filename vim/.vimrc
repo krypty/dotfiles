@@ -25,6 +25,12 @@ Plugin 'chriskempson/base16-vim'
 "   autocmd ColorScheme nord highlight Comment ctermfg=14
 " augroup END
 
+Plugin 'morhetz/gruvbox'
+" let g:gruvbox_italic=1
+" let g:gruvbox_italicize_strings=0
+" let g:gruvbox_italicize_comments=1
+
+
 Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -96,7 +102,7 @@ filetype indent plugin on
 " enable syntax highlighting
 syntax on
 
-" custom font on gVim
+custom font on gVim
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
@@ -198,9 +204,9 @@ nnoremap tl :tablast<CR>
 set background=dark
 " let g:hybrid_custom_term_colors = 1
 "let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-colorscheme base16-ocean
+colorscheme gruvbox
 let base16colorspace=256
-set termguicolors
+" set termguicolors
 
 " Set color syntax for specific extensions
 augroup filetypedetect
