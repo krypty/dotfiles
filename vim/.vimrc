@@ -200,6 +200,9 @@ nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
+" Keep selected text selected when fixing indentation
+vnoremap < <gv
+vnoremap > >gv
 " Color scheme
 set background=dark
 " let g:hybrid_custom_term_colors = 1
