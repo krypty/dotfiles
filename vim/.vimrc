@@ -203,6 +203,11 @@ nnoremap tl :tablast<CR>
 " Keep selected text selected when fixing indentation
 vnoremap < <gv
 vnoremap > >gv
+
+" Esc with jj or ii
+:imap jj <Esc>
+:imap ii <Esc>
+
 " Color scheme
 set background=dark
 " let g:hybrid_custom_term_colors = 1
