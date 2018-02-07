@@ -75,7 +75,8 @@ font pango:Noto Sans, monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+set $term urxvt
+bindsym $mod+Return exec $term
 # bindsym $mod+Return exec termite
 
 # kill focused window
@@ -250,6 +251,20 @@ for_window [class="Thunderbird"] floating enable
 ###############################
 #            MISC             #
 ###############################
+## quick terminal
+# exec --no-startup-id urxvt -name metask
+# for_window [instance="metask"] floating enable;
+# for_window [instance="metask"] move scratchpad; [instance="metask"] scratchpad show; move position 0px 22px; resize shrink height 300px; resize grow width 683px; move scratchpad
+# bindsym $mod+Shift+t [instance="metask"] scratchpad show
+
+bindsym $mod+c [instance="math"] scratchpad show; [instance="math"] move position center
+# Then I have a window running R I use for basic arithmetic
+# I'll later bind this to mod+a.
+for_window [instance="math"] floating enable
+for_window [instance="math"] resize set 800 300
+for_window [instance="math"] move scratchpad
+for_window [instance="math"] border pixel 5
+exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /metask\.URxvt/ {print $1}'); do wmctrl -ic $win; done; $term -name math  -fn 'xft:Bitstream Vera Sans Mono:pixelsize=22' -e python -q"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
