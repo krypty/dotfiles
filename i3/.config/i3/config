@@ -260,7 +260,7 @@ for_window [class="Thunderbird"] floating enable
 # Applications au démarrage
 exec --no-startup-id redshift-gtk # -l 46.930745:6.815189 -t 6500:3400 -l manual
 # exec --no-startup-id dropbox start
-# exec --no-startup-id insync start
+exec --no-startup-id insync start
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "xfce4-panel -d"
