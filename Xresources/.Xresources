@@ -122,10 +122,12 @@ URxvt*scrollTtyKeypress: true
 ! URxvt*boldFont: xft:Monospace:pixelsize=14
 ! URxvt*italicFont: xft:Monospace:ixelsize=14
 
-URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=15.5:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15.5:antialias=true:hinting=true
-URxvt*boldFont: xft:Source\ Code\ Pro\ SemiBold:pixelsize=15.5:antialias=true:hinting=true,xft:Source\ Code\ Pro\ SemiBold:pixelsize=15.5:antialias=true:hinting=true
+! Require to install Source Code Pro and Symbola fonts
+URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=16:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=16:antialias=true:hinting=true,xft:symbola:size=9
+URxvt*boldFont: xft:Source\ Code\ Pro\ SemiBold:pixelsize=16:antialias=true:hinting=true,xft:Source\ Code\ Pro\ SemiBold:pixelsize=16:antialias=true:hinting=true,xft:symbola:size=9
 
-URxvt.letterSpace: -2
+
+URxvt.letterSpace: -1
 URxvt.lineSpace: 1
 ! URxvt.letterSpace: -1
 
