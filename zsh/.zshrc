@@ -90,6 +90,16 @@ bindkey "${terminfo[kend]}" end-of-line
 bindkey -M vicmd "${terminfo[khome]}" beginning-of-line
 bindkey -M vicmd "${terminfo[kend]}" end-of-line
 
+# use the vi navigation keys in menu completion
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+bindkey -M viins '^k' vi-up-line-or-history
+bindkey -M vicmd '^k' vi-up-line-or-history
+bindkey -M viins '^j' vi-down-line-or-history
+bindkey -M vicmd '^j' vi-down-line-or-history
 ## HADOOP
 # Set Hadoop-related environment variables
 export HADOOP_HOME=/usr/local/hadoop
