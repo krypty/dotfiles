@@ -125,7 +125,7 @@ rofi.show-icons: true
 URxvt.scrollstyle: rxvt
 URxvt.termName: rxvt-256color
 URxvt.urgentOnBell: true
-! URxvt.cursorBlink: true
+URxvt.cursorBlink: true
 
 ! Disable urxvt ISO14755 mode yellow box on ctrl+shift
 URxvt.iso14755: false
