@@ -2,34 +2,34 @@
 ! ! ============
 ! !   Couleurs
 ! ! ============
-*background: #1D1D26
-*foreground: #B3B3D4
-*secondary:  #535172
-*active:     #FFCC66
-!black
-*color0:     #1D1D26
-*color8:     #928374
-!red
-*color1:     #E20049
-*color9:     #E20049
-!green
-*color2:     #00F572
-*color10:    #00D965
-!yellow
-*color3:     #FFCC66
-*color11:    #D9AD57
-!blue
-*color4:     #00BFFF
-*color12:    #00A3D9
-!magenta
-*color5:     #FF3399
-*color13:    #BD2671
-!cyan
-*color6:     #7874A6
-*color14:    #535172
-!white
-*color7:     #F8F8F0
-*color15: #B3B3AD
+! *background: #1D1D26
+! *foreground: #B3B3D4
+! *secondary:  #535172
+! *active:     #FFCC66
+! !black
+! *color0:     #1D1D26
+! *color8:     #928374
+! !red
+! *color1:     #E20049
+! *color9:     #E20049
+! !green
+! *color2:     #00F572
+! *color10:    #00D965
+! !yellow
+! *color3:     #FFCC66
+! *color11:    #D9AD57
+! !blue
+! *color4:     #00BFFF
+! *color12:    #00A3D9
+! !magenta
+! *color5:     #FF3399
+! *color13:    #BD2671
+! !cyan
+! *color6:     #7874A6
+! *color14:    #535172
+! !white
+! *color7:     #F8F8F0
+! *color15: #B3B3AD
 
 
 ! Base16 Ocean
@@ -70,6 +70,34 @@
 *base0E:      base0E
 *base0F:      base0F
 
+*background: base00
+*foreground: base04
+*secondary:  base02
+*active:     base0A
+!black
+*color0:     base00
+*color8:     base01
+!red
+*color1:     base08
+*color9:     base08
+!green
+*color2:     base0B
+*color10:    base0B
+!yellow
+*color3:     base0A
+*color11:    base0A
+!blue
+*color4:     base0D
+*color12:    base0D
+!magenta
+*color5:     base0E
+*color13:    base0E
+!cyan
+*color6:     base0C
+*color14:    base0D
+!white
+*color7:     base06
+*color15:    base07
 
 ! rofi
 ! =================
@@ -154,20 +182,20 @@ URxvt.keysym.C-S-Down: font-size:decglobal
 URxvt.keysym.C-equal:  font-size:reset
 URxvt.keysym.C-slash:  font-size:show
 
-URxvt*color0: #101010
-URxvt*color1: #f13a21
-URxvt*color2: #93f91d
-URxvt*color3: #ffd00a
-URxvt*color4: #004f9e
-URxvt*color5: #ec0048
-URxvt*color6: #2aa7e7
-URxvt*color7: #f2f2f2
-URxvt*color8: #1d202f
-URxvt*color9: #ff361e
-URxvt*color10: #ffc005
-URxvt*color11: #93ff00
-URxvt*color12: #0071ff
-URxvt*color13: #ef0051
-URxvt*color14: #4bb8fd
-URxvt*color15: #a020f0
+! URxvt*color0: #101010
+! URxvt*color1: #f13a21
+! URxvt*color2: #93f91d
+! URxvt*color3: #ffd00a
+! URxvt*color4: #004f9e
+! URxvt*color5: #ec0048
+! URxvt*color6: #2aa7e7
+! URxvt*color7: #f2f2f2
+! URxvt*color8: #1d202f
+! URxvt*color9: #ff361e
+! URxvt*color10: #ffc005
+! URxvt*color11: #93ff00
+! URxvt*color12: #0071ff
+! URxvt*color13: #ef0051
+! URxvt*color14: #4bb8fd
+! URxvt*color15: #a020f0
 
