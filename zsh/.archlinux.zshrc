@@ -1,2 +1,2 @@
 # ALIAS
-alias orphan="sudo pacman -Rns $(pacman -Qtdq)"
+# alias orphan="pacman -Rns $(pacman -Qtdq)"
