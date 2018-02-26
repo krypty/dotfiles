@@ -79,6 +79,10 @@ set $term urxvt
 bindsym $mod+Return exec $term
 # bindsym $mod+Return exec termite
 
+# start a file explorer
+set $explorer thunar
+bindsym $mod+Shift+Return exec $explorer
+
 # kill focused window
 bindsym $mod+Shift+A kill
 bindsym $alt+F4 kill
