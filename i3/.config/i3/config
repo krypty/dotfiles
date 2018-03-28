@@ -201,6 +201,8 @@ bindsym $mod+$alt+p exec ~/.screenlayout/single_laptop_monitor.sh
 
 # Launch lockscreen
 bindsym $mod+$alt+l exec ~/dotfiles/.scripts/i3lock-fancy/lock.sh
+# Disable caps lock
+exec --no-startup-id  "setxkbmap -option caps:none"
 
 ###############################
 #          SOURIS             #
