@@ -138,6 +138,9 @@ alias dots="cd ~/dotfiles"
 alias fd="fd -H"
 alias i3c="vim ~/.config/i3/config"
 alias history="fc -li 100"
+alias m="make"
+alias rg="ranger"
+alias td="vim -p ~/tasks/*.md"
 
 # tmux aliases
 alias ts="tmux new -s"
@@ -185,7 +188,7 @@ source ~/dotfiles/zsh/safe_rm.sh
 
 ## Custom functions
 function ff() {
-        find $1 -type f -print0 | xargs -0 grep -E $2
+        find $1 -type f -print0 | xargs -0 grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} -E $2
 }
 
 BASE16_SHELL=$HOME/.config/base16-shell/
