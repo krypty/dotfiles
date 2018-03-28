@@ -307,6 +307,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id thunderbird
 exec --no-startup-id pamac-tray
 exec --no-startup-id 'xinput --set-prop "SynPS/2 Synaptics TouchPad"  "libinput Natural Scrolling Enabled" 1'
+exec --no-startup-id owncloud
 
 # I3 Gaps
 for_window [class="^.*"] border pixel 2
