@@ -153,17 +153,10 @@ alias gd="git difftool"
 
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
-PATH=$PATH:/home/gary/workspace/xu3/buildroot/output/host/usr/bin
-
-# added by Anaconda2 4.3.1 installer
-# PATH="/home/gary/anaconda2/bin:$PATH"
 
 # Virtualenv Python
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
-
-# anaconda
-# export PATH=/home/gary/anaconda3/bin:$PATH
 
 # less utf-8
 export LESSCHARSET=UTF-8
