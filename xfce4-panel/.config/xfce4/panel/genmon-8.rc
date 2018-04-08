@@ -1,0 +1,6 @@
+Command=bash -c "df -h | grep /home | awk  '{print $6,$4}'"
+UseLabel=0
+Text=\ \ \ 
+UpdatePeriod=300000
+Font=Inconsolata for Powerline Medium 16
+

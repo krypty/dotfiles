@@ -2,5 +2,5 @@ Command=python /home/gary/dotfiles/.scripts/current_track_spotify.py
 UseLabel=0
 Text=(genmon)
 UpdatePeriod=5000
-Font=Bitstream Vera Sans 14
+Font=Inconsolata for Powerline Medium 16
 
