@@ -1,5 +1,7 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/gary/.oh-my-zsh
+if [[ -z "$ZSH" ]]; then
+	export ZSH=/home/gary/.oh-my-zsh
+fi
 
 # set a custom directory for the plugins/themes in order to use stow
 ZSH_CUSTOM=$HOME/.zsh_custom
@@ -100,12 +102,6 @@ bindkey -M viins '^k' vi-up-line-or-history
 bindkey -M vicmd '^k' vi-up-line-or-history
 bindkey -M viins '^j' vi-down-line-or-history
 bindkey -M vicmd '^j' vi-down-line-or-history
-## HADOOP
-# Set Hadoop-related environment variables
-export HADOOP_HOME=/usr/local/hadoop
-
-# Add Hadoop bin/ directory to PATH
-export PATH=$PATH:$HADOOP_HOME/bin
 
 # Force GTK theme for Qt based applications
 export QT_QPA_PLATFORMTHEME=qt5ct
