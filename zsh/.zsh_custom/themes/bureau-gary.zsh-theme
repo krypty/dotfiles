@@ -81,7 +81,7 @@ bureau_git_prompt () {
 _PATH="%{$fg_bold[white]%}%~%{$reset_color%}"
 
 # color the hostname with a unique color (hash-based hack)
-hostname_color="%B%F{$((`echo $HOST | md5sum | grep -Eo "[[:digit:]]{1}" | awk "NR==6"`))}"
+hostname_color="%B%F{$((`echo $HOST | md5sum | grep -Eo "[[:digit:]]{1}" | awk "NR==4"`))}"
 
 if [[ $EUID -eq 0 ]]; then
   _USERNAME="%{$fg_bold[red]%}%n"
