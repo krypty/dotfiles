@@ -322,5 +322,3 @@ smart_gaps on
 exec_always --no-startup-id "killall compton; compton --config /home/gary/.config/compton.conf"
 # exec_always --no-startup-id "killall conky; /usr/bin/conky -d -p10 -c /home/gary/.conkyrc"
 exec_always --no-startup-id nitrogen --restore
-
-exec_always --no-startup-id "killall flashfocus; flashfocus --opacity 0.7 --time 120"
