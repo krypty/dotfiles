@@ -112,6 +112,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 unset QT_STYLE_OVERRIDE
 
 export EDITOR=vim
+export PAGER=less
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -140,6 +141,7 @@ alias i3c="vim ~/.config/i3/config"
 alias history="fc -li 100"
 alias m="make"
 alias rg="ranger"
+alias v="vim"
 
 # tmux aliases
 alias ts="tmux new -s"
