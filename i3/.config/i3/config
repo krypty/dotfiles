@@ -119,8 +119,8 @@ bindsym $mod+v split v
 
 # Permet de changer de mode
 bindsym $mod+f fullscreen toggle
-bindsym $mod+s layout stacking
-bindsym $mod+z layout tabbed
+# bindsym $mod+s layout stacking
+# bindsym $mod+z layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+f floating toggle
 
