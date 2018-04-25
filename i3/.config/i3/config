@@ -312,7 +312,7 @@ exec --no-startup-id owncloud
 # I3 Gaps
 for_window [class="^.*"] border pixel 2
 for_window [class=".*"] title_format "  %title"
-gaps inner 5
+gaps inner 10
 smart_borders on
 smart_gaps on
 
