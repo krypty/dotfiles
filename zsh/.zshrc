@@ -143,6 +143,7 @@ alias history="fc -li 100"
 alias m="make"
 alias rg="ranger"
 alias v="vim"
+alias py="python"
 
 # tmux aliases
 alias ts="tmux new -s"
