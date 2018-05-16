@@ -189,6 +189,9 @@ setopt extended_glob
 # safe rm
 source ~/dotfiles/zsh/safe_rm.sh
 
+# pikaur cache in RAM
+source ~/dotfiles/zsh/move_pikaur_cache_in_ram.sh
+
 ## Custom functions
 function ff() {
         find $1 -type f -print0 | xargs -0 grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} -E $2
