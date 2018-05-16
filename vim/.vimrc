@@ -245,3 +245,5 @@ let base16colorspace=256
 augroup filetypedetect
   au BufRead,BufNewFile *.ffs set filetype=xml
 augroup END
+
+au FileType markdown setl sw=4 sts=4 et
