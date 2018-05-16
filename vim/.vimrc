@@ -224,6 +224,15 @@ vnoremap > >gv
 :imap jj <Esc>
 :imap ii <Esc>
 
+
+" Move lines
+nnoremap <C-S-j> :m .+1<CR>==
+nnoremap <C-S-k> :m .-2<CR>==
+inoremap <C-S-j> <Esc>:m .+1<CR>==gi
+inoremap <C-S-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-S-j> :m '>+1<CR>gv=gv
+vnoremap <C-S-k> :m '<-2<CR>gv=gv
+
 " Color scheme
 set background=dark
 " let g:hybrid_custom_term_colors = 1
