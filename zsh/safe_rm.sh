@@ -1,6 +1,6 @@
 # always be safe
 unalias rm 2>/dev/null
-real_rm=/bin/rm
+real_rm=`which rm`
 rm_opts=""
 
 function confirm {
