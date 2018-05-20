@@ -194,7 +194,7 @@ source ~/dotfiles/zsh/move_pikaur_cache_in_ram.sh
 
 ## Custom functions
 function ff() {
-        find $1 -type f -print0 | xargs -0 grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} -E $2
+        find $1 -type f -print0 | xargs -0 grep -I --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} -E $2
 }
 
 function td() {
@@ -202,5 +202,6 @@ function td() {
 
 }
 
+# Fix colors in shell
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
