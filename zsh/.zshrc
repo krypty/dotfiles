@@ -54,7 +54,7 @@ HIST_STAMPS="yyyy/mm/dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dirhistory pip extract colored-man-pages z mvn virtualenvwrapper vi-mode)
+plugins=(git dirhistory pip extract colored-man-pages z vi-mode)
 
 # User configuration
 
@@ -159,10 +159,6 @@ alias gd="git difftool"
 
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
-
-# Virtualenv Python
-export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
 
 # less utf-8
 export LESSCHARSET=UTF-8
