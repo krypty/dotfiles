@@ -103,6 +103,11 @@ bindkey -M vicmd '^k' vi-up-line-or-history
 bindkey -M viins '^j' vi-down-line-or-history
 bindkey -M vicmd '^j' vi-down-line-or-history
 
+# Fix the Delete key
+bindkey -M vicmd "\e[3~" delete-char
+bindkey -M viins "\e[3~" delete-char
+bindkey -M menuselect "\e[3~" delete-char
+
 # Force GTK theme for Qt based applications
 export QT_QPA_PLATFORMTHEME=qt5ct
 unset QT_STYLE_OVERRIDE
