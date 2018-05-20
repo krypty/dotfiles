@@ -80,7 +80,7 @@ bindsym $mod+Return exec $term
 # bindsym $mod+Return exec termite
 
 # start a file explorer
-set $explorer thunar
+set $explorer caja
 bindsym $mod+Shift+Return exec $explorer
 
 # kill focused window
