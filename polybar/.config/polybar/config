@@ -7,30 +7,38 @@
 ;
 ;=====================================================
 
+[globals]
+primary-mon = ${env:PRIMARY_MON}
+margin = 1
+
 [colors]
-; background = #222
-background = #88000000
+; background = #464646
+background = #373737
+; background = #88000000
+; background = #8800000
 ; background-alt = #444
 foreground = #dfdfdf
 ; foreground = #992f343f
 foreground-alt = #55
 primary = #ffb52a
-secondary = #e60053
+; secondary = #e60053
+secondary = #464646
 alert = #bd2c40
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 [bar/example]
-monitor = DVI-I-1
+; monitor = ${globals.primary-mon}
+monitor =
 width = 100%
-height = 27
+height = 24
 offset-x = 0
 offset-y = 0
 
 ;background = ${xrdb:color9}
-background = ${colors.background}
+background =  ${colors.background}
 foreground = ${colors.foreground}
 
 overline-size = 2
@@ -42,23 +50,24 @@ border-bottom-size = 2
 border-bottom-color = #333
 
 padding-left = 0
-padding-right = 2
+padding-right = 1
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 0
 
 ; font-0 = fixed:pixelsize=10
 ; font-1 = unifont:fontformat=truetype:size=6:heavy;-2
 ; font-2 = siji:pixelsize=10
 
 
-font-0 = NotoSans-Regular:size=8;-1
+font-0 = Inconsolata:size=10;2
 font-1 = MaterialIcons:size=14;0
-font-2 = Termsynu:size=8:antialias=false;-2
-font-3 = FontAwesome:size=10;0
+; font-2 = Termsynu:size=8:antialias=false;-2
+font-2 = FontAwesome:size=10;0
+font-3 = SourceCodeProForPowerline:size=10;0
 
-modules-left = bspwm i3 xwindow
+modules-left = powermenu i3
 modules-center =
-modules-right = xbacklight volume memory cpu wlan date powermenu
+modules-right = spotify-track battery battery1 filesystem volume memory cpu date
 
 tray-position = right
 tray-padding = 2
@@ -77,6 +86,11 @@ tray-padding = 2
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
 
+
+[module/spotify-track]
+type = custom/script
+exec = ~/dotfiles/.scripts/current_track_spotify.py
+interval = 30
 
 [module/xwindow]
 type = internal/xwindow
@@ -98,9 +112,9 @@ interval = 25
 
 mount-0 = /
 mount-1 = /home
-mount-2 = /invalid/mountpoint
+; mount-2 = /invalid/mountpoint
 
-label-mounted = %mountpoint%: %percentage_free%%
+label-mounted = %mountpoint%: %free%
 
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
@@ -110,75 +124,42 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+label-separator = |
+
+; ws-icon-0 = 1;
+; ws-icon-1 = 2;
+; ws-icon-2 = 3;
+; ws-icon-3 = 4;
+; ws-icon-4 = 5;
+; ws-icon-default = 
+
+; pin-workspaces = true;
 
 label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 label-focused = %index%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused-background = ${colors.secondary}
+; label-focused-underline = ${module/bspwm.label-focused-underline}
+label-focused-underline = #000000
+label-focused-padding = ${globals.margin}
 
 label-unfocused = %index%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused-padding = ${globals.margin}
 
 label-urgent = %index%!
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
+; label-urgent-background = ${module/bspwm.label-urgent-background}
+; label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
-[module/mpd]
-type = internal/mpd
-
-format-online = <label-song>  <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
-icon-prev = 
-icon-seekb = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-icon-seekf = 
-
-icon-random = 
-icon-repeat = 
-
-toggle-on-foreground = ${colors.primary}
-toggle-off-foreground = #66
-
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = │
-bar-indicator-foreground = #ff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
 [module/cpu]
 type = internal/cpu
-interval = 0.5
+interval = 1
 format = <label> <ramp-coreload>
 label =
 
@@ -220,7 +201,7 @@ ramp-coreload-7-foreground = #ff5555
 type = internal/memory
 interval = 3
 ; format = <bar-used>
-format-prefix = " "
+; format-prefix = "RAM "
 ; format-prefix-foreground = ${colors.foreground-alt}
 ; format-underline = #4bffdc
 label = %gb_used%
@@ -238,7 +219,7 @@ bar-used-empty-foreground = #444444
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = wlp4s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -326,11 +307,38 @@ ramp-volume-3 = 
 ; bar-volume-empty-font = 2
 ; bar-volume-empty-foreground = ${colors.foreground-alt}
 
+[module/battery1]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+full-at = 90
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
 [module/battery]
 type = internal/battery
 battery = BAT0
 adapter = ADP1
-full-at = 98
+full-at = 90
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
@@ -378,11 +386,11 @@ type = custom/menu
 format-spacing = 1
 
 label-open =  
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.primary}
 label-close = cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.primary}
 label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
+; label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1

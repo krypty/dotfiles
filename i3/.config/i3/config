@@ -254,6 +254,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # tip: use xprop to find out the class (WM_CLASS)
 for_window [class="Gitg"] floating enable
 for_window [class="Thunderbird"] floating enable
+for_window [class="FUGE-LC"] floating enable
 
 ###############################
 #            MISC             #
@@ -302,7 +303,7 @@ exec --no-startup-id redshift-gtk # -l 46.930745:6.815189 -t 6500:3400 -l manual
 exec --no-startup-id insync start
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id "xfce4-panel -d"
+# exec --no-startup-id "xfce4-panel -d"
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id thunderbird
 exec --no-startup-id pamac-tray
@@ -318,7 +319,7 @@ smart_gaps on
 
 # Redémarre polybar quand on redémarre i3
 # exec_always --no-startup-id "killall polybar;polybar -r center & polybar -r left & polybar -r right"
-# exec_always --no-startup-id "killall polybar;polybar -r example"
+exec_always --no-startup-id "source ~/.profile; killall polybar;polybar -r example"
 exec_always --no-startup-id "killall compton; compton --config /home/gary/.config/compton.conf"
 # exec_always --no-startup-id "killall conky; /usr/bin/conky -d -p10 -c /home/gary/.conkyrc"
 exec_always --no-startup-id nitrogen --restore
