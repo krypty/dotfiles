@@ -1,7 +1,5 @@
 # Path to your oh-my-zsh installation.
-if [[ -z "$ZSH" ]]; then
-	export ZSH=/home/gary/.oh-my-zsh
-fi
+export ZSH=$HOME/.oh-my-zsh
 
 # set a custom directory for the plugins/themes in order to use stow
 ZSH_CUSTOM=$HOME/.zsh_custom
@@ -174,15 +172,14 @@ n_proc_minus_one=`nproc`
 let "n_proc_minus_one-=1"
 export XZ_OPT="--threads=$n_proc_minus_one"
 
+# source hostname-specific commands
+source $HOME/dotfiles/.scripts/globals/`hostname`.sh
 
 # set extended glob
 setopt extended_glob
 
 # safe rm
 source ~/dotfiles/zsh/safe_rm.sh
-
-# pikaur cache in RAM
-source ~/dotfiles/zsh/move_pikaur_cache_in_ram.sh
 
 ## Custom functions
 function ff() {
