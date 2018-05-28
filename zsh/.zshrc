@@ -173,7 +173,9 @@ let "n_proc_minus_one-=1"
 export XZ_OPT="--threads=$n_proc_minus_one"
 
 # source hostname-specific commands
-source $HOME/dotfiles/.scripts/globals/`hostname`.sh
+if [ -f $HOME/dotfiles/.scripts/globals/`hostname`.sh ]; then
+     source $HOME/dotfiles/.scripts/globals/`hostname`.sh
+fi
 
 # set extended glob
 setopt extended_glob
@@ -183,7 +185,7 @@ source ~/dotfiles/zsh/safe_rm.sh
 
 ## Custom functions
 function ff() {
-        find $1 -type f -print0 | xargs -0 grep -I --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} -E $2
+     find $1 -type f -print0 | xargs -0 grep -I --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} -E $2
 }
 
 function td() {
