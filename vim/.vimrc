@@ -75,6 +75,8 @@ let python_highlight_all = 1
 Plugin 'suan/vim-instant-markdown'
 let g:instant_markdown_autostart=0
 
+Plugin 'tpope/vim-surround'
+
 Plugin 'tpope/vim-markdown'
 let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
 
