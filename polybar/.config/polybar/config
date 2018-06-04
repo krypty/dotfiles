@@ -62,7 +62,7 @@ module-margin-right = 0
 font-0 = Inconsolata:size=10;2
 font-1 = MaterialIcons:size=14;0
 ; font-2 = Termsynu:size=8:antialias=false;-2
-font-2 = FontAwesome:size=10;0
+font-2 = FontAwesome:size=16;3
 font-3 = SourceCodeProForPowerline:size=10;0
 
 modules-left = powermenu i3
@@ -108,7 +108,8 @@ label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
-interval = 25
+interval = 300
+; label = 
 
 mount-0 = /
 mount-1 = /home
@@ -271,13 +272,13 @@ label = %time% %date%
 type = internal/volume
 
 format-volume = <ramp-volume> <label-volume>
-label-muted =   muted
+label-muted = 
 label-muted-foreground = #66
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
 
 ; type = internal/volume
 ;
@@ -313,24 +314,30 @@ battery = BAT1
 adapter = ADP1
 full-at = 90
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+time-format = %R
 
+format-charging = <animation-charging> <label-charging>
+; format-charging-underline = #ffb52a
+
+label-discharging = %percentage%% (%time%)
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+; format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+; format-full-underline = ${self.format-charging-underline}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.foreground}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
@@ -340,24 +347,30 @@ battery = BAT0
 adapter = ADP1
 full-at = 90
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+time-format = %R
 
+format-charging = <animation-charging> <label-charging>
+; format-charging-underline = #ffb52a
+
+label-discharging = %percentage%% (%time%)
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+; format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+; format-full-underline = ${self.format-charging-underline}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.foreground}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
