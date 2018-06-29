@@ -143,7 +143,7 @@ label-mode-background = ${colors.primary}
 label-focused = %index%
 label-focused-background = ${colors.secondary}
 ; label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-underline = #000000
+; label-focused-underline = #000000
 label-focused-padding = ${globals.margin}
 
 label-unfocused = %index%
@@ -155,7 +155,7 @@ label-urgent = %index%!
 
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+; label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 [module/cpu]
