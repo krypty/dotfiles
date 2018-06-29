@@ -107,7 +107,8 @@ bindkey -M viins "\e[3~" delete-char
 bindkey -M menuselect "\e[3~" delete-char
 
 # Force GTK theme for Qt based applications
-export QT_QPA_PLATFORMTHEME=qt5ct
+# export QT_QPA_PLATFORMTHEME=qt5ct
+set QT_QPA_PLATFORMTHEME=gtk2
 unset QT_STYLE_OVERRIDE
 
 export EDITOR=vim
