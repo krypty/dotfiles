@@ -134,7 +134,6 @@ alias run-jupyter="bash ~/run-jupyter.sh"
 alias vpn="sudo openconnect remote.heig-vd.ch  --servercert sha256:37fb600e2df69cd181801741a4992232a924550378f86660ead5e76a30ac76e9 --authgroup All_Users --user gary.mariglia"
 alias calc="loffice --calc"
 alias jp="jupyter-notebook"
-alias ztic="/home/gary/ZTIC/zticproxy -mount:/media/gary/BCN-NETKEY/"
 alias dots="cd ~/dotfiles"
 alias fd="fd -H"
 alias i3c="vim ~/.config/i3/config"
@@ -192,9 +191,14 @@ function ff() {
 
 function td() {
      bash -c "cd ~/tasks/ && vim -p *.md"
-
 }
 
+function ztic() {
+     sudo mkdir -p /media/gary/BCN-NETKEY
+     sudo mount /dev/disk/by-label/BCN-NETKEY /media/gary/BCN-NETKEY -o rw,nosuid,nodev,relatime,uid=1000
+     ./ZTIC/zticproxy -mount:/media/gary/BCN-NETKEY
+     sudo umount /media/gary/BCN-NETKEY                                                      
+}
 # Fix colors in shell
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
