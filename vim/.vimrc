@@ -108,6 +108,12 @@ Plugin 'terryma/vim-expand-region'
 
 Plugin 'tomtom/tcomment_vim'
 
+" Extended f, F,t and T key mappings
+Plugin 'rhysd/clever-f.vim'
+
+" Range, pattern and substitute preview for Vim
+Plugin 'markonm/traces.vim'
+
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
