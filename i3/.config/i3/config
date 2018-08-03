@@ -202,9 +202,6 @@ bindsym $mod+$alt+p exec "~/.screenlayout/single_laptop_monitor.sh && brightness
 # Launch lockscreen
 bindsym $mod+$alt+l exec ~/dotfiles/.scripts/lock.sh
 
-# Disable caps lock
-exec --no-startup-id  "setxkbmap -option caps:none"
-
 ###############################
 #          SOURIS             #
 ###############################
