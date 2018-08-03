@@ -107,7 +107,7 @@
     "editor.renderControlCharacters": false,
     "java.errors.incompleteClasspath.severity": "ignore",
     "extensions.ignoreRecommendations": false,
-    "workbench.colorTheme": "Base16 Ocean Dark",
+    "workbench.colorTheme": "Base16 Gruvbox dark, soft",
     ////////////////////////////////////
     /////////////// CPP ////////////////
     ////////////////////////////////////
