@@ -155,6 +155,7 @@ alias youtube-dl-playlist-mp3="youtube-dl-playlist -x --audio-format=mp3 --audio
 # git aliases
 alias gd="git difftool"
 alias gds="git difftool --staged"
+alias lg="lazygit"
 
 # Android SDK, adb and tools
 PATH=$PATH:/home/gary/Android/Sdk/platform-tools
