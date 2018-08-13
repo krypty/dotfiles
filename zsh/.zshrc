@@ -198,7 +198,7 @@ function ztic() {
      sudo mkdir -p /media/gary/BCN-NETKEY
      sudo mount /dev/disk/by-label/BCN-NETKEY /media/gary/BCN-NETKEY -o rw,nosuid,nodev,relatime,uid=1000
      ./ZTIC/zticproxy -mount:/media/gary/BCN-NETKEY
-     sudo umount /media/gary/BCN-NETKEY                                                      
+     sudo umount /media/gary/BCN-NETKEY
 }
 # Fix colors in shell
 BASE16_SHELL=$HOME/.config/base16-shell/
