@@ -269,21 +269,21 @@ for_window [instance="math"] move scratchpad
 for_window [instance="math"] border pixel 5
 exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /math\.URxvt/ {print $1}'); do wmctrl -ic $win; done; $term -name math  -fn 'xft:Bitstream Vera Sans Mono:pixelsize=22' -e python -q"
 
-# Quick math terminal
-bindsym $mod+t [instance="telegram"] scratchpad show; [instance="telegram"] move position center
-for_window [instance="telegram"] floating enable
-for_window [instance="telegram"] resize set 800 600
-for_window [instance="telegram"] move scratchpad
-for_window [instance="telegram"] border pixel 5
-exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /telegram\.URxvt/ {print $1}'); do wmctrl -ic $win; done; $term -name telegram -e nctelegram"
+# # Quick math terminal
+# bindsym $mod+t [instance="telegram"] scratchpad show; [instance="telegram"] move position center
+# for_window [instance="telegram"] floating enable
+# for_window [instance="telegram"] resize set 800 600
+# for_window [instance="telegram"] move scratchpad
+# for_window [instance="telegram"] border pixel 5
+# exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /telegram\.URxvt/ {print $1}'); do wmctrl -ic $win; done; $term -name telegram -e nctelegram"
 
 # Quick math terminal
-# bindsym $mod+t [class="Telegram"] scratchpad show; [class="Telegram"] move position center
-# for_window [class="Telegram"] floating enable
-# for_window [class="Telegram"] resize set 1200 800
-# for_window [class="Telegram"] move scratchpad
-# for_window [class="Telegram"] border pixel 5
-# exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /Telegram/ {print $1}'); do wmctrl -ic $win; done; telegram-desktop"
+bindsym $mod+t [class="Telegram"] scratchpad show; [class="Telegram"] move position center
+for_window [class="Telegram"] floating enable
+for_window [class="Telegram"] resize set 1200 800
+for_window [class="Telegram"] move scratchpad
+for_window [class="Telegram"] border pixel 5
+exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /Telegram/ {print $1}'); do wmctrl -ic $win; done; telegram-desktop"
 
 
 
