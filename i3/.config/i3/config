@@ -25,25 +25,6 @@ set_from_resource       $inactive     secondary
 set_from_resource       $background   background
 set_from_resource       $foreground   foreground
 
-set_from_resource       $base00       base00
-set_from_resource       $base01       base01
-set_from_resource       $base02       base02
-set_from_resource       $base03       base03
-set_from_resource       $base04       base04
-set_from_resource       $base05       base05
-set_from_resource       $base06       base06
-set_from_resource       $base07       base07
-set_from_resource       $base08       base08
-set_from_resource       $base09       base09
-set_from_resource       $base0A       base0A
-set_from_resource       $base0B       base0B
-set_from_resource       $base0C       base0C
-set_from_resource       $base0D       base0D
-set_from_resource       $base0E       base0E
-set_from_resource       $base0F       base0F
-
-
-
 # class                 border      backgr.     text           indicat   child_border
 client.focused          $background #303040     $foreground    #2e9ef4   $active
 client.focused_inactive $background #303040     $foreground    #484e50   $inactive

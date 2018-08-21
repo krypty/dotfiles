@@ -1,111 +1,50 @@
-! ! =================
-! ! ============
-! !   Couleurs
-! ! ============
-! *background: #1D1D26
-! *foreground: #B3B3D4
-! *secondary:  #535172
-! *active:     #FFCC66
-! !black
-! *color0:     #1D1D26
-! *color8:     #928374
-! !red
-! *color1:     #E20049
-! *color9:     #E20049
-! !green
-! *color2:     #00F572
-! *color10:    #00D965
-! !yellow
-! *color3:     #FFCC66
-! *color11:    #D9AD57
-! !blue
-! *color4:     #00BFFF
-! *color12:    #00A3D9
-! !magenta
-! *color5:     #FF3399
-! *color13:    #BD2671
-! !cyan
-! *color6:     #7874A6
-! *color14:    #535172
-! !white
-! *color7:     #F8F8F0
-! *color15: #B3B3AD
+! terminal.sexy tomorrow dark
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+*secondary:  #535172
+*active:     #FFCC66
 
+! black
+*.color0:       #1d1f21
+*.color8:       #969896
 
-! Base16 Ocean
-! Scheme: Chris Kempson (http://chriskempson.com)
+! red
+*.color1:       #cc6666
+*.color9:       #cc6666
 
-#define base00 #2b303b
-#define base01 #343d46
-#define base02 #4f5b66
-#define base03 #65737e
-#define base04 #a7adba
-#define base05 #c0c5ce
-#define base06 #dfe1e8
-#define base07 #eff1f5
-#define base08 #bf616a
-#define base09 #d08770
-#define base0A #ebcb8b
-#define base0B #a3be8c
-#define base0C #96b5b4
-#define base0D #8fa1b3
-#define base0E #b48ead
-#define base0F #ab7967
+! green
+*.color2:       #b5bd68
+*.color10:      #b5bd68
 
+! yellow
+*.color3:       #f0c674
+*.color11:      #f0c674
 
-*base00:      base00
-*base01:      base01
-*base02:      base02
-*base03:      base03
-*base04:      base04
-*base05:      base05
-*base06:      base06
-*base07:      base07
-*base08:      base08
-*base09:      base09
-*base0A:      base0A
-*base0B:      base0B
-*base0C:      base0C
-*base0D:      base0D
-*base0E:      base0E
-*base0F:      base0F
+! blue
+*.color4:       #81a2be
+*.color12:      #81a2be
 
-*background: base00
-*foreground: base04
-*secondary:  base02
-*active:     base0A
-!black
-*color0:     base00
-*color8:     base01
-!red
-*color1:     base08
-*color9:     base08
-!green
-*color2:     base0B
-*color10:    base0B
-!yellow
-*color3:     base0A
-*color11:    base0A
-!blue
-*color4:     base0D
-*color12:    base0D
-!magenta
-*color5:     base0E
-*color13:    base0E
-!cyan
-*color6:     base0C
-*color14:    base0D
-!white
-*color7:     base06
-*color15:    base07
+! magenta
+*.color5:       #b294bb
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #8abeb7
+*.color14:      #8abeb7
+
+! white
+*.color7:       #c5c8c6
+*.color15:      #ffffff
 
 ! rofi
 ! =================
 rofi.font:              "Bitstream Vera Sans" medium 20
 rofi.fullscreen: true
 rofi.color-enabled: true
-rofi.color-window: argb:e81d1d26,argb:00292f37,#259E83
-rofi.color-normal: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#259E83
+rofi.color-window: argb:f41d1f21,argb:00292f37,#f0c674
+rofi.color-normal: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#f0c674
 rofi.color-active: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#B3B3AD
 rofi.color-urgent: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#B3B3AD
 
@@ -189,21 +128,4 @@ URxvt.keysym.C-slash:  font-size:show
 
 ! Alt-Esc to enter in keyboard select mode
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
-
-! URxvt*color0: #101010
-! URxvt*color1: #f13a21
-! URxvt*color2: #93f91d
-! URxvt*color3: #ffd00a
-! URxvt*color4: #004f9e
-! URxvt*color5: #ec0048
-! URxvt*color6: #2aa7e7
-! URxvt*color7: #f2f2f2
-! URxvt*color8: #1d202f
-! URxvt*color9: #ff361e
-! URxvt*color10: #ffc005
-! URxvt*color11: #93ff00
-! URxvt*color12: #0071ff
-! URxvt*color13: #ef0051
-! URxvt*color14: #4bb8fd
-! URxvt*color15: #a020f0
 

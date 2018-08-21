@@ -200,9 +200,9 @@ function ztic() {
      ./ZTIC/zticproxy -mount:/media/gary/BCN-NETKEY
      sudo umount /media/gary/BCN-NETKEY
 }
-# Fix colors in shell
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+# # Fix colors in shell
+# BASE16_SHELL=$HOME/.config/base16-shell/
+# [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 
 # pyenv
