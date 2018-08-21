@@ -29,12 +29,11 @@
     ////////////////////////////////////
     ////////////// Window //////////////
     ////////////////////////////////////
-    // Controls how folders are being reopened after a restart. Select 'none' to never reopen a folder, 'one' to reopen the last folder you worked on or 'all' to reopen all folders of your last session.
-    "window.reopenFolders": "all",
     // Columns at which to show vertical rulers
     "editor.rulers": [
         80
     ],
+    "editor.lineNumbers": "relative",
     ////////////////////////////////////
     ////////////// Files ///////////////
     ////////////////////////////////////
@@ -53,6 +52,12 @@
     "files.associations": {
         "*.ffs": "xml"
     },
+    ////////////////////////////////////
+    ////////////// SEARCH //////////////
+    ////////////////////////////////////
+
+    "search.smartCase": true,
+
     ////////////////////////////////////
     //////////////// CSS ///////////////
     ////////////////////////////////////
@@ -96,18 +101,14 @@
     ////////////////////////////////////
     //////////// Easy SASS /////////////
     ////////////////////////////////////
-    "easysass.formats": [
-        {
-            "format": "expanded",
-            "extension": ".css"
-        }
-    ],
+    "easysass.formats": [{
+        "format": "expanded",
+        "extension": ".css"
+    }],
     "editor.minimap.enabled": false,
     "material-icon-theme.showUpdateMessage": false,
     "editor.renderControlCharacters": false,
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "extensions.ignoreRecommendations": false,
-    "workbench.colorTheme": "Base16 Gruvbox dark, soft",
+    "workbench.colorTheme": "Base16 Gruvbox dark, hard",
     ////////////////////////////////////
     /////////////// CPP ////////////////
     ////////////////////////////////////
@@ -116,7 +117,26 @@
     },
     "C_Cpp.autocomplete": "Disabled",
 
-    "c-cpp-flylint.clang.pedantic": true,
-    "c-cpp-flylint.clang.pedanticErrors": true,
-    "c-cpp-flylint.clang.standard": ["c++14"]
+    "sync.gist": "1cb65720100d6aa4c8131634f9a89748",
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastUpload": "2018-08-21T16:49:14.233Z",
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+
+    ////////////////////////////////////
+    ///////// Breadcrumb nav ///////////
+    ////////////////////////////////////
+    "breadcrumbs.enabled": true,
+
+    ////////////////////////////////////
+    ///////////// Python ///////////////
+    ////////////////////////////////////
+    "python.formatting.provider": "black"
 }
