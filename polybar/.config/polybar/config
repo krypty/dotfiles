@@ -269,7 +269,13 @@ format-prefix-foreground = ${colors.foreground-alt}
 label = %time% %date%
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
+; Soundcard to be used
+; Usually in the format hw:# where # is the card number
+; You can find the different card numbers in `/proc/asound/cards`
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
 
 format-volume = <ramp-volume> <label-volume>
 label-muted = 
@@ -280,33 +286,15 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-3 = 
 
-; type = internal/volume
-;
-; format-volume = <label-volume> <bar-volume>
-; label-volume = VOL
-; label-volume-foreground = ${root.foreground}
-;
-; format-muted-prefix = " "
-; format-muted-foreground = ${colors.foreground-alt}
-; label-muted = sound muted
-;
-; bar-volume-width = 10
-; bar-volume-foreground-0 = #55aa55
-; bar-volume-foreground-1 = #55aa55
-; bar-volume-foreground-2 = #55aa55
-; bar-volume-foreground-3 = #55aa55
-; bar-volume-foreground-4 = #55aa55
-; bar-volume-foreground-5 = #f5a70a
-; bar-volume-foreground-6 = #ff5555
-; bar-volume-gradient = false
-; bar-volume-indicator = │
-; bar-volume-indicator-font = 2
-; bar-volume-indicator-foreground = #ff
-; bar-volume-fill = ─
-; bar-volume-fill-font = 2
-; bar-volume-empty = ─
-; bar-volume-empty-font = 2
-; bar-volume-empty-foreground = ${colors.foreground-alt}
+; If defined, it will replace <ramp-volume> when
+; headphones are plugged in to `headphone_control_numid`
+; If undefined, <ramp-volume> will be used for both
+; Only applies if <ramp-volume> is used
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+ramp-headphones-2 = 
+ramp-headphones-3 = 
+
 
 [module/battery1]
 type = internal/battery
