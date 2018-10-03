@@ -128,6 +128,9 @@ Plugin 'markonm/traces.vim'
 
 " Switch between header and source
 Plugin 'derekwyatt/vim-fswitch'
+Plugin 'mhinz/vim-startify'
+let g:startify_custom_header = ['']
+
 " Illuminate other uses of the current word under the cursor
 Plugin 'RRethy/vim-illuminate'
 
