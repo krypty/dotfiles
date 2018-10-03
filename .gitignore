@@ -3,3 +3,5 @@ vim/.vim/.backup/*
 vim/.vim/.swp/*
 
 vim/.vim/bundle/*
+vim/.vim/black/*
+vim/.vim/session/*
