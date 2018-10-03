@@ -202,6 +202,9 @@ set hidden
 " ability to toogle search with F3
 nnoremap <F3> :set hlsearch!<CR>
 
+" Keep n lines visibles above/below the cursor
+set scrolloff=10
+
 " enable mouse
 set mouse=a
 
