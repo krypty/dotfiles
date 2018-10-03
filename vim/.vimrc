@@ -138,16 +138,18 @@ filetype indent plugin on
 " enable syntax highlighting
 syntax on
 
-" custom font on gVim
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-  elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h14
-  elseif has("gui_win32")
-    set guifont=Lucida_Console:h10
-  endif
-endif
+" " custom font on gVim
+" if has("gui_running")
+"   if has("gui_gtk2")
+"     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
+"   elseif has("gui_macvim")
+"     set guifont=Menlo\ Regular:h14
+"   elseif has("gui_win32")
+"     set guifont=Lucida_Console:h10
+"   endif
+" endif
+
+set encoding=UTF-8
 
 " set leader key
 let mapleader=" "
