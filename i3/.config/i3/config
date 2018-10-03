@@ -246,11 +246,11 @@ for_window [class="FUGE-LC"] floating enable
 # bindsym $mod+Shift+t [instance="metask"] scratchpad show
 
 # Scratchpad Thunderbird
-bindsym $mod+m [class="Thunderbird"] scratchpad show; [class="Thunderbird"] move position center
-for_window [class="Thunderbird"] floating enable
-for_window [class="Thunderbird"] resize set 1600 900
-for_window [class="Thunderbird"] move scratchpad
-for_window [class="Thunderbird"] border pixel 5
+bindsym $mod+m [title="Inbox.*" class="Thunderbird"] scratchpad show; [title="Inbox.*" class="Thunderbird"] move position center
+for_window [title="Inbox.*" class="Thunderbird"] floating enable
+# for_window [class="Thunderbird"] resize set 1600 900
+for_window [title="Inbox.*" class="Thunderbird"] move scratchpad
+for_window [title="Inbox.*" class="Thunderbird"] border pixel 5
 
 # Quick math terminal
 bindsym $mod+c [instance="math"] scratchpad show; [instance="math"] move position center
