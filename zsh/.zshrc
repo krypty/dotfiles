@@ -210,3 +210,13 @@ function ztic() {
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# zsh hooks
+autoload -U add-zsh-hook
+
+# source .sourceme file if exist on dir changed
+function run-source-me() {
+        if [[ -x .sourceme ]]; then
+                source .sourceme
+        fi
+}
+add-zsh-hook chpwd run-source-me
