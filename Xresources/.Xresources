@@ -90,11 +90,20 @@ URxvt*scrollTtyKeypress: true
 ! URxvt*italicFont: xft:Monospace:ixelsize=14
 
 ! Require to install Source Code Pro and Symbola fonts
-URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
-URxvt*boldFont: xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
+! URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
+! URxvt*boldFont: xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:Source\ Code\ Pro\ SemiBold:pixelsize=15:antialias=true:hinting=true,xft:symbola:size=9
 
-URxvt.letterSpace: 0
-URxvt.lineSpace: 1
+! URxvt*font: xft:Source Code Pro for Powerline:size=12
+! URxvt*boldFont: xft:Source Code Pro for Powerline:bold:size=12
+! URxvt*italicFont: xft:Source Code Pro for Powerline:italic:size=12
+
+! Requires packages: nerd-fonts-complete, ner-fonts-source-code-pro and ttf-symbola
+URxvt*font: xft:Sauce Code Pro Nerd Font Mono-13,symbola:size:10
+URxvt*boldFont: xft:Sauce Code Pro Nerd Font Mono:semibold:pixelsize=18
+URxvt*italicFont: xft:Sauce Code Pro Nerd Font Mono:italic:pixelsize=18
+URxvt*boldItalicFont: xft:Sauce Code Pro Nerd Font Mono:semibold:italic:pixelsize=18
+! URxvt.letterSpace: 0
+! URxvt.lineSpace: 1
 ! URxvt.letterSpace: -1
 
 Xft.hinting: true
