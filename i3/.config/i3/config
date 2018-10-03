@@ -8,8 +8,8 @@
 set $mod Mod4
 set $alt Mod1
 
-set $monleft HDMI-2
-set $monright DP-1
+set $monleft DP-1
+set $monright HDMI-2
 
 # i3 config file (v4)
 #

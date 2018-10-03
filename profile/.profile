@@ -1,6 +1,6 @@
 /usr/bin/anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 
-export PRIMARY_MON=eDP-1
+export PRIMARY_MON=HDMI-2
 
 
 # Disable caps lock
