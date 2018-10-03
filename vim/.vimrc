@@ -131,6 +131,9 @@ Plugin 'derekwyatt/vim-fswitch'
 Plugin 'mhinz/vim-startify'
 let g:startify_custom_header = ['']
 
+" A solid language pack for Vim.
+Plugin 'sheerun/vim-polyglot'
+
 " Illuminate other uses of the current word under the cursor
 Plugin 'RRethy/vim-illuminate'
 
