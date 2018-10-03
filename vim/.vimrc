@@ -111,6 +111,9 @@ noremap <F2> :NERDTreeToggle<cr>
 " vim-autoformat
 Plugin 'Chiel92/vim-autoformat'
 noremap <F4> :Autoformat<CR>
+autocmd FileType c noremap <F4> :ClangFormat<CR>
+autocmd FileType cpp noremap <F4> :ClangFormat<CR>
+autocmd FileType python noremap <F4> :Black<CR>
 
 " vim-expand-region
 Plugin 'terryma/vim-expand-region'
