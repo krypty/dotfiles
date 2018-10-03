@@ -142,6 +142,7 @@ alias m="make"
 alias rg="ranger"
 alias v="vim"
 alias py="python"
+alias wtr="curl 'http://wttr.in/lausanne?lang=fr'"
 
 # tmux aliases
 alias ts="tmux new -s"
