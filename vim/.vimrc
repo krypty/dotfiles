@@ -106,7 +106,7 @@ Plugin 'elzr/vim-json'
 
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
-noremap <leader>o :NERDTreeToggle<cr>
+noremap <F2> :NERDTreeToggle<cr>
 
 " vim-autoformat
 Plugin 'Chiel92/vim-autoformat'
