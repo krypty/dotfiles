@@ -126,6 +126,8 @@ Plugin 'rhysd/clever-f.vim'
 " Range, pattern and substitute preview for Vim
 Plugin 'markonm/traces.vim'
 
+" Switch between header and source
+Plugin 'derekwyatt/vim-fswitch'
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
@@ -269,3 +271,8 @@ augroup filetypedetect
 augroup END
 
 au FileType markdown setl sw=4 sts=4 et
+
+
+" Cpp specific
+autocmd FileType c noremap <Leader>o :FSHere<CR>
+autocmd FileType cpp noremap <Leader>o :FSHere<CR>
