@@ -128,6 +128,7 @@ Plugin 'markonm/traces.vim'
 
 " Switch between header and source
 Plugin 'derekwyatt/vim-fswitch'
+Plugin 'ambv/black'
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
