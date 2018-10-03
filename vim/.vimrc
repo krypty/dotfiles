@@ -30,7 +30,7 @@ Plugin 'morhetz/gruvbox'
 " let g:gruvbox_italicize_strings=0
 " let g:gruvbox_italicize_comments=1
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
