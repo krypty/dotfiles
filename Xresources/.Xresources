@@ -138,3 +138,6 @@ URxvt.keysym.C-slash:  font-size:show
 ! Alt-Esc to enter in keyboard select mode
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
+! Scroll output
+URxvt.keysym.C-Shift-K: command:\033]720;1\007
+URxvt.keysym.C-Shift-J: command:\033]721;1\007
