@@ -17,6 +17,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'morhetz/gruvbox'
+let g:gruvbox_bold=1
 " let g:gruvbox_italic=1
 " let g:gruvbox_italicize_strings=0
 " let g:gruvbox_italicize_comments=1
@@ -27,18 +28,32 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_custom_ignore = '\v[\/](vendor|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
-" Open CtrlP selection into a new tab instead of a new window
+" In CtrlP use <c-v> and <c-b> to open in vsplit and split
+" replace old <c-b> mapping to <c-F> cycling between mode backward
 let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
+      \ 'AcceptSelection("h")': ['<c-b>'],
+      \ 'ToggleType(-1)': ['<c-F>'],
+      \ }
+" let g:ctrlp_prompt_mappings = {
+"       \ 'AcceptSelection("e")': ['<c-t>'],
+"       \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+"       \ }
+nnoremap <c-g> :CtrlPBuffer<CR>
 
-" Show list of opened documents
-noremap <C-b> :CtrlPBuffer<CR>
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor\ --hidden
 
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-Plugin 'DavidEGx/ctrlp-smarttabs'
-nnoremap tf :CtrlPSmartTabs<CR>
+  " ag is fast enough that CtrlP doesn't need to cache
+  " let g:ctrlp_use_caching = 0
+endif
+
+" Plugin 'DavidEGx/ctrlp-smarttabs'
+" nnoremap tf :CtrlPSmartTabs<CR>
 
 Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
@@ -60,10 +75,6 @@ if exists('&signcolumn')  " Vim 7.4.2201
 else
   let g:gitgutter_sign_column_always = 1
 endif
-
-" Better python highlighting
-Plugin 'hdima/python-syntax'
-let python_highlight_all = 1
 
 " --- Markdown
 " require some packages, see: https://github.com/suan/vim-instant-markdown
@@ -87,9 +98,6 @@ Plugin 'tpope/vim-fugitive'
 " Loupe (better search defaults)
 Plugin 'wincent/loupe'
 
-" JSON
-Plugin 'elzr/vim-json'
-
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 noremap <F2> :NERDTreeToggle<cr>
@@ -109,13 +117,34 @@ Plugin 'tomtom/tcomment_vim'
 " Extended f, F,t and T key mappings
 Plugin 'rhysd/clever-f.vim'
 
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'haya14busa/incsearch-easymotion.vim'
+
+
+map / <Plug>(incsearch-easymotion-/)
+
 " Range, pattern and substitute preview for Vim
 Plugin 'markonm/traces.vim'
 
 " Switch between header and source
 Plugin 'derekwyatt/vim-fswitch'
+
+" Clang
+Plugin 'Rip-Rip/clang_complete'
+
+Plugin 'rhysd/vim-clang-format'
+let g:clang_format#code_style = 'llvm'
+autocmd FileType c ClangFormatAutoEnable
+autocmd FileType cpp ClangFormatAutoEnable
+
 Plugin 'mhinz/vim-startify'
 let g:startify_custom_header = ['']
+
+" Plugin 'jiangmiao/auto-pairs'
 
 " A solid language pack for Vim.
 Plugin 'sheerun/vim-polyglot'
@@ -127,6 +156,29 @@ Plugin 'RRethy/vim-illuminate'
 Plugin 'ryanoasis/vim-devicons'
 
 Plugin 'ambv/black'
+
+" Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
+Plugin 'w0rp/ale'
+" Enable completion where available.
+let g:ale_completion_enabled = 1
+
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
+
+Plugin 'davidhalter/jedi-vim'
+
+Plugin 'tpope/vim-eunuch'
+
+Plugin 'vim-scripts/taglist.vim'
+nnoremap <F5> :TlistToggle<CR>
+" let Tlist_Use_Right_Window=1
+" let Tlist_WinWidth=120
+
+Plugin 'wsdjeg/FlyGrep.vim'
+let g:FlyGrep_search_tools = ['ag']
+" let g:FlyGrep_input_delay = 200
+nnoremap <Space>g :FlyGrep<cr>
+
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
@@ -136,19 +188,10 @@ call vundle#end()            " required by Vundle
 " Also required by Vundle
 filetype indent plugin on
 
+filetype plugin on
+
 " enable syntax highlighting
 syntax on
-
-" " custom font on gVim
-" if has("gui_running")
-"   if has("gui_gtk2")
-"     set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-"   elseif has("gui_macvim")
-"     set guifont=Menlo\ Regular:h14
-"   elseif has("gui_win32")
-"     set guifont=Lucida_Console:h10
-"   endif
-" endif
 
 set encoding=UTF-8
 
@@ -156,7 +199,7 @@ set encoding=UTF-8
 let mapleader=" "
 
 " Save one keystroke
-nnoremap , :
+" nnoremap , :
 
 " show line numbers
 set number
@@ -205,7 +248,7 @@ set mouse=a
 
 set t_Co=256
 
-set colorcolumn=90
+set colorcolumn=80,100
 
 " store undo changes across files openings
 set undofile
@@ -235,12 +278,11 @@ set clipboard=unnamed,unnamedplus
 nnoremap j gj
 nnoremap k gk
 
-" Manage tabs with shorter keymaps
-nnoremap tn :tabnew<Space>
-nnoremap tk :tabnext<CR>
-nnoremap tj :tabprev<CR>
-nnoremap th :tabfirst<CR>
-nnoremap tl :tablast<CR>
+" Manage buffers with shorter keymaps
+nnoremap tk :bnext<CR>
+nnoremap tj :bprevious<CR>
+nnoremap th :bfirst<CR>
+nnoremap tl :blast<CR>
 
 " Keep selected text selected when fixing indentation
 vnoremap < <gv
@@ -259,6 +301,18 @@ inoremap <C-S-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-S-j> :m '>+1<CR>gv=gv
 vnoremap <C-S-k> :m '<-2<CR>gv=gv
 
+" Scroll through completion list
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+" Accept completion using <CR> i.e. Enter without inserting new line
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+" Cancel completion with Esc
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+
+" Substitute with word-under-cursor pre-written
+nnoremap S :s/\(<c-r>=expand("<cword>")<cr>\)/
+
 " Color scheme
 set background=dark
 " let g:hybrid_custom_term_colors = 1
@@ -272,9 +326,11 @@ augroup filetypedetect
   au BufRead,BufNewFile *.ffs set filetype=xml
 augroup END
 
-au FileType markdown setl sw=4 sts=4 et
+" au FileType markdown setl sw=4 sts=4 et
 
 
 " Cpp specific
 autocmd FileType c noremap <Leader>o :FSHere<CR>
 autocmd FileType cpp noremap <Leader>o :FSHere<CR>
+
+
