@@ -16,15 +16,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Color scheme
-Plugin 'chriskempson/base16-vim'
-" Plugin 'arcticicestudio/nord-vim'
-" let g:nord_italic_comments = 1
-" augroup nord-overrides
-"   autocmd!
-"   autocmd ColorScheme nord highlight Comment ctermfg=14
-" augroup END
-
 Plugin 'morhetz/gruvbox'
 " let g:gruvbox_italic=1
 " let g:gruvbox_italicize_strings=0
@@ -35,11 +26,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_custom_ignore = '\v[\/](vendor|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-"   \ 'file': '\v\.(exe|so|dll)$',
-"   \ 'link': 'some_bad_symbolic_links',
-"   \ }
 
 " Open CtrlP selection into a new tab instead of a new window
 let g:ctrlp_prompt_mappings = {
