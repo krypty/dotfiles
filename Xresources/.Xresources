@@ -40,7 +40,7 @@
 
 ! rofi
 ! =================
-rofi.font:              "Bitstream Vera Sans" medium 20
+rofi.font: "Source Code Pro for Powerline" medium 20
 rofi.fullscreen: true
 rofi.color-enabled: true
 rofi.color-window: argb:f41d1f21,argb:00292f37,#f0c674
