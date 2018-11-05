@@ -38,7 +38,7 @@ let g:ctrlp_prompt_mappings = {
 "       \ 'AcceptSelection("e")': ['<c-t>'],
 "       \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
 "       \ }
-nnoremap <c-g> :CtrlPBuffer<CR>
+nnoremap tf :CtrlPBuffer<CR>
 
 " The Silver Searcher
 if executable('ag')
@@ -52,8 +52,6 @@ if executable('ag')
   " let g:ctrlp_use_caching = 0
 endif
 
-" Plugin 'DavidEGx/ctrlp-smarttabs'
-" nnoremap tf :CtrlPSmartTabs<CR>
 
 Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
