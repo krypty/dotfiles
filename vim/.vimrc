@@ -142,8 +142,6 @@ autocmd FileType cpp ClangFormatAutoEnable
 Plugin 'mhinz/vim-startify'
 let g:startify_custom_header = ['']
 
-" Plugin 'jiangmiao/auto-pairs'
-
 " A solid language pack for Vim.
 Plugin 'sheerun/vim-polyglot'
 
