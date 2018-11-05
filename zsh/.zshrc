@@ -119,6 +119,7 @@ export PAGER=less
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias reload-xresources="xrdb ~/.Xresources"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias pls='sudo $(fc -ln -1)'
