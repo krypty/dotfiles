@@ -193,7 +193,7 @@ function ff() {
 }
 
 function td() {
-     bash -c "cd ~/tasks/ && vim -p *.md"
+     bash -c "cd ~/tasks/ && vim *.md"
 }
 
 function ztic() {
