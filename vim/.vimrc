@@ -138,6 +138,8 @@ Plugin 'rhysd/vim-clang-format'
 let g:clang_format#code_style = 'llvm'
 autocmd FileType c ClangFormatAutoEnable
 autocmd FileType cpp ClangFormatAutoEnable
+autocmd FileType hpp ClangFormatAutoEnable
+autocmd FileType h ClangFormatAutoEnable
 
 Plugin 'mhinz/vim-startify'
 let g:startify_custom_header = ['']
@@ -329,4 +331,8 @@ augroup END
 autocmd FileType c noremap <Leader>o :FSHere<CR>
 autocmd FileType cpp noremap <Leader>o :FSHere<CR>
 
+au FileType c setl sw=2 sts=2 et
+au FileType h setl sw=2 sts=2 et
+au FileType cpp setl sw=2 sts=2 et
+au FileType hpp setl sw=2 sts=2 et
 
