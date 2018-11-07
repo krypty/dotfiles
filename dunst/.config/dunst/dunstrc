@@ -186,12 +186,12 @@ timeout = 8
 
 [urgency_normal]
 background = "#203e4a"
-foreground = "#F078ED"
+foreground = "#38acd6"
 timeout = 8
 
 [urgency_critical]
 background = "#203e4a"
-foreground = "#F2CC91`"
+foreground = "#38acd6"
 timeout = 0
 
 
