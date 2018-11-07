@@ -177,6 +177,9 @@ let g:FlyGrep_search_tools = ['ag']
 " let g:FlyGrep_input_delay = 200
 nnoremap <Space>g :FlyGrep<cr>
 
+Plugin 'chrisbra/Colorizer'
+nnoremap <Space>cc :ColorToggle<cr>
+
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
