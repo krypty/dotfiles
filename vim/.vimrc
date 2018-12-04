@@ -81,8 +81,9 @@ let g:instant_markdown_autostart=0
 
 Plugin 'tpope/vim-surround'
 
-Plugin 'tpope/vim-markdown'
-let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
+" Plugin 'tpope/vim-markdown'
+" let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
+" let g:markdown_syntax_conceal=0
 
 " Detect shiftwidth and expandtab automatically
 Plugin 'tpope/vim-sleuth'
@@ -146,6 +147,7 @@ let g:startify_custom_header = ['']
 
 " A solid language pack for Vim.
 Plugin 'sheerun/vim-polyglot'
+let g:vim_markdown_conceal = 0
 
 " Illuminate other uses of the current word under the cursor
 Plugin 'RRethy/vim-illuminate'
@@ -326,9 +328,6 @@ let base16colorspace=256
 augroup filetypedetect
   au BufRead,BufNewFile *.ffs set filetype=xml
 augroup END
-
-" au FileType markdown setl sw=4 sts=4 et
-
 
 " Cpp specific
 autocmd FileType c noremap <Leader>o :FSHere<CR>
