@@ -84,7 +84,6 @@ MANIFEST
 [Ll]ib
 [Ll]ib64
 [Ll]ocal
-[Ss]cripts
 __pycache__/
 atlassian-ide-plugin.xml
 build/
