@@ -113,6 +113,8 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+Shift+a focus child
 
+bindsym $mod+Tab workspace back_and_forth
+
 # Rechargement / Actualisation de la configuration
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
