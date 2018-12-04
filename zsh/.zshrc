@@ -105,6 +105,9 @@ bindkey -M vicmd "\e[3~" delete-char
 bindkey -M viins "\e[3~" delete-char
 bindkey -M menuselect "\e[3~" delete-char
 
+# Disable terminal freeze after pressing ctrl+s
+stty -ixon
+
 # Force GTK theme for Qt based applications
 # export QT_QPA_PLATFORMTHEME=qt5ct
 set QT_QPA_PLATFORMTHEME=gtk2
