@@ -45,6 +45,8 @@ if executable('ag')
   " let g:ctrlp_use_caching = 0
 endif
 
+" Spell-check set to <F7> like Word
+map <F7> :setlocal spell! spelllang=en_us<CR>
 
 Plugin 'qpkorr/vim-bufkill'
 nnoremap <space>q :BUN<CR>
