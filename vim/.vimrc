@@ -298,8 +298,10 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 " Cancel completion with Esc
 inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
-" Substitute with word-under-cursor pre-written
-nnoremap S :s/\(<c-r>=expand("<cword>")<cr>\)/
+" Substitute with word-under-cursor pre-writen
+" nnoremap S :s/\(<c-r>=expand("<cword>")<cr>\)//g<left><left>
+nnoremap S :s/\v
+nnoremap <C-s> :%s/\v
 
 " Color scheme
 set background=dark
