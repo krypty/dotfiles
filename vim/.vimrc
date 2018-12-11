@@ -46,6 +46,9 @@ if executable('ag')
 endif
 
 
+Plugin 'qpkorr/vim-bufkill'
+nnoremap <space>q :BUN<CR>
+
 Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
