@@ -113,6 +113,9 @@ map  <space>f <Plug>(easymotion-bd-f)
 nmap <space>f <Plug>(easymotion-overwin-f)
 
 Plugin 'haya14busa/incsearch.vim'
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
 " Range, pattern and substitute preview for Vim
 Plugin 'markonm/traces.vim'
