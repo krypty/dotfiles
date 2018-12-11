@@ -105,9 +105,9 @@ Plugin 'tomtom/tcomment_vim'
 " Extended f, F,t and T key mappings
 Plugin 'rhysd/clever-f.vim'
 
-" <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
+" <space>f{char} to move to {char}
+map  <space>f <Plug>(easymotion-bd-f)
+nmap <space>f <Plug>(easymotion-overwin-f)
 
 Plugin 'haya14busa/incsearch.vim'
 
