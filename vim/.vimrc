@@ -2,7 +2,7 @@
 set nocompatible
 
 "Vundle bootstrap
-if !filereadable($HOME . '/.vim/bundle/Vundle.vim/.git/config') && confirm("Clone Vundle?","Y\nn") == 1
+if !filereadable($HOME . '/.vim/bundle/Vundle.vim/.git/config') && confirm("Clone Vundle?","Y\nn")==1
   exec '!git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim'
 endif
 
@@ -23,14 +23,15 @@ Plugin 'ctrlpvim/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
-let g:ctrlp_custom_ignore = '\v[\/](vendor|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore='\v[\/](vendor|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " In CtrlP use <c-v> and <c-b> to open in vsplit and split
 " replace old <c-b> mapping to <c-F> cycling between mode backward
-let g:ctrlp_prompt_mappings = {
+let g:ctrlp_prompt_mappings={
       \ 'AcceptSelection("h")': ['<c-b>'],
       \ 'ToggleType(-1)': ['<c-F>'],
       \ }
+
 nnoremap tf :CtrlPBuffer<CR>
 
 " The Silver Searcher
@@ -39,10 +40,10 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor\ --hidden
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+  let g:ctrlp_user_command='ag %s -l --nocolor --hidden -g ""'
 
-  " ag is fast enough that CtrlP doesn't need to cache
-  " let g:ctrlp_use_caching = 0
+  " Enable cache
+  let g:ctrlp_use_caching=1
 endif
 
 " Splits open at the bottom and right
@@ -60,19 +61,19 @@ Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
 " enable modified detection
 let g:airline_detect_modified=1
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 
-let g:airline_theme='base16'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='distinguished'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#left_sep=' '
+let g:airline#extensions#tabline#left_alt_sep='|'
 
 Plugin 'airblade/vim-gitgutter'
 " always display the gutter, avoid window changing size
 if exists('&signcolumn')  " Vim 7.4.2201
   set signcolumn=yes
 else
-  let g:gitgutter_sign_column_always = 1
+  let g:gitgutter_sign_column_always=1
 endif
 
 " --- Markdown
@@ -132,18 +133,18 @@ Plugin 'derekwyatt/vim-fswitch'
 Plugin 'Rip-Rip/clang_complete'
 
 Plugin 'rhysd/vim-clang-format'
-let g:clang_format#code_style = 'llvm'
+let g:clang_format#code_style='llvm'
 autocmd FileType c ClangFormatAutoEnable
 autocmd FileType cpp ClangFormatAutoEnable
 autocmd FileType hpp ClangFormatAutoEnable
 autocmd FileType h ClangFormatAutoEnable
 
 Plugin 'mhinz/vim-startify'
-let g:startify_custom_header = ['']
+let g:startify_custom_header=['']
 
 " A solid language pack for Vim.
 Plugin 'sheerun/vim-polyglot'
-let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal=0
 
 " Illuminate other uses of the current word under the cursor
 Plugin 'RRethy/vim-illuminate'
@@ -153,13 +154,13 @@ Plugin 'ryanoasis/vim-devicons'
 
 Plugin 'ambv/black'
 
-" Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
-Plugin 'w0rp/ale'
-" Enable completion where available.
-let g:ale_completion_enabled = 1
+" " Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
+" Plugin 'w0rp/ale'
+" " Enable completion where available.
+" let g:ale_completion_enabled=1
 
-" Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
+" " Set this. Airline will handle the rest.
+" let g:airline#extensions#ale#enabled=1
 
 Plugin 'davidhalter/jedi-vim'
 
@@ -171,8 +172,8 @@ nnoremap <F5> :TlistToggle<CR>
 " let Tlist_WinWidth=120
 
 Plugin 'wsdjeg/FlyGrep.vim'
-let g:FlyGrep_search_tools = ['ag']
-" let g:FlyGrep_input_delay = 200
+let g:FlyGrep_search_tools=['ag']
+" let g:FlyGrep_input_delay=200
 nnoremap <Space>g :FlyGrep<cr>
 
 Plugin 'chrisbra/Colorizer'
@@ -258,7 +259,7 @@ set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swp//
 
 " ignore sh/bash error resulting ugly parenthesis highlighting
-let g:sh_no_error = 1
+let g:sh_no_error=1
 
 " Removes trailing spaces
 function! TrimWhiteSpace()
