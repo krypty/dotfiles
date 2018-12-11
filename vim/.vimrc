@@ -18,9 +18,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'morhetz/gruvbox'
 let g:gruvbox_bold=1
-" let g:gruvbox_italic=1
-" let g:gruvbox_italicize_strings=0
-" let g:gruvbox_italicize_comments=1
 
 Plugin 'ctrlpvim/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -34,10 +31,6 @@ let g:ctrlp_prompt_mappings = {
       \ 'AcceptSelection("h")': ['<c-b>'],
       \ 'ToggleType(-1)': ['<c-F>'],
       \ }
-" let g:ctrlp_prompt_mappings = {
-"       \ 'AcceptSelection("e")': ['<c-t>'],
-"       \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-"       \ }
 nnoremap tf :CtrlPBuffer<CR>
 
 " The Silver Searcher
@@ -81,10 +74,6 @@ let g:instant_markdown_autostart=0
 
 Plugin 'tpope/vim-surround'
 
-" Plugin 'tpope/vim-markdown'
-" let g:markdown_fenced_languages = ['python', 'bash=sh', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml']
-" let g:markdown_syntax_conceal=0
-
 " Detect shiftwidth and expandtab automatically
 Plugin 'tpope/vim-sleuth'
 
@@ -121,10 +110,6 @@ map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 
 Plugin 'haya14busa/incsearch.vim'
-Plugin 'haya14busa/incsearch-easymotion.vim'
-
-
-map / <Plug>(incsearch-easymotion-/)
 
 " Range, pattern and substitute preview for Vim
 Plugin 'markonm/traces.vim'
@@ -318,8 +303,6 @@ nnoremap S :s/\(<c-r>=expand("<cword>")<cr>\)/
 
 " Color scheme
 set background=dark
-" let g:hybrid_custom_term_colors = 1
-"let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
 colorscheme gruvbox
 let base16colorspace=256
 " set termguicolors
