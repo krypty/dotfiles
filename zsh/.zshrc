@@ -205,6 +205,27 @@ function ztic() {
      ./ZTIC/zticproxy -mount:/media/gary/BCN-NETKEY
      sudo umount /media/gary/BCN-NETKEY
 }
+
+function most_recent_folders() {
+     RED="\\\e[1;32m"
+     NC="\\\e[0m"  # no color
+     COLOR=$RED
+     muf_file="/tmp/most_used_folders"
+     sort -t\| -nk2 ~/.z | tail -n10 | sort | awk -F\| '{printf "[%s] %s (%s)\n", NR-1, $1, NR-1}' > $muf_file
+
+     cp $muf_file $muf_file.bak
+     sed -i "s/[0-9]/${COLOR}\0${NC}/" $muf_file.bak
+     sed -i -r "s/(.*)\/(.+)/\1\/${COLOR}\2${NC}/" $muf_file.bak
+     echo "$(cat $muf_file.bak)"
+
+     echo ""
+     read -k "ans?Choose [0-9]: "
+     chosen_folder=$(cat $muf_file | awk -v ans="$ans" '$1 ~ ans {print $2}')
+     echo ""
+     cd $chosen_folder
+}
+alias d=most_recent_folders
+
 # # Fix colors in shell
 # BASE16_SHELL=$HOME/.config/base16-shell/
 # [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
