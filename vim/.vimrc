@@ -53,7 +53,7 @@ set splitbelow splitright
 map <F7> :setlocal spell! spelllang=en_us<CR>
 
 Plugin 'qpkorr/vim-bufkill'
-nnoremap <space>q :BUN<CR>
+nnoremap <space>q :BD<CR>
 
 Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
