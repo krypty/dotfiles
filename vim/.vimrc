@@ -19,6 +19,18 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 let g:gruvbox_bold=1
 
+Plugin 'lifepillar/vim-mucomplete'
+set completeopt+=menuone
+set completeopt+=noinsert
+set shortmess+=c   " Shut off completion messages
+set belloff+=ctrlg " If Vim beeps during completion
+let g:mucomplete#enable_auto_at_startup = 1
+" Accept completion using <CR> i.e. Enter without inserting new line
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+" Cancel completion with Esc
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+
+
 Plugin 'ctrlpvim/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
@@ -300,15 +312,6 @@ inoremap <C-S-j> <Esc>:m .+1<CR>==gi
 inoremap <C-S-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-S-j> :m '>+1<CR>gv=gv
 vnoremap <C-S-k> :m '<-2<CR>gv=gv
-
-" Scroll through completion list
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-" Accept completion using <CR> i.e. Enter without inserting new line
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-" Cancel completion with Esc
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
 " Substitute with word-under-cursor pre-writen
 " nnoremap S :s/\(<c-r>=expand("<cword>")<cr>\)//g<left><left>
