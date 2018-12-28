@@ -240,11 +240,6 @@ for_window [class="FUGE-LC"] floating enable
 ###############################
 #            MISC             #
 ###############################
-## quick terminal
-# exec --no-startup-id urxvt -name metask
-# for_window [instance="metask"] floating enable;
-# for_window [instance="metask"] move scratchpad; [instance="metask"] scratchpad show; move position 0px 22px; resize shrink height 300px; resize grow width 683px; move scratchpad
-# bindsym $mod+Shift+t [instance="metask"] scratchpad show
 
 # Scratchpad Thunderbird
 bindsym $mod+m [title="Inbox.*" class="Thunderbird"] scratchpad show; [title="Inbox.*" class="Thunderbird"] move position center
@@ -254,22 +249,14 @@ for_window [title="Inbox.*" class="Thunderbird"] move scratchpad
 for_window [title="Inbox.*" class="Thunderbird"] border pixel 5
 
 # Quick math terminal
-bindsym $mod+c [instance="math"] scratchpad show; [instance="math"] move position center
-for_window [instance="math"] floating enable
-for_window [instance="math"] resize set 800 300
-for_window [instance="math"] move scratchpad
-for_window [instance="math"] border pixel 5
-exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /math\.URxvt/ {print $1}'); do wmctrl -ic $win; done; $term -name math  -fn 'xft:Bitstream Vera Sans Mono:pixelsize=22' -e python -q"
+bindsym $mod+c [title="math"] scratchpad show; [title="math"] move position center
+for_window [title="math"] floating enable
+for_window [title="math"] resize set 800 300
+for_window [title="math"] move scratchpad
+for_window [title="math"] border pixel 5
+exec_always --no-startup-id "for win in $(wmctrl -lx | grep -E 'title math' | awk '{print $1}'); do wmctrl -ic $win; done; $term --title math -e 'python -q'"
 
-# # Quick math terminal
-# bindsym $mod+t [instance="telegram"] scratchpad show; [instance="telegram"] move position center
-# for_window [instance="telegram"] floating enable
-# for_window [instance="telegram"] resize set 800 600
-# for_window [instance="telegram"] move scratchpad
-# for_window [instance="telegram"] border pixel 5
-# exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /telegram\.URxvt/ {print $1}'); do wmctrl -ic $win; done; $term -name telegram -e nctelegram"
-
-# Quick math terminal
+# Quick Telegram window
 bindsym $mod+t [class="Telegram"] scratchpad show; [class="Telegram"] move position center
 for_window [class="Telegram"] floating enable
 for_window [class="Telegram"] resize set 1200 800
