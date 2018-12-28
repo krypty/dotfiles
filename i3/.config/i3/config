@@ -182,6 +182,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%- # decrease screen brigh
 # External monitors controls
 bindsym $mod+p exec "~/.screenlayout/external_vga.sh && brightnessctl set 0"
 bindsym $mod+$alt+p exec "~/.screenlayout/single_laptop_monitor.sh && brightnessctl set 25%"
+bindsym $mod+Shift+p exec "~/dotfiles/scripts/modes/mode_selector.sh"
 
 # Launch lockscreen
 bindsym $mod+$alt+l exec ~/dotfiles/.scripts/lock.sh
