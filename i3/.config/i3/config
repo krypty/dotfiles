@@ -56,9 +56,8 @@ font pango:DejaVu Sans Mono 10
 floating_modifier $mod
 
 # start a terminal
-set $term urxvt
+set $term termite
 bindsym $mod+Return exec $term
-# bindsym $mod+Return exec termite
 
 # start a file explorer
 set $explorer caja
