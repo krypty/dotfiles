@@ -262,6 +262,14 @@ set t_Co=256
 
 set colorcolumn=80,100
 
+set list
+set listchars=nbsp:·
+set listchars+=precedes:«
+set listchars+=tab:»·
+set listchars+=trail:.
+set listchars+=extends:»
+" set listchars+=eol:¶
+
 " store undo changes across files openings
 set undofile
 set undodir=~/.vim/.undo//
