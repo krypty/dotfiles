@@ -267,13 +267,6 @@ exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /Telegram/ {pri
 for_window [class="Telegram" title="Media viewer"] fullscreen enable;
 for_window [class="Telegram" title="Media viewer"] scratchpad show;
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         status_command i3status
-# }
-
 # Applications au démarrage
 exec --no-startup-id redshift-gtk # -l 46.930745:6.815189 -t 6500:3400 -l manual
 # exec --no-startup-id dropbox start
