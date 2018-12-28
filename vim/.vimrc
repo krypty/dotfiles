@@ -18,6 +18,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'morhetz/gruvbox'
 let g:gruvbox_bold=1
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark="hard"
 
 Plugin 'lifepillar/vim-mucomplete'
 set completeopt+=menuone
