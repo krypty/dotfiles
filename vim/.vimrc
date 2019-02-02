@@ -143,9 +143,6 @@ Plugin 'markonm/traces.vim'
 " Switch between header and source
 Plugin 'derekwyatt/vim-fswitch'
 
-" Clang
-Plugin 'Rip-Rip/clang_complete'
-
 Plugin 'rhysd/vim-clang-format'
 let g:clang_format#code_style='llvm'
 autocmd FileType c ClangFormatAutoEnable
@@ -167,14 +164,6 @@ Plugin 'RRethy/vim-illuminate'
 Plugin 'ryanoasis/vim-devicons'
 
 Plugin 'ambv/black'
-
-" " Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
-" Plugin 'w0rp/ale'
-" " Enable completion where available.
-" let g:ale_completion_enabled=1
-
-" " Set this. Airline will handle the rest.
-" let g:airline#extensions#ale#enabled=1
 
 Plugin 'davidhalter/jedi-vim'
 
