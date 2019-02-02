@@ -197,6 +197,8 @@ bindsym $mod+Shift+p exec "~/dotfiles/scripts/modes/mode_selector.sh"
 # Launch lockscreen
 bindsym $mod+$alt+l exec ~/dotfiles/.scripts/lock.sh
 
+bindsym $mod+$alt+e exec "~/dotfiles/.scripts/emoji/pick_emoji.sh"
+
 ###############################
 #          SOURIS             #
 ###############################
