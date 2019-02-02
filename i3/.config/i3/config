@@ -249,6 +249,8 @@ bindsym $mod+Shift+0 move workspace 10
 for_window [class="Gitg"] floating enable
 for_window [class="Thunderbird"] floating enable
 for_window [class="FUGE-LC"] floating enable
+for_window [class="keepassxc"] floating enable
+
 
 ###############################
 #            MISC             #
