@@ -261,7 +261,8 @@ for_window [class="Gitg"] floating enable
 for_window [class="Thunderbird"] floating enable
 for_window [class="FUGE-LC"] floating enable
 for_window [class="keepassxc"] floating enable
-
+for_window [class="Spotify"] move to workspace $ws10
+for_window [class="Pulseeffects"] move to workspace $ws10
 
 ###############################
 #            MISC             #
