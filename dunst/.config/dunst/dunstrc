@@ -152,10 +152,6 @@ icon_position = left
 icon_path = /usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/48x48/devices/:/usr/share/icons/Paper/48x48/apps/:/usr/share/icons/Paper/48x48/categories/:/usr/share/icons/Paper/48x48/emblems/:/usr/share/icons/Paper/48x48/emotes/:/usr/share/icons/Paper/48x48/mimetypes/:/usr/share/icons/Paper/48x48/places:/usr/share/icons/Paper/48x48/status
 max_icon_size=64
 
-# [frame]
-# width = 3
-# color = "#38acd6"
-
 [shortcuts]
 
 # Shortcuts are specified as [modifier+][modifier+]...key
@@ -180,18 +176,18 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-background = "#203e4a"
-foreground = "#38acd6"
+background = "#282828"
+foreground = "#fabd2f"
 timeout = 8
 
 [urgency_normal]
-background = "#203e4a"
-foreground = "#38acd6"
+background = "#282828"
+foreground = "#fabd2f"
 timeout = 8
 
 [urgency_critical]
-background = "#203e4a"
-foreground = "#38acd6"
+background = "#282828"
+foreground = "#fabd2f"
 timeout = 0
 
 
