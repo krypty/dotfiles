@@ -155,7 +155,10 @@ let g:startify_custom_header=['']
 
 " A solid language pack for Vim.
 Plugin 'sheerun/vim-polyglot'
-let g:vim_markdown_conceal=0
+let g:polyglot_disabled = ['markdown']
+" let g:vim_markdown_conceal=0
+Plugin 'tpope/vim-markdown'
+let g:markdown_syntax_conceal = 0
 
 " Illuminate other uses of the current word under the cursor
 Plugin 'RRethy/vim-illuminate'
@@ -337,3 +340,5 @@ au FileType h setl sw=2 sts=2 et
 au FileType cpp setl sw=2 sts=2 et
 au FileType hpp setl sw=2 sts=2 et
 
+au FileType md setl sw=2 sts=2 et
+au FileType markdown setl sw=2 sts=2 et
