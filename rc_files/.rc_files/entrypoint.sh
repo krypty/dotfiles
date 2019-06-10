@@ -1,3 +1,4 @@
+# to use in your .bashrc add: cd ~/.rc_files; source entrypoint.sh; cd -
 #
 # INPUT
 #
