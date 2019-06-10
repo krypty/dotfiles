@@ -1,0 +1,11 @@
+alias reload-xresources="xrdb ~/.Xresources"
+alias xopen="gio open"
+alias mv='mv -i'
+alias :q="exit"
+alias calc="loffice --calc"
+alias jp="jupyter-notebook"
+alias fd="fd -H"
+alias i3c="vim ~/.config/i3/config"
+alias m="make"
+alias rg="ranger"
+alias wtr="curl 'http://wttr.in/lausanne?lang=fr'"
