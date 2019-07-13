@@ -1,33 +1,63 @@
-say() {
-  echo "$@" | sed \
-    -e "s/\(\(@\(red\|green\|yellow\|blue\|magenta\|cyan\|white\|reset\|b\|u\)\)\+\)[[]\{2\}\(.*\)[]]\{2\}/\1\4@reset/g" \
-    -e "s/@red/$(tput setaf 1)/g" \
-    -e "s/@green/$(tput setaf 2)/g" \
-    -e "s/@yellow/$(tput setaf 3)/g" \
-    -e "s/@blue/$(tput setaf 4)/g" \
-    -e "s/@magenta/$(tput setaf 5)/g" \
-    -e "s/@cyan/$(tput setaf 6)/g" \
-    -e "s/@white/$(tput setaf 7)/g" \
-    -e "s/@reset/$(tput sgr0)/g" \
-    -e "s/@b/$(tput bold)/g" \
-    -e "s/@u/$(tput sgr 0 1)/g"
-  }
+# regular colors
+fgblack="\[\033[0;30m\]"    # black
+fgred="\[\033[0;31m\]"    # red
+fggreen="\[\033[0;32m\]"    # green
+fgyellow="\[\033[0;33m\]"    # yellow
+fgblue="\[\033[0;34m\]"    # blue
+fgmagenta="\[\033[0;35m\]"    # magenta
+fgcyan="\[\033[0;36m\]"    # cyan
+fgwhite="\[\033[0;37m\]"    # white
 
-ps1() {
-  p_user=`say @b@white[[$USER]]`
-  p_host=`say @b@green[[$HOSTNAME]]`
+bfgblack="\[\033[1;30m\]"    # black
+bfgred="\[\033[1;31m\]"    # red
+bfggreen="\[\033[1;32m\]"    # green
+bfgyellow="\[\033[1;33m\]"    # yellow
+bfgblue="\[\033[1;34m\]"    # blue
+bfgmagenta="\[\033[1;35m\]"    # magenta
+bfgcyan="\[\033[1;36m\]"    # cyan
+bfgwhite="\[\033[1;37m\]"    # white
 
-  source ~/.rc_files/prompt/git.sh
-  p_git="`parse_git_branch`"
+fgreset="\[\033[m\]"
 
-  cwd=`pwd | sed "s|/home/$USER|~|"`
-  p_cwd=`say @b@white[[$cwd]]`
-
-  p_symbol=`say @green[[$]]`
-  echo -e "$p_user@$p_host $p_cwd\n$p_git > $p_symbol "
+p_cwd() {
+  pwd | sed "s|/home/$USER|~|"
 }
+# p_cwd() {
+#   # $(pwd | sed "s|/home/$USER|~|")
+#   local bfgwhite="\033[1;37m"    # white
+#   local reset='\e[0m'
+#   echo -e "${bfgwhite}$(pwd | sed 's|/home/$USER|~|')${reset}"
+# }
+#
+# p_git() {
+#   local fggreen="\033[0;32m"    # green
+#   local bfgwhite="\033[1;37m"    # white
+#   local reset='\e[0m'
+#   source ~/.rc_files/prompt/git.sh
+#   parse_git_branch
+# }
 
-export PS1="\$(ps1)"
+p_user="${bfgwhite}${USER}${fgreset}"
+p_host="${bfggreen}${HOSTNAME}${fgreset}"
+
+source ~/.rc_files/prompt/git.sh
+# p_git="`parse_git_branch`"
+
+# cwd=`pwd | sed "s|/home/$USER|~|"`
+# p_cwd="${bfgwhite}${cwd}${fgreset}"
+
+p_symbol="${fggreen}\$${fgreset}"
+# echo -e "$p_user@$p_host $p_cwd\n$p_git > $p_symbol "
+
+
+prompt_cmd() {
+  export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(parse_git_branch) $GARY > ${p_symbol} ${fgreset}"
+}
+PROMPT_COMMAND=prompt_cmd
+# export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${reset} \n > ${p_symbol} ${reset}"
+
+# export PS1="\$(ps1)"
+# ps1
 
 
 

@@ -4,7 +4,9 @@ parse_git_branch() {
   if [ ! "${BRANCH}" == "" ]
   then
     STAT=`parse_git_dirty`
-    echo "[`say @b@green[[±]]`${BRANCH}${STAT}]"
+    # local bfggreen="\033[1;32m"    # green
+    # local reset='\e[0m'
+    echo "[${bfggreen}±${fgreset}${BRANCH}${STAT}]"
   else
     echo ""
   fi
@@ -27,10 +29,12 @@ function parse_git_dirty {
     bits="*${bits}"
   fi
   if [ "${newfile}" == "0" ]; then
-    bits="${COLOR_RED}●${COLOR_NC}${bits}"
+    bits="${fggreen}●${fgreset}${bits}"
+    # bits="*${bits}"
   fi
   if [ "${untracked}" == "0" ]; then
-    bits="?${bits}"
+    bits="${fgred}●${fgreset}${bits}"
+    # bits="?${bits}"
   fi
   if [ "${deleted}" == "0" ]; then
     bits="x${bits}"
