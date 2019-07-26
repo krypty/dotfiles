@@ -26,21 +26,19 @@ function parse_git_dirty {
     bits=">${bits}"
   fi
   if [ "${ahead}" == "0" ]; then
-    bits="*${bits}"
+    bits="↑${bits}"
   fi
   if [ "${newfile}" == "0" ]; then
     bits="${fggreen}●${fgreset}${bits}"
-    # bits="*${bits}"
   fi
   if [ "${untracked}" == "0" ]; then
     bits="${fgred}●${fgreset}${bits}"
-    # bits="?${bits}"
   fi
   if [ "${deleted}" == "0" ]; then
     bits="x${bits}"
   fi
   if [ "${dirty}" == "0" ]; then
-    bits="!${bits}"
+    bits="${fgyellow}●${fgreset}${bits}"
   fi
   if [ ! "${bits}" == "" ]; then
     echo " ${bits}"
