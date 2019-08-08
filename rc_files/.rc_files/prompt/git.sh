@@ -1,11 +1,15 @@
 # get current branch in git repo
 parse_git_branch() {
+
   BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ ! "${BRANCH}" == "" ]
   then
+    local -r MAX_CHARS_BRANCH_NAME=25
+    if [ $(echo -n $BRANCH | wc -m) -gt $MAX_CHARS_BRANCH_NAME ]; then
+      BRANCH=$(echo $BRANCH | sed -E "s/(.{,$MAX_CHARS_BRANCH_NAME})(.*)/\1.../")
+    fi
+
     STAT=`parse_git_dirty`
-    # local bfggreen="\033[1;32m"    # green
-    # local reset='\e[0m'
     echo "[${bfggreen}±${fgreset}${BRANCH}${STAT}]"
   else
     echo ""
