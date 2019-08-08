@@ -22,6 +22,7 @@ function parse_git_dirty {
   dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
   untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
   ahead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
+  diverged=`echo -n "${status}" 2> /dev/null | grep "different commits each" &> /dev/null; echo "$?"`
   newfile=`echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?"`
   renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
   deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
@@ -31,6 +32,9 @@ function parse_git_dirty {
   fi
   if [ "${ahead}" == "0" ]; then
     bits="↑${bits}"
+  fi
+  if [ "${diverged}" == "0" ]; then
+    bits="↑↓${bits}"
   fi
   if [ "${newfile}" == "0" ]; then
     bits="${fggreen}●${fgreset}${bits}"
