@@ -22,20 +22,19 @@ fgreset="\[\033[m\]"
 p_cwd() {
   pwd | sed "s|/home/$USER|~|"
 }
-# p_cwd() {
-#   # $(pwd | sed "s|/home/$USER|~|")
-#   local bfgwhite="\033[1;37m"    # white
-#   local reset='\e[0m'
-#   echo -e "${bfgwhite}$(pwd | sed 's|/home/$USER|~|')${reset}"
-# }
-#
-# p_git() {
-#   local fggreen="\033[0;32m"    # green
-#   local bfgwhite="\033[1;37m"    # white
-#   local reset='\e[0m'
-#   source ~/.rc_files/prompt/git.sh
-#   parse_git_branch
-# }
+
+eval_virtual_env() {
+  # Add python virtual env to prompt
+  if [[ "$VIRTUAL_ENV" != "" ]]
+      then
+        # Strip out the path and just leave the env name
+        venv="(${VIRTUAL_ENV##*/})"
+  else
+        # In case you don't have one activated
+        venv=''
+  fi
+  echo "$venv"
+}
 
 p_user="${bfgwhite}${USER}${fgreset}"
 p_host="${bfggreen}${HOSTNAME}${fgreset}"
@@ -51,7 +50,7 @@ p_symbol="${fggreen}\$${fgreset}"
 
 
 prompt_cmd() {
-  export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(parse_git_branch) $GARY > ${p_symbol} ${fgreset}"
+  export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(eval_virtual_env) $(parse_git_branch) $GARY > ${p_symbol} ${fgreset}"
 }
 PROMPT_COMMAND=prompt_cmd
 # export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${reset} \n > ${p_symbol} ${reset}"
