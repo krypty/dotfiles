@@ -154,8 +154,8 @@ Plugin 'mhinz/vim-startify'
 let g:startify_custom_header=['']
 
 " A solid language pack for Vim.
-Plugin 'sheerun/vim-polyglot'
-let g:polyglot_disabled = ['markdown']
+" Plugin 'sheerun/vim-polyglot'
+" let g:polyglot_disabled = ['markdown']
 " let g:vim_markdown_conceal=0
 Plugin 'tpope/vim-markdown'
 let g:markdown_syntax_conceal = 0
@@ -205,6 +205,8 @@ set encoding=UTF-8
 
 " set leader key
 let mapleader=" "
+
+let g:loaded_sql_completion = 0
 
 " Save one keystroke
 " nnoremap , :
