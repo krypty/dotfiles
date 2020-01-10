@@ -67,7 +67,7 @@ font-3 = SourceCodeProForPowerline:size=10;0
 
 modules-left = powermenu i3
 modules-center =
-modules-right = spotify-track battery battery1 filesystem volume memory cpu date
+modules-right = eth wlan spotify-track battery battery1 filesystem volume memory cpu date
 
 tray-position = right
 tray-padding = 2
@@ -223,19 +223,28 @@ type = internal/network
 interface = wlp4s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+; format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected>
+format-connected-underline =
 format-disconnected-underline = ${self.format-connected-underline}
 
-label-connected = %essid%
+label-connected = %essid%  %downspeed:1%  %upspeed:1%
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+#ramp-signal-0 = 
+#ramp-signal-0-foreground = #ff0000
+#ramp-signal-1 = 
+#ramp-signal-1-foreground = #0a0a0a
+#ramp-signal-2 = 
+#ramp-signal-2-foreground = #434343
+#ramp-signal-3 = 
+#ramp-signal-3-foreground = #999999
+#ramp-signal-4 = 
+#ramp-signal-4-foreground = #acacac
+#ramp-signal-5 = 
+#ramp-signal-5-foreground = #ffffff
+
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -244,13 +253,14 @@ interface = eth0
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = " "
 format-connected-foreground-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected =  %downspeed:1%  %upspeed:1%
 
 format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
+
 
 [module/date]
 type = internal/date
@@ -378,8 +388,7 @@ ramp-foreground = ${colors.foreground-alt}
 type = custom/menu
 
 format-spacing = 1
-
-label-open =  
+label-open =  " "
 label-open-foreground = ${colors.primary}
 label-close = cancel
 label-close-foreground = ${colors.primary}
