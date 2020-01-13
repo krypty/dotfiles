@@ -268,7 +268,7 @@ type = internal/date
 interval = 5
 
 ; date =
-date = " %Y-%m-%d"
+date = " %Y-%m-%d W%V"
 time = %H:%M
 label = %time% %date%
 
