@@ -2,6 +2,7 @@
 # CHPWD-LIKE FEATURE
 # source: https://github.com/mpapis/bash_zsh_support/tree/master/chpwd
 #
+
 source ~/.rc_files/chpwd/function.sh
 source ~/.rc_files/chpwd/load.sh
 

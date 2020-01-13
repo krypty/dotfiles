@@ -30,3 +30,12 @@ function ztic() {
 # }
 #
 # shared_history
+
+# function source_sourceme() {
+#     if [ -x ".sourceme" ]; then
+#         source .sourceme
+#     fi
+# }
+#
+# export PROMPT_COMMAND="$(source_sourceme)$PROMPT_COMMAND"
+

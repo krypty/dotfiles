@@ -32,3 +32,7 @@ source chpwd/hooks.sh
 # DEFAULT aka too lazy to sort
 #
 source default.sh
+
+# Fix bash completion when using aliases
+source ./alias_completion.sh
+

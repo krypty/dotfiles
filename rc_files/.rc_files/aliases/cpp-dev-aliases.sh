@@ -1,0 +1,5 @@
+alias m="make -j$(nproc)"
+alias mt="make -j$(nproc) && make check"
+alias cm="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
+alias mi="make -j$(nproc) && make check && sudo -H make install"
+alias gb="cd build"
