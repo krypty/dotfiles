@@ -250,15 +250,15 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = eth0
+interface = enp3s0
 interval = 3.0
 
-format-connected-underline = #55aa55
+format-connected-underline =
 format-connected-prefix = " "
 format-connected-foreground-foreground = ${colors.foreground-alt}
 label-connected =  %downspeed:1%  %upspeed:1%
 
-format-disconnected-underline = ${self.format-connected-underline}
+format-disconnected-underline =
 label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
