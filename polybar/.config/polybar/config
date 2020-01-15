@@ -67,7 +67,7 @@ font-3 = SourceCodeProForPowerline:size=10;0
 
 modules-left = powermenu i3
 modules-center =
-modules-right = eth wlan spotify-track battery battery1 filesystem volume memory cpu date
+modules-right = spotify-track eth wlan battery battery1 filesystem volume memory cpu date
 
 tray-position = right
 tray-padding = 2
