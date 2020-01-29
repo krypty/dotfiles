@@ -56,7 +56,7 @@ font pango:DejaVu Sans Mono 10
 floating_modifier $mod
 
 # start a terminal
-set $term termite
+set $term st
 bindsym $mod+Return exec $term
 
 # start a file explorer
@@ -281,7 +281,7 @@ for_window [title="quick_math"] floating enable
 for_window [title="quick_math"] resize set 800 300
 for_window [title="quick_math"] move scratchpad
 for_window [title="quick_math"] border pixel 5
-exec_always --no-startup-id "for win in $(wmctrl -lx | grep -E 'quick_math' | awk '{print $1}'); do wmctrl -ic $win; done; $term --title quick_math -e 'python -q'"
+exec_always --no-startup-id "for win in $(wmctrl -lx | grep -E 'quick_math' | awk '{print $1}'); do wmctrl -ic $win; done; $term -t quick_math -e python -q"
 
 # Quick Telegram window
 bindsym $mod+t [class="Telegram"] scratchpad show; [class="Telegram"] move position center
@@ -305,7 +305,6 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id thunderbird
 exec --no-startup-id pamac-tray
 exec --no-startup-id 'xinput --set-prop "SynPS/2 Synaptics TouchPad"  "libinput Natural Scrolling Enabled" 1'
-exec --no-startup-id nextcloud
 
 # requires python-i3-py and xorg-util-macros
 exec_always --no-startup-id "sleep 5;~/dotfiles/i3/.config/i3/i3-alternating-layout/alternating_layouts.py"
