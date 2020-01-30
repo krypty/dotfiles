@@ -32,6 +32,8 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 " Cancel completion with Esc
 inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
+Plugin 'mileszs/ack.vim'
+
 
 Plugin 'ctrlpvim/ctrlp.vim'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -77,7 +79,7 @@ set laststatus=2
 let g:airline_detect_modified=1
 let g:airline_powerline_fonts=1
 
-let g:airline_theme='distinguished'
+let g:airline_theme='base16_gruvbox_dark_hard'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep=' '
 let g:airline#extensions#tabline#left_alt_sep='|'
