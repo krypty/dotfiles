@@ -296,6 +296,7 @@ for_window [class="Telegram" title="Media viewer"] scratchpad show;
 
 # Applications au démarrage
 exec --no-startup-id redshift-gtk # -l 46.930745:6.815189 -t 6500:3400 -l manual
+exec --no-startup-id tmux new-session -d -s i3
 # exec --no-startup-id dropbox start
 exec --no-startup-id insync start
 exec --no-startup-id nm-applet
