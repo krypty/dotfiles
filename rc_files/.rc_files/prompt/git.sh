@@ -10,7 +10,7 @@ parse_git_branch() {
     fi
 
     STAT=`parse_git_dirty`
-    echo "[${bfggreen}±${fgreset}${BRANCH}${STAT}]"
+    echo "[${bfggreen}±${fgreset}${BRANCH}${STAT}] "
   else
     echo ""
   fi

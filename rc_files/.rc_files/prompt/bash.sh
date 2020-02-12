@@ -28,35 +28,27 @@ eval_virtual_env() {
   if [[ "$VIRTUAL_ENV" != "" ]]
       then
         # Strip out the path and just leave the env name
-        venv="(${VIRTUAL_ENV##*/})"
+        echo "(${VIRTUAL_ENV##*/})"
   else
         # In case you don't have one activated
-        venv=''
+        echo ""
   fi
-  echo "$venv"
 }
-
-p_user="${bfgwhite}${USER}${fgreset}"
-p_host="${bfggreen}${HOSTNAME}${fgreset}"
 
 source ~/.rc_files/prompt/git.sh
-# p_git="`parse_git_branch`"
-
-# cwd=`pwd | sed "s|/home/$USER|~|"`
-# p_cwd="${bfgwhite}${cwd}${fgreset}"
 
 p_symbol="${fggreen}\$${fgreset}"
-# echo -e "$p_user@$p_host $p_cwd\n$p_git > $p_symbol "
-
 
 prompt_cmd() {
-  export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(eval_virtual_env) $(parse_git_branch) $GARY > ${p_symbol} ${fgreset}"
+if [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  p_user="${bfgwhite}${USER}${fgreset}"
+  p_host="${bfggreen}${HOSTNAME}${fgreset}"
+
+  export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(eval_virtual_env) $(parse_git_branch)${p_symbol} ${fgreset}"
+
+else
+  export PS1="\$(p_cwd)${fgreset}$(eval_virtual_env) $(parse_git_branch)${p_symbol} ${fgreset}"
+fi
 }
 PROMPT_COMMAND=prompt_cmd
-# export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${reset} \n > ${p_symbol} ${reset}"
-
-# export PS1="\$(ps1)"
-# ps1
-
-
 
