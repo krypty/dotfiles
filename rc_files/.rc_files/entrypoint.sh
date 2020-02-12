@@ -33,9 +33,6 @@ source chpwd/hooks.sh
 #
 source default.sh
 
-# Fix bash completion when using aliases
-source ./alias_completion.sh
-
 # Start with tmux
 # [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 
