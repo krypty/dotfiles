@@ -8,10 +8,6 @@ if [ -f $HOME/dotfiles/.scripts/globals/`hostname`.sh ]; then
      source $HOME/dotfiles/.scripts/globals/`hostname`.sh
 fi
 
-function ff() {
-     find $1 -type f -print0 | xargs -0 grep -I --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} -E $2
-}
-
 function ztic() {
      sudo mkdir -p /media/gary/BCN-NETKEY
      sudo mount /dev/disk/by-label/BCN-NETKEY /media/gary/BCN-NETKEY -o rw,nosuid,nodev,relatime,uid=1000

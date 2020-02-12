@@ -34,6 +34,4 @@ source chpwd/hooks.sh
 source default.sh
 
 # Start with tmux
-# [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
-
 [ -z "$TMUX"  ] && exec tmux new-session -c $HOME && exit;
