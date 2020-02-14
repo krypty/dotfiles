@@ -28,7 +28,7 @@ eval_virtual_env() {
   if [[ "$VIRTUAL_ENV" != "" ]]
       then
         # Strip out the path and just leave the env name
-        echo "(${VIRTUAL_ENV##*/})"
+        echo "(${VIRTUAL_ENV##*/}) "
   else
         # In case you don't have one activated
         echo ""
@@ -47,7 +47,7 @@ if [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(eval_virtual_env) $(parse_git_branch)${p_symbol} ${fgreset}"
 
 else
-  export PS1="\$(p_cwd)${fgreset}$(eval_virtual_env) $(parse_git_branch)${p_symbol} ${fgreset}"
+  export PS1="${fgreset}$(eval_virtual_env)$(parse_git_branch)$(p_cwd) ${p_symbol} ${fgreset}"
 fi
 }
 PROMPT_COMMAND=prompt_cmd
