@@ -1,8 +1,3 @@
-# make xz use all threads
-n_proc_minus_one=`nproc`
-let "n_proc_minus_one-=1"
-export XZ_OPT="--threads=$n_proc_minus_one"
-
 # source hostname-specific commands
 if [ -f $HOME/dotfiles/.scripts/globals/`hostname`.sh ]; then
      source $HOME/dotfiles/.scripts/globals/`hostname`.sh
