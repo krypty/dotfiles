@@ -32,35 +32,43 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 " Cancel completion with Esc
 inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
-Plugin 'mileszs/ack.vim'
+" Plugin 'mileszs/ack.vim'
 
 
-Plugin 'ctrlpvim/ctrlp.vim'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+" Plugin 'ctrlpvim/ctrlp.vim'
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+" set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+"
+" let g:ctrlp_custom_ignore='\v[\/](vendor|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+"
+" " In CtrlP use <c-v> and <c-b> to open in vsplit and split
+" " replace old <c-b> mapping to <c-F> cycling between mode backward
+" let g:ctrlp_prompt_mappings={
+"       \ 'AcceptSelection("h")': ['<c-b>'],
+"       \ 'ToggleType(-1)': ['<c-F>'],
+"       \ }
 
-let g:ctrlp_custom_ignore='\v[\/](vendor|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+" nnoremap tf :CtrlPBuffer<CR>
 
-" In CtrlP use <c-v> and <c-b> to open in vsplit and split
-" replace old <c-b> mapping to <c-F> cycling between mode backward
-let g:ctrlp_prompt_mappings={
-      \ 'AcceptSelection("h")': ['<c-b>'],
-      \ 'ToggleType(-1)': ['<c-F>'],
-      \ }
+" " The Silver Searcher
+" if executable('ag')
+"   " Use ag over grep
+"   set grepprg=ag\ --nogroup\ --nocolor\ --hidden
+"
+"   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+"   let g:ctrlp_user_command='ag %s -l --nocolor --hidden -g ""'
+"
+"   " Enable cache
+"   let g:ctrlp_use_caching=1
+" endif
 
-nnoremap tf :CtrlPBuffer<CR>
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor\ --hidden
+nnoremap tf :Buffers<CR>
+nnoremap <C-p> :Files<Cr>
+nnoremap <Space>rg :Rg<CR>
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command='ag %s -l --nocolor --hidden -g ""'
-
-  " Enable cache
-  let g:ctrlp_use_caching=1
-endif
 
 " Splits open at the bottom and right
 set splitbelow splitright
@@ -179,10 +187,10 @@ nnoremap <F5> :TlistToggle<CR>
 " let Tlist_Use_Right_Window=1
 " let Tlist_WinWidth=120
 
-Plugin 'wsdjeg/FlyGrep.vim'
-let g:FlyGrep_search_tools=['ag']
-" let g:FlyGrep_input_delay=200
-nnoremap <Space>g :FlyGrep<cr>
+" Plugin 'wsdjeg/FlyGrep.vim'
+" let g:FlyGrep_search_tools=['ag']
+" " let g:FlyGrep_input_delay=200
+" nnoremap <Space>g :FlyGrep<cr>
 
 Plugin 'chrisbra/Colorizer'
 nnoremap <Space>cc :ColorToggle<cr>
