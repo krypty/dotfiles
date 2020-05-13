@@ -162,6 +162,7 @@ autocmd FileType h ClangFormatAutoEnable
 
 Plugin 'mhinz/vim-startify'
 let g:startify_custom_header=['']
+set viminfo='100,n$HOME/.vim/files/info/viminfo
 
 " A solid language pack for Vim.
 " Plugin 'sheerun/vim-polyglot'
