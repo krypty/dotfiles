@@ -94,7 +94,7 @@ endif
 
 " --- Markdown
 " require some packages, see: https://github.com/suan/vim-instant-markdown
-Plugin 'suan/vim-instant-markdown'
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 let g:instant_markdown_autostart=0
 
 Plugin 'tpope/vim-surround'
