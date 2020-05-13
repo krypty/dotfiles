@@ -56,7 +56,7 @@ font pango:DejaVu Sans Mono 10
 floating_modifier $mod
 
 # start a terminal
-set $term st
+set $term xfce4-terminal
 bindsym $mod+Return exec $term
 
 # start a file explorer
