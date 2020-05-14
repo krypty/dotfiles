@@ -155,11 +155,11 @@ Plugin 'markonm/traces.vim'
 Plugin 'derekwyatt/vim-fswitch'
 
 Plugin 'rhysd/vim-clang-format'
-let g:clang_format#code_style='llvm'
-autocmd FileType c ClangFormatAutoEnable
-autocmd FileType cpp ClangFormatAutoEnable
-autocmd FileType hpp ClangFormatAutoEnable
-autocmd FileType h ClangFormatAutoEnable
+"let g:clang_format#code_style='llvm'
+"autocmd FileType c ClangFormatAutoEnable
+"autocmd FileType cpp ClangFormatAutoEnable
+"autocmd FileType hpp ClangFormatAutoEnable
+"autocmd FileType h ClangFormatAutoEnable
 
 Plugin 'mhinz/vim-startify'
 let g:startify_custom_header=['']
