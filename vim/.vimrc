@@ -123,6 +123,7 @@ Plugin 'wincent/loupe'
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 noremap <F2> :NERDTreeToggle<cr>
+nnoremap <space><F2> :NERDTreeFind<cr>
 
 " vim-autoformat
 Plugin 'Chiel92/vim-autoformat'
