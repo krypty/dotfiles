@@ -1,23 +1,23 @@
 [user]
-	email = gmarigliano93@gmail.com
-	name = Gary Marigliano
+    email = gmarigliano93@gmail.com
+    name = Gary Marigliano
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	stash-all = stash save --include-untracked
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    stash-all = stash save --include-untracked
 [credential]
-	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
+    helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
 [color]
-	ui = auto
+    ui = auto
 [status]
-	showUntrackedFiles = all
+    showUntrackedFiles = all
 [pager]
-	diff = true
-	difftool = true
+    diff = true
+    difftool = true
 [diff]
-	tool = icdiff
+    tool = icdiff
 [difftool]
-	prompt = false
+    prompt = false
 [difftool "icdiff"]
-	cmd = /usr/bin/env icdiff --line-numbers  $LOCAL $REMOTE
+    cmd = /usr/bin/env icdiff --line-numbers  $LOCAL $REMOTE
 [core]
-	excludesfile = /home/gary/.gitignore_global
+    excludesfile = /home/gary/.gitignore_global
