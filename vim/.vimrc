@@ -140,9 +140,9 @@ Plugin 'tomtom/tcomment_vim'
 " Extended f, F,t and T key mappings
 Plugin 'rhysd/clever-f.vim'
 
-" <space>f{char} to move to {char}
-map  <space>f <Plug>(easymotion-bd-f)
-nmap <space>f <Plug>(easymotion-overwin-f)
+"" <space>f{char} to move to {char}
+"map  <space>f <Plug>(easymotion-bd-f)
+"nmap <space>f <Plug>(easymotion-overwin-f)
 
 Plugin 'haya14busa/incsearch.vim'
 map /  <Plug>(incsearch-forward)
@@ -217,6 +217,7 @@ syntax on
 set encoding=UTF-8
 
 " set leader key
+nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 let g:loaded_sql_completion = 0

@@ -1,0 +1,13 @@
+source .vimrc
+
+nnoremap / /
+nnoremap ? ?
+nnoremap g/ g/
+
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+set easymotion
+
+set surround
+set commentary
+
