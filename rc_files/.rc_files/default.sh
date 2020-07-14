@@ -3,6 +3,9 @@ if [ -f $HOME/dotfiles/.scripts/globals/`hostname`.sh ]; then
      source $HOME/dotfiles/.scripts/globals/`hostname`.sh
 fi
 
+# disable history expansion e.g. `sudo !!`
+set +H
+
 function ztic() {
      sudo mkdir -p /media/gary/BCN-NETKEY
      sudo mount /dev/disk/by-label/BCN-NETKEY /media/gary/BCN-NETKEY -o rw,nosuid,nodev,relatime,uid=1000
