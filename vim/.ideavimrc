@@ -10,5 +10,6 @@ set easymotion
 
 set surround
 set commentary
+set highlightedyank
 
 noremap gd :action GotoDeclaration<CR>
