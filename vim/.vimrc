@@ -120,6 +120,9 @@ Plugin 'tpope/vim-fugitive'
 " Loupe (better search defaults)
 Plugin 'wincent/loupe'
 
+" Highlight the yanked region
+Plugin 'machakann/vim-highlightedyank'
+
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 noremap <F2> :NERDTreeToggle<cr>
