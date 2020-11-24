@@ -24,5 +24,3 @@
     pager = delta --plus-color="22"  --minus-color="#340001" --theme='Monokai Extended'
 [interactive]
     diffFilter = delta --color-only
-[submodule]
-	recurse = true
