@@ -203,6 +203,8 @@ nnoremap <Space>cc :ColorToggle<cr>
 
 Plugin 'editorconfig/editorconfig-vim'
 
+Plugin 'lepture/vim-jinja'
+
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
