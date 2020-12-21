@@ -5,6 +5,9 @@ bind 'set show-all-if-unmodified on'
 bind 'set menu-complete-display-prefix on'
 bind '"\t": menu-complete'
 bind '"\e[Z": menu-complete-backward'
+bind '"\C-h": backward-kill-word'
+bind '"^[[1;3D": backward-word'
+bind '"^[[1;3C": forward-word'
 
 # Disable terminal freeze after pressing ctrl+s
 stty -ixon
