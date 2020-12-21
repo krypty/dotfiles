@@ -306,11 +306,12 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id thunderbird
 exec --no-startup-id pamac-tray
 exec --no-startup-id 'xinput --set-prop "SynPS/2 Synaptics TouchPad"  "libinput Natural Scrolling Enabled" 1'
+exec_always --no-startup-id "killall picom; picom --experimental-backend"
 
 # requires python-i3-py and xorg-util-macros
 
 # I3 Gaps
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 4
 for_window [class=".*"] title_format "  %title"
 gaps inner 10
 smart_borders on
@@ -320,7 +321,5 @@ smart_gaps on
 # exec_always --no-startup-id "killall polybar;polybar -r center & polybar -r left & polybar -r right"
 exec_always --no-startup-id "source ~/.profile"
 exec_always --no-startup-id "bash ~/.config/polybar/run_polybar.sh"
-exec_always --no-startup-id "killall compton; compton --config /home/gary/.config/compton.conf"
-# exec_always --no-startup-id "killall conky; /usr/bin/conky -d -p10 -c /home/gary/.conkyrc"
 exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id "killall dunst; dunst"

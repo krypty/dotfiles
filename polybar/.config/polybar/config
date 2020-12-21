@@ -13,7 +13,7 @@ margin = 1
 
 [colors]
 ; background = #464646
-background = #373737
+background = #77373737
 ; background = #88000000
 ; background = #8800000
 ; background-alt = #444
@@ -71,7 +71,7 @@ modules-right = spotify-track eth wlan battery battery1 filesystem volume memory
 
 tray-position = right
 tray-padding = 2
-; tray-transparent = true
+tray-transparent = true
 ; tray-background = #88000000
 ; tray-background = #0063ff
 
