@@ -6,13 +6,6 @@ fi
 # disable history expansion e.g. `sudo !!`
 set +H
 
-function ztic() {
-     sudo mkdir -p /media/gary/BCN-NETKEY
-     sudo mount /dev/disk/by-label/BCN-NETKEY /media/gary/BCN-NETKEY -o rw,nosuid,nodev,relatime,uid=1000
-     ./ZTIC/zticproxy -mount:/media/gary/BCN-NETKEY
-     sudo umount /media/gary/BCN-NETKEY
-}
-
 # function shared_history {
 #     export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 #     export HISTSIZE=100000                   # big big history
