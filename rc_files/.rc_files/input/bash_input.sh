@@ -8,6 +8,8 @@ bind '"\e[Z": menu-complete-backward'
 bind '"\C-h": backward-kill-word'
 bind '"^[[1;3D": backward-word'
 bind '"^[[1;3C": forward-word'
+bind '"\ej": next-history'
+bind '"\ek": previous-history'
 
 # Disable terminal freeze after pressing ctrl+s
 stty -ixon
