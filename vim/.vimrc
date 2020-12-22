@@ -305,9 +305,6 @@ endfunction
 
 nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
 
-" Transparent background
-hi Normal ctermbg=none
-
 " Use the system clipboard
 set clipboard=unnamed,unnamedplus
 
@@ -348,6 +345,11 @@ set background=dark
 colorscheme gruvbox
 let base16colorspace=256
 " set termguicolors
+
+" Transparent background
+" hi Normal ctermbg=none
+hi Normal guibg=NONE ctermbg=NONE
+
 
 " Set color syntax for specific extensions
 augroup filetypedetect
