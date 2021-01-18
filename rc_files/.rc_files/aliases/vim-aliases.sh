@@ -4,5 +4,5 @@ alias sv="sudo vim"
 alias vimrc="vim ~/.vimrc"
 
 function td() {
-     bash -c "cd ~/tasks/ && vim *.md"
+     bash -c "cd ~/Nextcloud/tasks/ && vim -O *.md"
 }
