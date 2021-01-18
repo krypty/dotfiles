@@ -340,6 +340,9 @@ vnoremap <C-S-k> :m '<-2<CR>gv=gv
 nnoremap S :s/\v
 nnoremap <C-s> :%s/\v
 
+" Ctrl-Backspace removes last word in insert mode
+inoremap <C-H> <C-W>
+
 " Color scheme
 set background=dark
 colorscheme gruvbox
