@@ -67,7 +67,7 @@ font-3 = SourceCodeProForPowerline:size=10;0
 
 modules-left = powermenu i3
 modules-center =
-modules-right = spotify-track eth wlan battery battery1 filesystem volume memory cpu date
+modules-right = spotify-track temperature eth wlan battery battery1 filesystem volume memory cpu date
 
 tray-position = right
 tray-padding = 2
@@ -372,13 +372,13 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+; format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format-warn-underline = #f50a4d
 
-label = %temperature%
-label-warn = %temperature%
-label-warn-foreground = ${colors.secondary}
+label = " %temperature%"
+label-warn = " %temperature%"
+label-warn-foreground = ${colors.primary}
 
 ramp-0 = 
 ramp-1 = 
