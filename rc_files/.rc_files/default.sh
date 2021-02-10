@@ -26,7 +26,7 @@ set +H
 #
 # export PROMPT_COMMAND="$(source_sourceme)$PROMPT_COMMAND"
 
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden -g '!.git'"
 export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
 
 # Base16 Gruvbox dark, hard
