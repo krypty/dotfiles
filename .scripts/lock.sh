@@ -12,7 +12,8 @@
 #     com.github.chjj.compton.opts_set string:unredir_if_possible boolean:false
 
 # Suspend dunst and lock, then resume dunst when unlocked.
-# pkill -u $USER -USR1 dunst
+pkill -u $USER -USR1 dunst
+
 i3lock-fancy
 # i3lock-fancy -n -i $HOME/Pictures/wall.jpg \
 #     --insidecolor=373445ff --ringcolor=ffffffff --line-uses-inside \
@@ -20,7 +21,7 @@ i3lock-fancy
 #     --insidevercolor=fecf4dff --insidewrongcolor=d23c3dff \
 #     --ringvercolor=ffffffff --ringwrongcolor=ffffffff --indpos="x+86:y+1003" \
 #     --radius=15 --veriftext="" --wrongtext=""
-# pkill -u $USER -USR2 dunst
+pkill -u $USER -USR2 dunst
 
 # Revert compton's config changes.
 sleep 0.2
