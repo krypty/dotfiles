@@ -564,6 +564,11 @@ background_opacity: 0.9
 #       Remove the active selection.
 #   - ReceiveChar
 #   - None
+key_bindings:
+  - { key: PageUp,   mods: Alt, action: IncreaseFontSize             }
+  - { key: PageDown,    mods: Alt, action: DecreaseFontSize             }
+  - { key: Key0,    mods: Alt, action: ResetFontSize             }
+
 #
 # - Vi mode exclusive actions:
 #
