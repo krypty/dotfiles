@@ -188,8 +188,6 @@ Plugin 'ryanoasis/vim-devicons'
 
 Plugin 'ambv/black'
 
-Plugin 'davidhalter/jedi-vim'
-
 Plugin 'tpope/vim-eunuch'
 
 Plugin 'vim-scripts/taglist.vim'
