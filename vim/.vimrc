@@ -32,6 +32,8 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 " Cancel completion with Esc
 inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
+Plugin 'vim-scripts/dbext.vim'
+
 " Plugin 'mileszs/ack.vim'
 
 
@@ -229,8 +231,6 @@ set encoding=UTF-8
 " set leader key
 nnoremap <SPACE> <Nop>
 let mapleader=" "
-
-let g:loaded_sql_completion = 0
 
 " Save one keystroke
 " nnoremap , :
