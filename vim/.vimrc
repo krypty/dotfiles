@@ -34,36 +34,6 @@ inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
 Plugin 'vim-scripts/dbext.vim'
 
-" Plugin 'mileszs/ack.vim'
-
-
-" Plugin 'ctrlpvim/ctrlp.vim'
-" set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-" set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-"
-" let g:ctrlp_custom_ignore='\v[\/](vendor|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-"
-" " In CtrlP use <c-v> and <c-b> to open in vsplit and split
-" " replace old <c-b> mapping to <c-F> cycling between mode backward
-" let g:ctrlp_prompt_mappings={
-"       \ 'AcceptSelection("h")': ['<c-b>'],
-"       \ 'ToggleType(-1)': ['<c-F>'],
-"       \ }
-
-" nnoremap tf :CtrlPBuffer<CR>
-
-" " The Silver Searcher
-" if executable('ag')
-"   " Use ag over grep
-"   set grepprg=ag\ --nogroup\ --nocolor\ --hidden
-"
-"   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-"   let g:ctrlp_user_command='ag %s -l --nocolor --hidden -g ""'
-"
-"   " Enable cache
-"   let g:ctrlp_use_caching=1
-" endif
-
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
@@ -71,10 +41,6 @@ nnoremap tf :Buffers<CR>
 nnoremap <C-p> :Files<Cr>
 nnoremap <Space>rg :Rg<CR>
 
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
 
 " Splits open at the bottom and right
 set splitbelow splitright
