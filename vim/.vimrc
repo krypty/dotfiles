@@ -122,42 +122,20 @@ Plugin 'markonm/traces.vim'
 Plugin 'derekwyatt/vim-fswitch'
 
 Plugin 'rhysd/vim-clang-format'
-"let g:clang_format#code_style='llvm'
-"autocmd FileType c ClangFormatAutoEnable
-"autocmd FileType cpp ClangFormatAutoEnable
-"autocmd FileType hpp ClangFormatAutoEnable
-"autocmd FileType h ClangFormatAutoEnable
 
 Plugin 'mhinz/vim-startify'
 let g:startify_custom_header=['']
 set viminfo='100,n$HOME/.vim/files/info/viminfo
 
-" A solid language pack for Vim.
-" Plugin 'sheerun/vim-polyglot'
-" let g:polyglot_disabled = ['markdown']
-" let g:vim_markdown_conceal=0
 Plugin 'tpope/vim-markdown'
 let g:markdown_syntax_conceal = 0
 
 " Illuminate other uses of the current word under the cursor
 Plugin 'RRethy/vim-illuminate'
 
-" Should be the last plugin to load
-Plugin 'ryanoasis/vim-devicons'
-
 Plugin 'ambv/black'
 
 Plugin 'tpope/vim-eunuch'
-
-Plugin 'vim-scripts/taglist.vim'
-nnoremap <F5> :TlistToggle<CR>
-" let Tlist_Use_Right_Window=1
-" let Tlist_WinWidth=120
-
-" Plugin 'wsdjeg/FlyGrep.vim'
-" let g:FlyGrep_search_tools=['ag']
-" " let g:FlyGrep_input_delay=200
-" nnoremap <Space>g :FlyGrep<cr>
 
 Plugin 'chrisbra/Colorizer'
 nnoremap <Space>cc :ColorToggle<cr>
