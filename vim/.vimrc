@@ -115,15 +115,6 @@ Plugin 'tomtom/tcomment_vim'
 " Extended f, F,t and T key mappings
 Plugin 'rhysd/clever-f.vim'
 
-"" <space>f{char} to move to {char}
-"map  <space>f <Plug>(easymotion-bd-f)
-"nmap <space>f <Plug>(easymotion-overwin-f)
-
-Plugin 'haya14busa/incsearch.vim'
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-
 " Range, pattern and substitute preview for Vim
 Plugin 'markonm/traces.vim'
 
@@ -239,6 +230,8 @@ set hidden
 
 " ability to toogle search with F3
 nnoremap <F3> :set hlsearch!<CR>
+
+set hlsearch
 
 " Keep n lines visibles above/below the cursor
 set scrolloff=10
