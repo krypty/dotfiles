@@ -34,6 +34,8 @@ inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
 Plugin 'vim-scripts/dbext.vim'
 
+Plugin 'martinda/Jenkinsfile-vim-syntax'
+
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
