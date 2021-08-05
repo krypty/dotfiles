@@ -1,4 +1,7 @@
-/usr/bin/anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
+# ensure anacron dirs and files exists, even if empty
+mkdir -p ${HOME}/.anacron/{etc,spool}
+touch ${HOME}/.anacron/etc/anacrontab
+anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 
 export PRIMARY_MON=HDMI-2
 
