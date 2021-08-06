@@ -42,6 +42,8 @@ Plugin 'junegunn/fzf.vim'
 nnoremap tf :Buffers<CR>
 nnoremap <C-p> :Files<Cr>
 nnoremap <Space>rg :Rg<CR>
+" Don't make rg search for filename but only file content, see: https://github.com/junegunn/fzf.vim/issues/346
+command! -bang -nargs=* Gg call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 
 " Splits open at the bottom and right
