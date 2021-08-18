@@ -39,15 +39,24 @@ source ~/.rc_files/prompt/git.sh
 
 p_symbol="${fggreen}\$${fgreset}"
 
+eval_jobs() {
+  n_jobs=$(jobs -l | wc -l)
+  if [[ $n_jobs -eq 0 ]]; then
+    echo -n ""
+    return
+  fi
+  echo -n "${fgcyan}[$n_jobs]${fgreset}"
+}
+
 prompt_cmd() {
 if [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   p_user="${bfgwhite}${USER}${fgreset}"
   p_host="${bfggreen}${HOSTNAME}${fgreset}"
 
-  export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(eval_virtual_env) $(parse_git_branch)${p_symbol} ${fgreset}"
+  export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(eval_jobs)$(eval_virtual_env) $(parse_git_branch)${p_symbol} ${fgreset}"
 
 else
-  export PS1="${fgreset}$(eval_virtual_env)$(parse_git_branch)$(p_cwd) ${p_symbol} ${fgreset}"
+  export PS1="${fgreset}$(eval_jobs)$(eval_virtual_env)$(parse_git_branch)$(p_cwd) ${p_symbol} ${fgreset}"
 fi
 }
 PROMPT_COMMAND=prompt_cmd
