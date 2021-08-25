@@ -1,6 +1,6 @@
 [user]
-    email = gmarigliano93@gmail.com
     name = Gary Marigliano
+    useConfigOnly = true  # then, use `git config user.email "me@example.com"`
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     stash-all = stash save --include-untracked
