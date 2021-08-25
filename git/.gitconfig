@@ -4,7 +4,7 @@
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     stash-all = stash save --include-untracked
-	reset-origin = reset --hard @{u}
+    reset-origin = reset --hard @{u}
 [credential]
     helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
 [color]
@@ -24,7 +24,7 @@
     cmd = /usr/bin/env icdiff --line-numbers  $LOCAL $REMOTE
 [core]
     excludesfile = /home/gary/.gitignore_global
-    pager = delta --theme='Monokai Extended' 
+    pager = delta --theme='Monokai Extended'
     #--plus-color="#6e6e10" --minus-color="#9d0006"
 [interactive]
     diffFilter = delta --color-only
