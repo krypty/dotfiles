@@ -49,6 +49,13 @@ command! -bang -nargs=* Gg call fzf#vim#ag(<q-args>, {'options': '--delimiter : 
 " Splits open at the bottom and right
 set splitbelow splitright
 
+" <esc> is somehow the alt key...
+nnoremap <esc>j :resize +5<CR>
+nnoremap <esc>k :resize -5<CR>
+nnoremap <esc>h :vertical resize -5<CR>
+nnoremap <esc>l :vertical resize +5<CR>
+
+
 " Spell-check set to <F7> like Word
 map <F7> :setlocal spell! spelllang=en_us<CR>
 
