@@ -103,6 +103,7 @@ Plugin 'machakann/vim-highlightedyank'
 Plugin 'scrooloose/nerdtree'
 noremap <F2> :NERDTreeToggle<cr>
 nnoremap <space><F2> :NERDTreeFind<cr>
+let NERDTreeShowHidden=1
 
 " vim-autoformat
 Plugin 'Chiel92/vim-autoformat'
