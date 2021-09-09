@@ -1,0 +1,7 @@
+element-icon {
+    size: 4ch;
+}
+
+@import "gruvbox-dark.rasi"
+
+

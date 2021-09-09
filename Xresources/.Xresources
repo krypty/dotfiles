@@ -78,24 +78,6 @@
 ! *.color7:       #c5c8c6
 ! *.color15:      #ffffff
 
-! rofi
-! =================
-rofi.font: Sauce Code Pro Nerd Font Mono 22
-rofi.fullscreen: true
-rofi.color-enabled: true
-rofi.color-window: argb:f41d1f21,argb:00292f37,#f0c674
-rofi.color-normal: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#f0c674
-rofi.color-active: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#B3B3AD
-rofi.color-urgent: argb:02000000,#B3B3AD,argb:02000000,argb:02000000,#B3B3AD
-
-rofi.eh: 1
-rofi.separator-style: solid
-rofi.hide-scrollbar: true
-rofi.lines: 10
-rofi.width: 100
-rofi.padding: 200
-rofi.bw: 0
-rofi.show-icons: true
 
 
 ! urxvt
