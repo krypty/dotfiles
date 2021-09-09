@@ -324,3 +324,12 @@ au FileType hpp setl sw=2 sts=2 et
 
 au FileType md setl sw=2 sts=2 et
 au FileType markdown setl sw=2 sts=2 et
+
+" Java specific
+let java_highlight_functions = 1
+let java_highlight_all = 1
+
+highlight link javaScopeDecl Statement
+highlight link javaType Type
+highlight link javaDocTags PreProc
+hi javaTypedef term=italic cterm=NONE ctermfg=LightGreen ctermbg=NONE gui=bold guifg=#60ff60 guibg=NONE
