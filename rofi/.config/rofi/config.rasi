@@ -4,10 +4,7 @@ configuration {
         font: "Sauce Code Pro Nerd Font Mono 22";
         theme: "theme";
         show-icons: true;
-        icon-theme: "Papirus-Dark";
         case-sensitive: false;
         eh: 1;
         disable-history: true;
-        window-thumbnail: true;
-
 }
