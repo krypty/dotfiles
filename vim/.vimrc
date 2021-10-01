@@ -303,6 +303,10 @@ colorscheme gruvbox
 let base16colorspace=256
 " set termguicolors
 
+if has('gui_running')
+  au VimEnter * colorscheme gruvbox
+endif
+
 " Transparent background
 " hi Normal ctermbg=none
 hi Normal guibg=NONE ctermbg=NONE
