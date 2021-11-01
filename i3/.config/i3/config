@@ -8,8 +8,7 @@
 set $mod Mod4
 set $alt Mod1
 
-set $monleft DP-1
-set $monright HDMI-2
+include ~/.config/i3/config.d/`hostname`.conf
 
 # i3 config file (v4)
 #
@@ -216,17 +215,6 @@ set $ws8 8
 set $ws9 9
 set $ws10 10
 
-# odd numbers to mon left and even to mon right
-workspace 1 output $monleft
-workspace 2 output $monleft
-workspace 3 output $monleft
-workspace 4 output $monleft
-workspace 5 output $monleft
-workspace 6 output $monright
-workspace 7 output $monright
-workspace 8 output $monright
-workspace 9 output $monright
-workspace 10 output $monright
 
 # switch to workspace
 bindsym $mod+1 workspace 1
