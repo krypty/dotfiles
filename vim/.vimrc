@@ -62,6 +62,9 @@ map <F7> :setlocal spell! spelllang=en_us<CR>
 Plugin 'qpkorr/vim-bufkill'
 nnoremap <space>q :BD<CR>
 
+" close all buffers except current one
+command! BufCurOnly execute '%bdelete|edit#|bdelete#'
+
 Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
