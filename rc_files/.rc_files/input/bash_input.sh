@@ -10,6 +10,7 @@ bind '"^[[1;3D": backward-word'
 bind '"^[[1;3C": forward-word'
 bind '"\ej": next-history'
 bind '"\ek": previous-history'
+bind '"\ee": edit-and-execute-command'
 
 # Disable terminal freeze after pressing ctrl+s
 stty -ixon
