@@ -322,6 +322,8 @@ augroup filetypedetect
   au BufRead,BufNewFile *.ffs set filetype=xml
 augroup END
 
+au FileType * setl sw=4 sts=4 et
+
 " Cpp specific
 autocmd FileType c noremap <Leader>o :FSHere<CR>
 autocmd FileType cpp noremap <Leader>o :FSHere<CR>
