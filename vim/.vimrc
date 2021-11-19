@@ -109,6 +109,8 @@ Plugin 'wincent/loupe'
 " Highlight the yanked region
 Plugin 'machakann/vim-highlightedyank'
 
+Plugin 'chr4/nginx.vim'
+
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
 noremap <F2> :NERDTreeToggle<cr>
