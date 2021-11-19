@@ -272,8 +272,8 @@ nnoremap j gj
 nnoremap k gk
 
 " Manage buffers with shorter keymaps
-nnoremap tk :bnext<CR>
-nnoremap tj :bprevious<CR>
+nnoremap tk :bprevious<CR>
+nnoremap tj :bnext<CR>
 nnoremap th :bfirst<CR>
 nnoremap tl :blast<CR>
 
