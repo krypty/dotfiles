@@ -145,7 +145,9 @@ let g:markdown_syntax_conceal = 0
 " Illuminate other uses of the current word under the cursor
 Plugin 'RRethy/vim-illuminate'
 
-Plugin 'ambv/black'
+if has('python3')
+  Plugin 'ambv/black'
+endif
 
 Plugin 'tpope/vim-eunuch'
 
