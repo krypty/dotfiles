@@ -63,7 +63,6 @@ nnoremap <space>q :BD<CR>
 " close all buffers except current one
 command! BufCurOnly execute '%bdelete|edit#|bdelete#'
 
-Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
@@ -106,8 +105,6 @@ Plugin 'wincent/loupe'
 
 " Highlight the yanked region
 Plugin 'machakann/vim-highlightedyank'
-
-Plugin 'chr4/nginx.vim'
 
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
@@ -270,8 +267,8 @@ nnoremap j gj
 nnoremap k gk
 
 " Manage buffers with shorter keymaps
-nnoremap tk :bprevious<CR>
-nnoremap tj :bnext<CR>
+nnoremap tk :bnext<CR>
+nnoremap tj :bprevious<CR>
 nnoremap th :bfirst<CR>
 nnoremap tl :blast<CR>
 
@@ -330,8 +327,6 @@ hi Normal guibg=NONE ctermbg=NONE
 augroup filetypedetect
   au BufRead,BufNewFile *.ffs set filetype=xml
 augroup END
-
-au FileType * setl sw=4 sts=4 et
 
 " Cpp specific
 autocmd FileType c noremap <Leader>o :FSHere<CR>
