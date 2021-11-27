@@ -16,10 +16,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'morhetz/gruvbox'
-let g:gruvbox_bold=1
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark="hard"
+Plugin 'sainnhe/gruvbox-material'
 
 Plugin 'lifepillar/vim-mucomplete'
 set completeopt+=menuone
@@ -73,7 +70,7 @@ set laststatus=2
 let g:airline_detect_modified=1
 let g:airline_powerline_fonts=1
 
-let g:airline_theme='base16_gruvbox_dark_hard'
+let g:airline_theme='gruvbox_material'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep=' '
 let g:airline#extensions#tabline#left_alt_sep='|'
@@ -302,14 +299,25 @@ nnoremap <C-s> :%s/\v
 " Ctrl-Backspace removes last word in insert mode
 inoremap <C-H> <C-W>
 
-" Color scheme
+" Important!!
+if has('termguicolors')
+  set termguicolors
+endif
+" " For dark version.
 set background=dark
-colorscheme gruvbox
-let base16colorspace=256
-" set termguicolors
+" For light version.
+" set background=light
+" Set contrast.
+" This configuration option should be placed before `colorscheme gruvbox-material`.
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_transparent_background = 0
+
+colorscheme gruvbox-material
 
 if has('gui_running')
-  au VimEnter * colorscheme gruvbox
+  au VimEnter * colorscheme gruvbox-material
 endif
 
 " Transparent background
