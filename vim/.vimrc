@@ -24,10 +24,6 @@ set completeopt+=noinsert
 set shortmess+=c   " Shut off completion messages
 set belloff+=ctrlg " If Vim beeps during completion
 let g:mucomplete#enable_auto_at_startup = 1
-" Accept completion using <CR> i.e. Enter without inserting new line
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-" Cancel completion with Esc
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 
 Plugin 'vim-scripts/dbext.vim'
 
