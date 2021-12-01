@@ -10,6 +10,7 @@ alias m="make"
 alias wtr="curl 'http://wttr.in/lausanne?lang=fr'"
 alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
 alias vihosts="sudo vim /etc/hosts"
+alias glow="glow -p"
 
 # Setup NNN
 alias update-nnn-plugs="curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh"
