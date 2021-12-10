@@ -37,7 +37,7 @@ nnoremap <C-p> :Files<Cr>
 nnoremap <Space>rg :Rg<CR>
 " Don't make rg search for filename but only file content, see: https://github.com/junegunn/fzf.vim/issues/346
 command! -bang -nargs=* Rg
-  \ call fzf#vim#grep("rg -g '!.git/**' --hidden --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+  \ call fzf#vim#grep("rg -g '!external/' -g '!.git/**' --hidden --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 
 " Splits open at the bottom and right
