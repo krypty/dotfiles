@@ -1,5 +1,5 @@
-confirmonquit: true
-reporting: "on"
-startuppopupversion: 1
-showCommandLog: false
-showFileTree: false # for rendering changes files in a tree format
+gui:
+  confirmOnQuit: true
+  reporting: "on"
+  showCommandLog: true
+  showFileTree: false # for rendering changes files in a tree format
