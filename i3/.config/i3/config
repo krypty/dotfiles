@@ -179,7 +179,7 @@ bindsym $mod+$alt+F12 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2
 bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 bindsym $mod+$alt+F10 exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 # Capture d'écran
-bindsym Print exec xfce4-screenshooter
+bindsym Print exec flameshot gui
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ # increase screen brightness
