@@ -2,7 +2,6 @@ configuration {
         modi: "window,drun,comb";
         combi-modi: "window,drun";
         font: "Sauce Code Pro Nerd Font Mono 22";
-        theme: "theme";
         show-icons: true;
         case-sensitive: false;
         eh: 1;
