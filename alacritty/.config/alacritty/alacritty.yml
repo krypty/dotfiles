@@ -184,7 +184,7 @@ schemes:
       foreground: '0xdfbf8e'
 
     normal:
-      black:   '0x665c54'
+      black:   '0x3A3938'
       red:     '0xea6962'
       green:   '0xa9b665'
       yellow:  '0xe78a4e'
