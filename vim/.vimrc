@@ -142,7 +142,7 @@ let g:markdown_syntax_conceal = 0
 Plugin 'RRethy/vim-illuminate'
 
 if has('python3')
-  Plugin 'ambv/black'
+  Plugin 'psf/black'
 endif
 
 Plugin 'tpope/vim-eunuch'
