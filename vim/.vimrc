@@ -259,6 +259,9 @@ nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
 
 " Use the system clipboard
 set clipboard=unnamed,unnamedplus
+"
+" Don't clear system clipboard on vim exit
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 " make j and k keys go up normally instead of to the previous line number
 nnoremap j gj
@@ -297,6 +300,7 @@ nnoremap <C-s> :%s/\v
 
 " Ctrl-Backspace removes last word in insert mode
 inoremap <C-H> <C-W>
+
 
 " Important!!
 if has('termguicolors')
