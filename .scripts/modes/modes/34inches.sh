@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
+first_arg=$1
+
 cdir=$(dirname $0)
 
 xrandr --output DP-0 --mode 3440x1440 -r 100
-i3-msg restart
-sleep 3
+
+if [[ "$first_arg" != "--no-restart" ]]; then
+        i3-msg restart
+        sleep 3
+fi
 # feh --bg-scale /home/gary/dotfiles/scripts/modes/modes/34inches/wallpaper
 feh --bg-scale $cdir/34inches/wallpaper
 notify-send "Mode set to 34inches"

@@ -309,5 +309,4 @@ smart_gaps on
 # exec_always --no-startup-id "killall polybar;polybar -r center & polybar -r left & polybar -r right"
 exec_always --no-startup-id "source ~/.profile"
 exec_always --no-startup-id "bash ~/.config/polybar/run_polybar.sh"
-exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id "killall dunst; dunst"
