@@ -1,4 +1,6 @@
 alias git='LANG=en_US.utf-8 git'
+alias gpf="git pull --ff-only"
+alias gpr="git pull --rebase"
 alias g=git
 alias gst="git status"
 alias gd="git diff"
