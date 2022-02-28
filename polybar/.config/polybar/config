@@ -393,7 +393,7 @@ ramp-foreground = ${colors.foreground-alt}
 type = custom/menu
 
 format-spacing = 1
-label-open =  " "
+label-open =  "[P]"
 label-open-foreground = ${colors.primary}
 label-close = cancel
 label-close-foreground = ${colors.primary}
