@@ -24,8 +24,7 @@
     cmd = /usr/bin/env icdiff --line-numbers  $LOCAL $REMOTE
 [core]
     excludesfile = /home/gary/.gitignore_global
-    pager = delta --theme='Monokai Extended'
-    #--plus-color="#6e6e10" --minus-color="#9d0006"
+    pager = delta --syntax-theme='Monokai Extended'
 [interactive]
     diffFilter = delta --color-only
 
