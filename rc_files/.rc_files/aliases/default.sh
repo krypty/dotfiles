@@ -41,3 +41,5 @@ n ()
             rm -f "$NNN_TMPFILE" > /dev/null
     fi
 }
+
+alias lf="lfrun"
