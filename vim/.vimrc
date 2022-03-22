@@ -159,6 +159,11 @@ Plugin 'leafgarland/typescript-vim'
 
 Plugin 'jvirtanen/vim-hcl'
 
+Plugin 'voldikss/vim-floaterm'
+Plugin 'ptzz/lf.vim'
+let g:lf_command_override = 'lf -command "set hidden"'
+let g:NERDTreeHijackNetrw = 0 " Add this line if you use NERDTree
+
 " --- All of your Plugins must be added before the following line
 call vundle#end()            " required by Vundle
 
