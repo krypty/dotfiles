@@ -268,7 +268,22 @@ nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
 set clipboard=unnamed,unnamedplus
 "
 " Don't clear system clipboard on vim exit
-autocmd VimLeave * call system("xsel -ib", getreg('+'))
+if executable("xsel")
+
+  function! PreserveClipboard()
+    call system("xsel -ib", getreg('+'))
+  endfunction
+
+  function! PreserveClipboadAndSuspend()
+    call PreserveClipboard()
+    suspend
+  endfunction
+
+  autocmd VimLeave * call PreserveClipboard()
+  nnoremap <silent> <c-z> :call PreserveClipboadAndSuspend()<cr>
+  vnoremap <silent> <c-z> :<c-u>call PreserveClipboadAndSuspend()<cr>
+
+endif
 
 " make j and k keys go up normally instead of to the previous line number
 nnoremap j gj
