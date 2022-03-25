@@ -375,3 +375,6 @@ highlight link javaScopeDecl Statement
 highlight link javaType Type
 highlight link javaDocTags PreProc
 hi javaTypedef term=italic cterm=NONE ctermfg=LightGreen ctermbg=NONE gui=bold guifg=#60ff60 guibg=NONE
+
+" Jenkinsfile specific
+au FileType Jenkinsfile set comments=://
