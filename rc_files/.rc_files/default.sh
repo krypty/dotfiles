@@ -72,3 +72,5 @@ export NNN_OPTS="H"
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 
 _gen_fzf_default_opts
+
+export PATH=/home/gary/.local/bin:$PATH
