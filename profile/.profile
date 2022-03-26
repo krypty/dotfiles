@@ -3,7 +3,8 @@ mkdir -p ${HOME}/.anacron/{etc,spool}
 touch ${HOME}/.anacron/etc/anacrontab
 anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 
-export PRIMARY_MON=HDMI-2
+[[ $(hostname) == "erxpc33" ]] && export PRIMARY_MON=HDMI-2
+[[ $(hostname) == "thinkpad-archlinux" ]] && export PRIMARY_MON=eDP-1
 
 
 # Disable caps lock
