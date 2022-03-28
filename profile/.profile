@@ -3,11 +3,11 @@ mkdir -p ${HOME}/.anacron/{etc,spool}
 touch ${HOME}/.anacron/etc/anacrontab
 anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 
-[[ $(hostname) == "erxpc33" ]] && export PRIMARY_MON=HDMI-2
+[[ $(hostname) == "erxpc33" ]] && export PRIMARY_MON=DP-4
+[[ $(hostname) == "erxpc33" ]] && export WINIT_X11_SCALE_FACTOR='1.15'
+
 [[ $(hostname) == "thinkpad-archlinux" ]] && export PRIMARY_MON=eDP-1
-
 [[ $(hostname) == "thinkpad-archlinux" ]] && export WINIT_X11_SCALE_FACTOR='1.4'
-
 
 # Disable caps lock
 setxkbmap -option caps:none
