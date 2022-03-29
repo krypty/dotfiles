@@ -6,6 +6,9 @@ fi
 # disable history expansion e.g. `sudo !!`
 set +H
 
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+
 # function shared_history {
 #     export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 #     export HISTSIZE=100000                   # big big history
