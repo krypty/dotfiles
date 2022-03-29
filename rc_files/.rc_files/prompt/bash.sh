@@ -59,5 +59,5 @@ else
   export PS1="${fgreset}$(eval_jobs)$(eval_virtual_env)$(parse_git_branch)$(p_cwd) ${p_symbol} ${fgreset}"
 fi
 }
-PROMPT_COMMAND=prompt_cmd
+PROMPT_COMMAND='prompt_cmd; history -a'
 

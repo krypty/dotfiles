@@ -6,28 +6,12 @@ fi
 # disable history expansion e.g. `sudo !!`
 set +H
 
+# Better bash history
 export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
-
-# function shared_history {
-#     export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-#     export HISTSIZE=100000                   # big big history
-#     export HISTFILESIZE=100000               # big big history
-#     shopt -s histappend                      # append to history, don't overwrite it
-#
-#     # Save and reload the history after each command finishes
-#     export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-# }
-#
-# shared_history
-
-# function source_sourceme() {
-#     if [ -x ".sourceme" ]; then
-#         source .sourceme
-#     fi
-# }
-#
-# export PROMPT_COMMAND="$(source_sourceme)$PROMPT_COMMAND"
+shopt -s histappend  # append to history, don't overwrite it
+export HISTCONTROL=ignoredups:erasedups
+shopt -s cmdhist  # use one command per line
 
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden -g '!.git'"
 export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
