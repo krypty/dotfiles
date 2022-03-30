@@ -15,3 +15,12 @@ setxkbmap -option caps:none
 xmodmap -e "keycode 105 = Menu"
 # Disable middle click on touchpad
 xinput --list | grep "SynPS/2 Synaptics TouchPad" && xinput set-button-map "SynPS/2 Synaptics TouchPad" 1 25 3 4 5 6 7
+
+source ~/.bashrc
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# source hostname-specific commands
+if [ -f $HOME/profile.d/`hostname`.sh ]; then
+     source $HOME//profile.d/`hostname`.sh
+fi
