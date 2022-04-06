@@ -9,6 +9,8 @@ anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 [[ $(hostname) == "thinkpad-archlinux" ]] && export PRIMARY_MON=eDP-1
 [[ $(hostname) == "thinkpad-archlinux" ]] && export WINIT_X11_SCALE_FACTOR='1.4'
 
+[[ $(hostname) == "tower" ]] && export PRIMARY_MON=DP-0
+
 # Disable caps lock
 setxkbmap -option caps:none
 # Map Control_Right to (context) Menu
