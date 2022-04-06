@@ -43,3 +43,4 @@ n ()
 }
 
 alias lf="lfrun"
+alias less="less -iF"
