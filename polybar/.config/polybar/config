@@ -70,7 +70,7 @@ modules-right = spotify-track temperature eth wlan battery battery1 filesystem v
 
 tray-position = right
 tray-padding = 2
-tray-transparent = true
+; tray-transparent = true
 ; tray-background = #88000000
 ; tray-background = #0063ff
 
@@ -379,13 +379,13 @@ format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 format-warn-underline = #f50a4d
 
-label = " %temperature%"
-label-warn = " %temperature%"
+label = " %temperature-c%"
+label-warn = " %temperature-c%"
 label-warn-foreground = ${colors.primary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 =
+ramp-1 =
+ramp-2 =
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
