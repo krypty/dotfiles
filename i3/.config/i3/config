@@ -269,7 +269,7 @@ for_window [title="quick_math"] floating enable
 for_window [title="quick_math"] resize set 800 300
 for_window [title="quick_math"] move scratchpad
 for_window [title="quick_math"] border pixel 5
-exec_always --no-startup-id "for win in $(wmctrl -lx | grep -E 'quick_math' | awk '{print $1}'); do wmctrl -ic $win; done; $term -t quick_math -e python -q"
+exec_always --no-startup-id "for win in $(wmctrl -lx | grep -E 'quick_math' | awk '{print $1}'); do wmctrl -ic $win; done; $term -t quick_math -e python3 -q"
 
 # Quick Telegram window
 bindsym $mod+t [class="Telegram"] scratchpad show; [class="Telegram"] move position center
