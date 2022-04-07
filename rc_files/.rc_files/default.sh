@@ -46,6 +46,8 @@ export FZF_DEFAULT_OPTS="
 
 }
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 
 # Make nnn preview escape colors correctly, also set insensitive search for less
 export PAGER="less -Ri"
