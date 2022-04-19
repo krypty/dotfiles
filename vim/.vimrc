@@ -223,6 +223,9 @@ set showmatch
 " allow switching unsaved files in buffers
 set hidden
 
+" Re-read automatically file if changed in background
+setl autoread
+
 " ability to toogle search with F3
 nnoremap <F3> :set hlsearch!<CR>
 
