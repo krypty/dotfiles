@@ -15,23 +15,24 @@
     diff = true
     difftool = true
 [diff]
-    tool = icdiff
     colorMoved = default
     color-moved-ws = allow-indentation-change
 [difftool]
     prompt = false
-[difftool "icdiff"]
-    cmd = /usr/bin/env icdiff --line-numbers  $LOCAL $REMOTE
 [core]
+    pager = delta
     excludesfile = /home/gary/.gitignore_global
-    pager = delta --syntax-theme='Monokai Extended'
+[merge]
+    ff = no
+    commit = no
+    conflictstyle = diff3
+[pull]
+    ff = yes
+[submodule]
+    recurse = false
 [interactive]
     diffFilter = delta --color-only
 
-[include]
-    path = /home/gary/.delta_themes
-
 [delta]
-    features = line-numbers decorations
-    inspect-raw-lines = false
-
+    navigate = true  # use n and N to move between diff sections
+    line-numbers = true
