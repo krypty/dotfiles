@@ -63,3 +63,5 @@ export RIPGREP_CONFIG_PATH=~/.ripgreprc
 _gen_fzf_default_opts
 
 export PATH=/home/gary/.local/bin:$PATH
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

@@ -8,3 +8,4 @@ vim/.vim/session/*
 
 vim/.vim/files/info/viminfo
 vim/.vim/.netrwhist
+ssh-agent/.config/systemd/user/default.target.wants/ssh-agent.service
