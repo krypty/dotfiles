@@ -381,3 +381,6 @@ hi javaTypedef term=italic cterm=NONE ctermfg=LightGreen ctermbg=NONE gui=bold g
 
 " Jenkinsfile specific
 au FileType Jenkinsfile set comments=://
+
+" Python specific
+au FileType python set completeopt-=preview
