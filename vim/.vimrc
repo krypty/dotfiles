@@ -40,6 +40,8 @@ command! -bang -nargs=* Rg
   \ call fzf#vim#grep("rg -g '!external/' -g '!.git/**' --hidden --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 
+Plugin 'junegunn/gv.vim'
+
 " Splits open at the bottom and right
 set splitbelow splitright
 
