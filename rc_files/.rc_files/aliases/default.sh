@@ -13,6 +13,10 @@ alias vihosts="sudo vim /etc/hosts"
 alias glow="glow -p"
 alias xsel="xsel --clipboard"
 
+function fd {
+    which fdfind > /dev/null && fdfind "$@" || fd "$@"
+}
+
 # Setup NNN
 alias update-nnn-plugs="curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh"
 
