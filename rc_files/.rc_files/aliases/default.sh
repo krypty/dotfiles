@@ -14,7 +14,7 @@ alias glow="glow -p"
 alias xsel="xsel --clipboard"
 
 function fd {
-    which fdfind > /dev/null && fdfind "$@" || fd "$@"
+    (which fdfind 2> /dev/null && fdfind "$@") || $(which fd) "$@"
 }
 
 # Setup NNN
