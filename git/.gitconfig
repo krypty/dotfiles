@@ -29,6 +29,8 @@
     conflictstyle = diff3
 [pull]
     ff = yes
+[push]
+    autoSetupRemote = yes
 [submodule]
     recurse = false
 [interactive]
