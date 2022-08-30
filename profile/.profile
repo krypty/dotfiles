@@ -11,6 +11,8 @@ anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 
 [[ $(hostname) == "tower" ]] && export PRIMARY_MON=DP-0
 
+[[ $(hostname) == "archlinux-hp" ]] && export WINIT_X11_SCALE_FACTOR='1.2'
+
 # Disable caps lock
 setxkbmap -option caps:none
 # Map Control_Right to (context) Menu

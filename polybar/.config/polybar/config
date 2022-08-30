@@ -9,6 +9,7 @@
 
 [globals]
 primary-mon = ${env:PRIMARY_MON}
+iface = ${env:PRIMARY_IFACE}
 margin = 1
 
 [colors]
@@ -66,7 +67,7 @@ font-3 = SourceCodeProForPowerline:size=10;0
 
 modules-left = powermenu i3
 modules-center =
-modules-right = spotify-track temperature eth wlan battery battery1 filesystem volume memory cpu date
+modules-right = spotify-track temperature eth_wired eth_wlan wlan battery battery1 filesystem volume memory cpu date
 
 tray-position = right
 tray-padding = 2
@@ -247,9 +248,23 @@ label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-foreground = ${colors.foreground-alt}
 
-[module/eth]
+[module/eth_wired]
 type = internal/network
-interface = enp3s0
+interface = enp0s31f6
+interval = 3.0
+
+format-connected-underline =
+format-connected-prefix = " "
+format-connected-foreground-foreground = ${colors.foreground-alt}
+label-connected =  %downspeed:1%  %upspeed:1%
+
+format-disconnected-underline =
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/eth_wlan]
+type = internal/network
+interface = wlan0
 interval = 3.0
 
 format-connected-underline =
@@ -298,7 +313,8 @@ ramp-headphones-1 = 
 ramp-headphones-2 = 
 ramp-headphones-3 = 
 
-
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
 [module/battery1]
 type = internal/battery
 battery = BAT1
@@ -314,7 +330,7 @@ label-discharging = %percentage%% (%time%)
 format-discharging = <ramp-capacity> <label-discharging>
 ; format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = "BAT1 "
 format-full-prefix-foreground = ${colors.foreground-alt}
 ; format-full-underline = ${self.format-charging-underline}
 ramp-capacity-0 = 
@@ -335,7 +351,7 @@ animation-charging-framerate = 750
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = ADP1
+adapter = AC
 full-at = 90
 
 time-format = %R
@@ -343,11 +359,11 @@ time-format = %R
 format-charging = <animation-charging> <label-charging>
 ; format-charging-underline = #ffb52a
 
-label-discharging = %percentage%% (%time%)
+label-discharging = BAT0 %percentage%% (%time%)
 format-discharging = <ramp-capacity> <label-discharging>
 ; format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = "BAT0 "
 format-full-prefix-foreground = ${colors.foreground-alt}
 ; format-full-underline = ${self.format-charging-underline}
 ramp-capacity-0 = 
