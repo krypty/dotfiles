@@ -371,6 +371,9 @@ au FileType hpp setl sw=2 sts=2 et
 
 au FileType md setl sw=2 sts=2 et
 au FileType markdown setl sw=2 sts=2 et
+"
+" for yaml files, 2 spaces
+autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
 
 " Java specific
 let java_highlight_functions = 1
