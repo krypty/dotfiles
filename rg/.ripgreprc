@@ -13,3 +13,6 @@
 
 # Because who cares about case!?
 --smart-case
+
+# Show hidden by default
+--hidden
