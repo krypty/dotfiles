@@ -250,7 +250,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth_wired]
 type = internal/network
-interface = enp0s31f6
+interface = ${globals.iface}
 interval = 3.0
 
 format-connected-underline =

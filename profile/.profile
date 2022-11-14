@@ -5,6 +5,7 @@ anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 
 [[ $(hostname) == "erxpc33" ]] && export PRIMARY_MON=DP-0
 [[ $(hostname) == "erxpc33" ]] && export WINIT_X11_SCALE_FACTOR='1.1'
+[[ $(hostname) == "erxpc33" ]] && export PRIMARY_IFACE='enp3s0'
 
 [[ $(hostname) == "thinkpad-archlinux" ]] && export PRIMARY_MON=eDP-1
 [[ $(hostname) == "thinkpad-archlinux" ]] && export WINIT_X11_SCALE_FACTOR='1.4'
