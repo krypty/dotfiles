@@ -47,5 +47,3 @@ n ()
 }
 
 alias lf="lfrun"
-alias less="bat --pager='less -iRF'"
-alias cat="bat --paging=never"
