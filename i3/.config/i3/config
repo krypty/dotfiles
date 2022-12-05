@@ -167,6 +167,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Audio
+bindsym $mod+$alt+F8 exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym $mod+$alt+F7 exec pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
