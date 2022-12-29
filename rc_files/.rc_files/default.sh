@@ -67,3 +67,8 @@ export PATH=/home/gary/.local/bin:$PATH
 if [[ -z "$SSH_AUTH_SOCK" ]]; then
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
