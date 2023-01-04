@@ -34,9 +34,13 @@ keymap("n", "<F7>", ":setlocal spell! spelllang=en_us<CR>", opts)
 
 -- Close buffer without closing its window
 keymap("n", "<leader>q", ":BD<CR>", opts)
+keymap("n", "<leader>q!", ":BD!<CR>", opts)
 
 -- Toggle search highlighted matches
 keymap("n", "<F3>", ":set hlsearch!<CR>", opts)
+
+-- Open vim's built-in file explorer
+keymap("n", "<leader>e", ":Lex 20<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "tj", ":bnext<CR>", opts)
