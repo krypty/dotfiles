@@ -12,6 +12,7 @@ anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 
 [[ $(hostname) == "tower" ]] && export PRIMARY_MON=DP-0
 [[ $(hostname) == "tower" ]] && export PRIMARY_IFACE='enp3s0'
+[[ $(hostname) == "tower" ]] && export WINIT_X11_SCALE_FACTOR='1.1'
 
 [[ $(hostname) == "archlinux-hp" ]] && export WINIT_X11_SCALE_FACTOR='1.2'
 
