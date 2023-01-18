@@ -266,12 +266,12 @@ for_window [title="Inbox.*" class="Thunderbird"] move scratchpad
 for_window [title="Inbox.*" class="Thunderbird"] border pixel 5
 
 # Quick math terminal
-bindsym $mod+c [title="quick_math"] scratchpad show; [title="quick_math"] move position center
-for_window [title="quick_math"] floating enable
-for_window [title="quick_math"] resize set 800 300
-for_window [title="quick_math"] move scratchpad
-for_window [title="quick_math"] border pixel 5
-exec_always --no-startup-id "for win in $(wmctrl -lx | grep -E 'quick_math' | awk '{print $1}'); do wmctrl -ic $win; done; $term -t quick_math -e python3 -q"
+bindsym $mod+c [class="quick_math"] scratchpad show; [class="quick_math"] move position center
+for_window [class="quick_math"] floating enable
+for_window [class="quick_math"] resize set 800 300
+for_window [class="quick_math"] move scratchpad
+for_window [class="quick_math"] border pixel 5
+exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /quick_math/ {print $1}'); do wmctrl -ic $win; done; $term --class quick_math -e python3 -q"
 
 # Quick Telegram window
 bindsym $mod+t [class="Telegram"] scratchpad show; [class="Telegram"] move position center
