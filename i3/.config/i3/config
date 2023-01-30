@@ -75,7 +75,7 @@ bindsym $mod+Shift+Q kill
 # bindsym $mod+d exec dmenu_run
 # bindsym $mod+space exec rofi -combi-mode window,drun -show combi -modi combi
 bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi"
-bindsym $mod+Shift+space exec "i3l $(echo -e '2columns\n3columns 0.5 0.47\nnone' | rofi -dmenu)"
+bindsym $mod+Shift+space exec "i3l $(/usr/bin/echo -e '2columns\n3columns 0.5 0.47\nnone' | rofi -dmenu)"
 
 # Changement du Focus
 bindsym $mod+h focus left
