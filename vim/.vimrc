@@ -92,8 +92,7 @@ Plugin 'tpope/vim-surround'
 " Detect shiftwidth and expandtab automatically
 Plugin 'tpope/vim-sleuth'
 
-" Easymotion
-Plugin 'easymotion/vim-easymotion'
+Plugin 'justinmk/vim-sneak'
 
 " Fugitive
 Plugin 'tpope/vim-fugitive'
