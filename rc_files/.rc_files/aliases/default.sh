@@ -12,6 +12,7 @@ alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
 alias vihosts="sudo vim /etc/hosts"
 alias glow="glow -p"
 alias xsel="xsel --clipboard"
+alias cal="cal -w -m"
 
 function fd {
     (which fdfind &> /dev/null && fdfind "$@") || $(which fd 2>/dev/null) "$@"
