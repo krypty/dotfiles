@@ -16,3 +16,6 @@
 
 # Show hidden by default
 --hidden
+
+# Follow symlinks
+--follow
