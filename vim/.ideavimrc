@@ -6,7 +6,8 @@ nnoremap g/ g/
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
-set easymotion
+" set easymotion
+set sneak
 
 set surround
 set commentary
