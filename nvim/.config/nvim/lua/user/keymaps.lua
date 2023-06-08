@@ -86,3 +86,14 @@ keymap("v", "p", '"_dP', opts)  -- don't replace replaced content in the clipboa
 -- Move text up and down
 keymap("x", "<C-J>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<C-K>", ":move '<-2<CR>gv-gv", opts)
+
+-- Telescope
+keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>rg", ":Telescope live_grep<CR>", opts)
+keymap("n", "tf", ":Telescope buffers<CR>", opts)
+
+-- Nvim-tree
+keymap("n", "<F2>", ":NvimTreeToggle<CR>", opts)
+keymap("i", "<F2>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<F2>", ":NvimTreeFindFileToggle<CR>", opts)
+keymap("i", "<F2>", ":NvimTreeFindFileToggle<CR>", opts)

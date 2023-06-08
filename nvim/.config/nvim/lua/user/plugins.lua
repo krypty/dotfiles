@@ -58,6 +58,7 @@ return packer.startup(function(use)
   use "tpope/vim-eunuch"  -- Helpers for UNIX (e.g. SudoWrite)
   use "gpanders/editorconfig.nvim"  -- EditorConfig
   use "ellisonleao/gruvbox.nvim"
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 
   use {
     "ptzz/lf.vim",
@@ -65,7 +66,7 @@ return packer.startup(function(use)
     requires = { 'voldikss/vim-floaterm' }
   }
 
-  use { "nvim-lualine/lualine.nvim", requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
+  use { "nvim-lualine/lualine.nvim", requires = { 'nvim-tree/nvim-web-devicons' } }
 
   use {'akinsho/bufferline.nvim', tag = "v4.*", requires = 'nvim-tree/nvim-web-devicons'}
 
@@ -87,10 +88,32 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
 
+  -- Telescope
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.1' }
+
+  use { 'nvim-telescope/telescope-media-files.nvim' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
+
+   -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use 'HiPhish/nvim-ts-rainbow2'
+  use "nvim-treesitter/playground"
+
+  -- Comments
+  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+
+  -- NvimTree
+  use "nvim-tree/nvim-tree.lua"
 end)
