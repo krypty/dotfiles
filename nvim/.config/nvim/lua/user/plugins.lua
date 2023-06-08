@@ -60,14 +60,14 @@ return packer.startup(function(use)
   use "ellisonleao/gruvbox.nvim"
 
   use {
-    "ptzz/lf.vim", 
+    "ptzz/lf.vim",
     config = function() vim.g.lf_command_override = 'lf -command "set hidden"' end,
     requires = { 'voldikss/vim-floaterm' }
   }
 
   use { "nvim-lualine/lualine.nvim", requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
 
-  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', tag = "v4.*", requires = 'nvim-tree/nvim-web-devicons'}
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
