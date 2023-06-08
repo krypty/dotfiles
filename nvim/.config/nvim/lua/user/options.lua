@@ -36,7 +36,7 @@ vim.opt.sidescrolloff = 10
 vim.opt.showmatch = true  -- highlight matching [{()}]
 vim.opt.hidden = true  -- allow switching unsaved files in buffers
 vim.opt.colorcolumn = { 80, 100 }
-vim.opt.background = "dark"
+vim.opt.background = "light"
 
 vim.opt.list = true
 vim.opt.listchars = "nbsp:·"
