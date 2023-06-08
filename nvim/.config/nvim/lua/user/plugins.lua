@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use "gpanders/editorconfig.nvim"  -- EditorConfig
   use "ellisonleao/gruvbox.nvim"
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "jose-elias-alvarez/null-ls.nvim"
 
   use {
     "ptzz/lf.vim",
