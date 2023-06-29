@@ -15,7 +15,7 @@ bind '"\ee": edit-and-execute-command'
 # Disable terminal freeze after pressing ctrl+s
 stty -ixon
 
-export EDITOR=vim
+export EDITOR=nvim
 
 export PAGER=less
 export LESSCHARSET=UTF-8
