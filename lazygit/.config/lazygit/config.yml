@@ -3,3 +3,4 @@ gui:
   reporting: "on"
   showCommandLog: true
   showFileTree: false # for rendering changes files in a tree format
+promptToReturnFromSubprocess: false
