@@ -47,7 +47,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye"  -- Kill a buffer without closing its window
   use "tpope/vim-surround"
   use "tpope/vim-sleuth" -- Detect shiftwidth and expandtab automatically
-  use "easymotion/vim-easymotion"
+  use "justinmk/vim-sneak"
   use "tpope/vim-fugitive"
   use "wincent/loupe"  -- Loupe (better search defaults)
   use "machakann/vim-highlightedyank"  -- Highlight the yanked region
