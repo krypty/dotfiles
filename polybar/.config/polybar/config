@@ -283,7 +283,7 @@ interval = 5
 
 ; date =
 date = " %Y-%m-%d W%V"
-time = %H:%M
+time = %H:%M:%S
 label = %time% %date%
 
 [module/volume]
