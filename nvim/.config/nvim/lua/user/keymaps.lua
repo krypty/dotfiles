@@ -35,6 +35,9 @@ keymap("n", "<F7>", ":setlocal spell! spelllang=en_us<CR>", opts)
 -- Close buffer without closing its window
 keymap("n", "<leader>q", ":Bdelete<CR>", opts)
 
+-- Close all buffers, but the focused one
+keymap("n", "<leader>Q", ":%bd|e#|bd#<CR>", opts)
+
 -- Toggle search highlighted matches
 keymap("n", "<F3>", ":set hlsearch!<CR>", opts)
 
