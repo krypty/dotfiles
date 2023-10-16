@@ -91,7 +91,7 @@ return packer.startup(function(use)
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
 
   -- Telescope
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.1' }
+  use { 'nvim-telescope/telescope.nvim' }
 
   use { 'nvim-telescope/telescope-media-files.nvim' }
 
