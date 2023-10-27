@@ -22,6 +22,9 @@ require("nvim-tree").setup({
             error = "",
         },
     },
+    view = {
+        width = 80,
+    },
     renderer = {
         highlight_git = true,
         icons = {
