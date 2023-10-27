@@ -11,7 +11,7 @@ anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 [[ $(hostname) == "thinkpad-archlinux" ]] && export WINIT_X11_SCALE_FACTOR='1.4'
 
 [[ $(hostname) == "tower" ]] && export PRIMARY_MON=HDMI-1
-[[ $(hostname) == "tower" ]] && export PRIMARY_IFACE='enp3s0'
+[[ $(hostname) == "tower" ]] && export PRIMARY_IFACE='enp2s0'
 [[ $(hostname) == "tower" ]] && export WINIT_X11_SCALE_FACTOR='1.1'
 
 [[ $(hostname) == "archlinux-hp" ]] && export WINIT_X11_SCALE_FACTOR='1.2'
