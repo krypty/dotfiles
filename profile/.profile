@@ -8,7 +8,7 @@ anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 [[ $(hostname) == "erxpc33" ]] && export PRIMARY_IFACE='enp3s0'
 
 [[ $(hostname) == "thinkpad-archlinux" ]] && export PRIMARY_MON=eDP-1
-[[ $(hostname) == "thinkpad-archlinux" ]] && export WINIT_X11_SCALE_FACTOR='1.4'
+[[ $(hostname) == "thinkpad-archlinux" ]] && export WINIT_X11_SCALE_FACTOR='1.3'
 
 [[ $(hostname) == "tower" ]] && export PRIMARY_MON=HDMI-1
 [[ $(hostname) == "tower" ]] && export PRIMARY_IFACE='enp2s0'
