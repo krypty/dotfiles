@@ -60,6 +60,8 @@ keymap("n", "<esc>l", ":vertical resize +5<CR>", opts)
 -- Remove trailing spaces
 keymap("n", "<leader>rts", ":%s/\\s\\+$//e<CR>", opts)
 
+keymap("n", "<leader>lg", ":LazyGit<CR>", opts)
+
 -- Insert --
 -- Press jj fast to exit insert mode
 keymap("i", "jj", "<ESC>", opts)
