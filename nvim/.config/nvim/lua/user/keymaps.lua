@@ -101,3 +101,6 @@ keymap("n", "<F2>", ":NvimTreeToggle<CR>", opts)
 keymap("i", "<F2>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<F2>", ":NvimTreeFindFileToggle<CR>", opts)
 keymap("i", "<F2>", ":NvimTreeFindFileToggle<CR>", opts)
+
+-- LSP
+keymap("n", "<leader>ld", ":lua vim.diagnostic.open_float()<CR>", opts)
