@@ -27,15 +27,5 @@ configs.setup {
       query = 'rainbow-parens',
       -- Highlight the entire buffer all at once
       strategy = ts_rainbow.strategy.global,
-    },
-  context_commentstring = {
-    enable = true,
-    -- javascript = {
-    --   __default = '// %s',
-    --   jsx_element = '{/* %s */}',
-    --   jsx_fragment = '{/* %s */}',
-    --   jsx_attribute = '// %s',
-    --   comment = '// %s',
-    -- },
-  },
+    }
 }
