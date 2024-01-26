@@ -15,6 +15,7 @@ anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 [[ $(hostname) == "tower" ]] && export WINIT_X11_SCALE_FACTOR='1.1'
 
 [[ $(hostname) == "archlinux-hp" ]] && export WINIT_X11_SCALE_FACTOR='1.2'
+[[ $(hostname) == "archlinux-hp" ]] && export PRIMARY_IFACE='enp1s0'
 
 # Disable caps lock
 setxkbmap -option caps:none
