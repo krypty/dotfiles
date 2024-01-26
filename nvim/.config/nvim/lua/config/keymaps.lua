@@ -1,6 +1,7 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
 local opts = { noremap = true, silent = true }
-
-local term_opts = { silent = true }
 
 -- Shorten the function name
 local keymap = vim.api.nvim_set_keymap
@@ -16,7 +17,6 @@ vim.g.maplocalleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
-
 
 -- Normal --
 -- Better window navigation
@@ -41,6 +41,9 @@ keymap("n", "<leader>Q", ":%bd|e#|bd#<CR>", opts)
 -- Toggle search highlighted matches
 keymap("n", "<F3>", ":set hlsearch!<CR>", opts)
 
+-- Format
+keymap("n", "<F4>", ":lua vim.lsp.buf.format{ async = true }<CR>", opts)
+
 -- Open vim's built-in file explorer
 keymap("n", "<leader>e", ":Lex 20<CR>", opts)
 
@@ -51,11 +54,11 @@ keymap("n", "tl", ":blast<CR>", opts)
 keymap("n", "th", ":bfirst<CR>", opts)
 
 -- Resize panes
--- <esc> is somehow the alt key...
-keymap("n", "<esc>j", ":resize +5<CR>", opts)
-keymap("n", "<esc>k", ":resize -5<CR>", opts)
-keymap("n", "<esc>h", ":vertical resize -5<CR>", opts)
-keymap("n", "<esc>l", ":vertical resize +5<CR>", opts)
+-- <A> is the alt key...
+keymap("n", "<A-j>", ":resize +5<CR>", opts)
+keymap("n", "<A-k>", ":resize -5<CR>", opts)
+keymap("n", "<A-h>", ":vertical resize -5<CR>", opts)
+keymap("n", "<A-l>", ":vertical resize +5<CR>", opts)
 
 -- Remove trailing spaces
 keymap("n", "<leader>rts", ":%s/\\s\\+$//e<CR>", opts)
@@ -72,8 +75,6 @@ keymap("i", "<C-H>", "<C-W>", opts)
 -- Toggle spellcheck
 keymap("i", "<F7>", ":setlocal spell! spelllang=en_us<CR>", opts)
 
-
-
 -- Visual --
 -- Keep selected text selected when fixing indentation
 keymap("v", "<", "<gv", opts)
@@ -82,9 +83,7 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "<C-J>", ":m .+1<CR>==", opts)
 keymap("v", "<C-K>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)  -- don't replace replaced content in the clipboard
-
-
+keymap("v", "p", '"_dP', opts) -- don't replace replaced content in the clipboard
 
 -- Visual Block --
 -- Move text up and down
@@ -97,10 +96,10 @@ keymap("n", "<leader>rg", ":Telescope live_grep<CR>", opts)
 keymap("n", "tf", ":Telescope buffers<CR>", opts)
 
 -- Nvim-tree
-keymap("n", "<F2>", ":NvimTreeToggle<CR>", opts)
-keymap("i", "<F2>", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<F2>", ":NvimTreeFindFileToggle<CR>", opts)
-keymap("i", "<F2>", ":NvimTreeFindFileToggle<CR>", opts)
+keymap("n", "<F2>", ":Neotree toggle<CR>", opts)
+keymap("i", "<F2>", ":Neotree toggle<CR>", opts)
+keymap("n", "<leader><F2>", ":Neotree reveal<CR>", opts)
+keymap("i", "<leader><F2>", ":Neotree reveal<CR>", opts)
 
 -- LSP
 keymap("n", "<leader>ld", ":lua vim.diagnostic.open_float()<CR>", opts)
