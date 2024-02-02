@@ -40,6 +40,8 @@ vim.opt.hidden = true -- allow switching unsaved files in buffers
 vim.opt.colorcolumn = { 80, 100 }
 vim.opt.background = "light"
 
+vim.g.autoformat = false
+
 -- vim.opt.list = true
 -- vim.opt.listchars = "nbsp:·"
 -- vim.opt.listchars:append "precedes:«"
