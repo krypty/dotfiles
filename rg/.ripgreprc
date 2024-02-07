@@ -19,3 +19,6 @@
 
 # Follow symlinks
 --follow
+
+# Ignore single long lines e.g. minified files
+--max-columns=1000
