@@ -27,8 +27,15 @@
     ff = no
     commit = no
     conflictstyle = diff3
+[rebase]
+    autosquash = true
+    autostash = true
+[commit]
+    verbose = true
 [pull]
     ff = yes
+[rerere]
+    enabled = true
 [push]
     autoSetupRemote = yes
 [submodule]
