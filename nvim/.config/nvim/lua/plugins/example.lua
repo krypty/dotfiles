@@ -61,6 +61,18 @@ if true then
             }
         },
 
+        {
+            "stevearc/conform.nvim",
+            opts = {
+                formatters_by_ft = {
+                    java = { "google-java-format" },
+                    lua = { "luals" },
+                    fish = { "fish_indent" },
+                    sh = { "shfmt" },
+                },
+            }
+        },
+
         -- Kill a buffer without closing its window
         { "moll/vim-bbye" },
 

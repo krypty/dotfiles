@@ -42,7 +42,7 @@ keymap("n", "<leader>Q", ":%bd|e#|bd#<CR>", opts)
 keymap("n", "<F3>", ":set hlsearch!<CR>", opts)
 
 -- Format
-keymap("n", "<F4>", ":lua vim.lsp.buf.format{ async = true }<CR>", opts)
+keymap("n", "<F4>", ":LazyFormat<CR>", opts)
 
 -- Open vim's built-in file explorer
 keymap("n", "<leader>e", ":Lex 20<CR>", opts)
