@@ -69,6 +69,7 @@ if true then
                     lua = { "luals" },
                     fish = { "fish_indent" },
                     sh = { "shfmt" },
+                    sql = { "pg_format" },
                 },
             }
         },
