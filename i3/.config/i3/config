@@ -77,15 +77,23 @@ bindsym $mod+Shift+Q kill
 bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi"
 bindsym $mod+Shift+space exec "i3l $(/usr/bin/echo -e '2columns\n3columns 0.5 0.47\nnone' | rofi -dmenu)"
 
+###
+### Set focus
+###
+# When focus changed on an other monitor, don't re-center the mouse position.
+# mouse_warping none
+
 # Changement du Focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# move the mouse at coordinates 100,100 of the newly focused window
+set $warpmouse exec xdotool mousemove --window $(xdotool getwindowfocus getwindowfocus) 150 150
+bindsym $mod+h focus left; $warpmouse
+bindsym $mod+j focus down; $warpmouse
+bindsym $mod+k focus up; $warpmouse
+bindsym $mod+l focus right; $warpmouse
+bindsym $mod+Left focus left; $warpmouse
+bindsym $mod+Down focus down; $warpmouse
+bindsym $mod+Up focus up; $warpmouse
+bindsym $mod+Right focus right; $warpmouse
 
 # Déplacement des fenêtre
 # bindsym $mod+Shift+h move left
@@ -216,11 +224,8 @@ bindsym $mod+$alt+l exec ~/dotfiles/.scripts/lock.sh
 bindsym $mod+$alt+e exec "~/dotfiles/.scripts/emoji/pick_emoji.sh"
 
 ###############################
-#          SOURIS             #
+#          WORKSPACES         #
 ###############################
-# Quand le focus change d'écran, ne pas déplacer la souris
-# mouse_warping none
-
 set $ws1 1
 set $ws2 2
 set $ws3 3
