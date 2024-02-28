@@ -223,6 +223,8 @@ bindsym $mod+$alt+l exec ~/dotfiles/.scripts/lock.sh
 
 bindsym $mod+$alt+e exec "~/dotfiles/.scripts/emoji/pick_emoji.sh"
 
+bindsym $mod+$alt+m exec "warpd --hint --config ~/dotfiles/warpd/config"
+
 ###############################
 #          WORKSPACES         #
 ###############################
