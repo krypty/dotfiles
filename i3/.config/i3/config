@@ -275,6 +275,7 @@ for_window [class="FUGE-LC"] floating enable
 for_window [class="keepassxc"] floating enable
 for_window [class="Spotify"] move to workspace $ws10
 for_window [class="Pulseeffects"] move to workspace $ws10
+for_window [class="zoom"] move to workspace $ws9
 
 ###############################
 #            MISC             #
