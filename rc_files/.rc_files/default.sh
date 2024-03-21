@@ -13,8 +13,15 @@ shopt -s histappend  # append to history, don't overwrite it
 export HISTCONTROL=ignoredups:erasedups
 shopt -s cmdhist  # use one command per line
 
+### FZF
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden -g '!.git'"
 export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
+
+# Preview file content using bat (https://github.com/sharkdp/bat)
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 # Base16 Gruvbox dark, hard
 # Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
