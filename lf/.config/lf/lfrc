@@ -22,4 +22,5 @@ set hidden on
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
-map r reload
+map r rename
+map d delete
