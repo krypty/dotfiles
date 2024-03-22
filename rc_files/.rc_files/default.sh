@@ -23,6 +23,9 @@ export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
 # Base16 Gruvbox dark, hard
 # Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
