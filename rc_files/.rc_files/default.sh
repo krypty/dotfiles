@@ -24,6 +24,7 @@ export FZF_CTRL_T_OPTS="
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 # Set up fzf key bindings and fuzzy completion
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(fzf --bash)"
 
 # Base16 Gruvbox dark, hard
