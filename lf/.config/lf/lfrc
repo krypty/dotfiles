@@ -16,11 +16,12 @@
 set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
-set icons
+set icons true
 set period 1
-set hidden on
+set hidden true
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
 map r rename
 map d delete
+map x cut
