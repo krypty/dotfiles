@@ -117,3 +117,11 @@ fi
 if which direnv >/dev/null 2>&1; then
   eval "$(direnv hook bash)"
 fi
+
+# Automatically setup ssh-agent at login, only once.
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add
