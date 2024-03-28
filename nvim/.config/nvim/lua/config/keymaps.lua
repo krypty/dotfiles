@@ -99,3 +99,7 @@ keymap("i", "<leader><F2>", ":Neotree reveal<CR>", opts)
 
 -- LSP
 keymap("n", "<leader>ld", ":lua vim.diagnostic.open_float()<CR>", opts)
+
+-- Vim's very magic regex
+keymap("n", "/", "/\\v", opts)
+keymap("c", "%s", "%s/\\v", opts)
