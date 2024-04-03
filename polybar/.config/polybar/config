@@ -9,7 +9,8 @@
 
 [globals]
 primary-mon = ${env:PRIMARY_MON}
-iface = ${env:PRIMARY_IFACE}
+eth_iface = ${env:ETH_IFACE}
+wlan_iface = ${env:WLAN_IFACE}
 margin = 1
 
 [colors]
@@ -67,7 +68,7 @@ font-3 = SourceCodeProForPowerline:size=10;0
 
 modules-left = powermenu i3
 modules-center =
-modules-right = spotify-track temperature eth_wired eth_wlan wlan battery battery1 filesystem volume memory cpu date
+modules-right = spotify-track temperature eth_wired wlan battery battery1 filesystem volume memory cpu date
 
 tray-position = right
 tray-padding = 2
@@ -221,61 +222,24 @@ bar-used-empty-foreground = #444444
 
 [module/wlan]
 type = internal/network
-interface = wlp4s0
+interface = ${globals.wlan_iface}
 interval = 3.0
 
-; format-connected = <ramp-signal> <label-connected>
 format-connected = <label-connected>
-format-connected-underline =
 format-disconnected-underline = ${self.format-connected-underline}
 
-label-connected = %essid%  %downspeed:1%  %upspeed:1%
-label-disconnected = %ifname% disconnected
+label-connected = [%ifname%] %essid%  %downspeed:1%  %upspeed:1%
 label-disconnected-foreground = ${colors.foreground-alt}
-
-#ramp-signal-0 = 
-#ramp-signal-0-foreground = #ff0000
-#ramp-signal-1 = 
-#ramp-signal-1-foreground = #0a0a0a
-#ramp-signal-2 = 
-#ramp-signal-2-foreground = #434343
-#ramp-signal-3 = 
-#ramp-signal-3-foreground = #999999
-#ramp-signal-4 = 
-#ramp-signal-4-foreground = #acacac
-#ramp-signal-5 = 
-#ramp-signal-5-foreground = #ffffff
-
-ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth_wired]
 type = internal/network
-interface = ${globals.iface}
+interface = ${globals.eth_iface}
 interval = 3.0
 
-format-connected-underline =
-format-connected-prefix = " "
 format-connected-foreground-foreground = ${colors.foreground-alt}
-label-connected =  %downspeed:1%  %upspeed:1%
+label-connected = [%ifname%]  %downspeed:1%  %upspeed:1%
 
-format-disconnected-underline =
-label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
-
-[module/eth_wlan]
-type = internal/network
-interface = wlan0
-interval = 3.0
-
-format-connected-underline =
-format-connected-prefix = " "
-format-connected-foreground-foreground = ${colors.foreground-alt}
-label-connected =  %downspeed:1%  %upspeed:1%
-
-format-disconnected-underline =
-label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
-
 
 [module/date]
 type = internal/date
@@ -408,7 +372,7 @@ ramp-foreground = ${colors.foreground-alt}
 type = custom/menu
 
 format-spacing = 1
-label-open =  "[P]"
+label-open =  " [P]"
 label-open-foreground = ${colors.primary}
 label-close = cancel
 label-close-foreground = ${colors.primary}
