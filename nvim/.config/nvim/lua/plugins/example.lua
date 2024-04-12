@@ -5,6 +5,9 @@ if true then
         -- add gruvbox
         { "ellisonleao/gruvbox.nvim" },
 
+        -- add robot framework syntax highlight
+        { "seeamkhan/robotframework-vim" },
+
         -- Helpers for UNIX (e.g. SudoWrite)
         { "tpope/vim-eunuch" },
 
