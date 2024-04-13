@@ -99,6 +99,7 @@ export BAT_THEME=gruvbox-light
 _gen_fzf_default_opts
 
 export PATH=/home/gary/.local/bin:$PATH
+export PATH=/home/gary/go/bin:$PATH
 
 if [[ -z "$SSH_AUTH_SOCK" ]]; then
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
