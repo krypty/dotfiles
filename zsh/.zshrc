@@ -201,7 +201,6 @@ alias d=seldir
 
 # pyenv
 eval "$(pyenv init - --no-rehash)"
-eval "$(pyenv virtualenv-init -)"
 
 # zsh hooks
 autoload -U add-zsh-hook

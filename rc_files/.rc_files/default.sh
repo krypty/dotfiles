@@ -112,7 +112,6 @@ eval "$(pyenv init -)"
 if which pyenv >/dev/null 2>&1; then
   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
 fi
 
 if which direnv >/dev/null 2>&1; then
