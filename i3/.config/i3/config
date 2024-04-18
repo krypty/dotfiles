@@ -307,6 +307,7 @@ exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /Telegram/ {pri
 
 for_window [class="Telegram" title="Media viewer"] fullscreen enable;
 for_window [class="Telegram" title="Media viewer"] scratchpad show;
+for_window [class="zoom"] floating enable
 
 # Applications au démarrage
 exec --no-startup-id redshift-gtk -c /home/gary/.config/redshift/redshift.conf # -l 46.930745:6.815189 -t 6500:3400 -l manual
