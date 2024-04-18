@@ -42,13 +42,8 @@ vim.opt.background = "light"
 
 vim.g.autoformat = false
 
--- vim.opt.list = true
--- vim.opt.listchars = "nbsp:·"
--- vim.opt.listchars:append "precedes:«"
--- vim.opt.listchars:append "tab:»·"
--- vim.opt.listchars:append "trail:."
--- vim.opt.listchars:append "extends:»"
--- --vim.opt.listchars:append "eol:¶"
+vim.opt.listchars = "tab:|-,trail:·,multispace:·,extends:▶,precedes:◀,nbsp:‿"
+vim.opt.list = true
 
 vim.opt.shortmess:append("c")
 
