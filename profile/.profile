@@ -13,7 +13,7 @@ anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 [[ $(hostname) == "thinkpad-archlinux" ]] && export ETH_IFACE='xxx'
 [[ $(hostname) == "thinkpad-archlinux" ]] && export WLAN_IFACE='xxx'
 
-[[ $(hostname) == "tower" ]] && export PRIMARY_MON=HDMI-1
+[[ $(hostname) == "tower" ]] && export PRIMARY_MON=HDMI-0
 [[ $(hostname) == "tower" ]] && export WINIT_X11_SCALE_FACTOR='1.1'
 [[ $(hostname) == "tower" ]] && export ETH_IFACE='enp2s0'
 
