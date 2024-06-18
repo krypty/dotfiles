@@ -18,7 +18,11 @@ if true then
         -- { "markonm/traces.vim" },
 
         -- Switch between header and source
-        { "derekwyatt/vim-fswitch",    lazy = true, event = "BufEnter *.cpp" },
+        {
+            "derekwyatt/vim-fswitch",
+            lazy = true,
+            event = "BufEnter *.cpp"
+        },
 
         -- { "justinmk/vim-sneak" },
 
@@ -39,6 +43,15 @@ if true then
                 filesystem = {
                     filtered_items = {
                         visible = true,
+                        never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
+                            ".DS_Store",
+                            "thumbs.db",
+                            "__pycache__",
+                        },
+                        never_show_by_pattern = { -- uses glob style patterns
+                            ".null-ls_*",
+                            "*.pyc",
+                        },
                     },
                     follow_current_file = {
                         enabled = false,
