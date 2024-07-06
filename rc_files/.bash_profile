@@ -2,5 +2,7 @@
 # ~/.bash_profile
 #
 
-# [[ -f ~/.bashrc ]] && . ~/.bashrc
-cd /home/gary/.rc_files; source entrypoint.sh; cd - > /dev/null
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
