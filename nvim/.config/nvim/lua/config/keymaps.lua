@@ -103,3 +103,6 @@ keymap("n", "<leader>ld", ":lua vim.diagnostic.open_float()<CR>", opts)
 -- Vim's very magic regex
 keymap("n", "/", "/\\v", opts)
 keymap("c", "%s", "%s/\\v", opts)
+
+keymap("n", "<leader>m", ":MakeitOpen<CR>", opts)
+keymap("n", "<leader>mm", ":MakeitRedo<CR>", opts)

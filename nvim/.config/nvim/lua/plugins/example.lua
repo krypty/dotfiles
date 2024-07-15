@@ -113,6 +113,27 @@ if true then
 
         -- disable project plugin
         { "ahmedkhalf/project.nvim",          enabled = false },
+
+        -- add makeit (Makefile)
+        {
+            "Zeioth/makeit.nvim",
+            cmd = { "MakeitOpen", "MakeitToggleResults", "MakeitRedo" },
+            dependencies = { "stevearc/overseer.nvim" },
+            opts = {},
+        },
+        {
+            "stevearc/overseer.nvim",
+            commit = "400e762648b70397d0d315e5acaf0ff3597f2d8b",
+            cmd = { "MakeitOpen", "MakeitToggleResults", "MakeitRedo" },
+            opts = {
+                task_list = {
+                    direction = "bottom",
+                    min_height = 25,
+                    max_height = 25,
+                    default_detail = 1
+                },
+            },
+        },
     }
 end
 
