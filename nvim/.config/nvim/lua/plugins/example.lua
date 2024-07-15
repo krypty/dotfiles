@@ -113,9 +113,6 @@ if true then
 
         -- disable project plugin
         { "ahmedkhalf/project.nvim",          enabled = false },
-
-        -- disable which-key plugin
-        { "folke/which-key.nvim",             enabled = false },
     }
 end
 
