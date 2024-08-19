@@ -22,6 +22,8 @@ anacron -s -t ${HOME}/.anacron/etc/anacrontab -S ${HOME}/.anacron/spool
 [[ $(hostname) == "archlinux-hp" ]] && export ETH_IFACE='enp1s0'
 [[ $(hostname) == "archlinux-hp" ]] && export WLAN_IFACE='wlan0'
 
+# Set eurkey as keyboard layout
+setxkbmap eu
 # Disable caps lock
 setxkbmap -option caps:none
 # Map Control_Right to (context) Menu
