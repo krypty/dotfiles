@@ -275,7 +275,6 @@ for_window [class="FUGE-LC"] floating enable
 for_window [class="keepassxc"] floating enable
 for_window [class="Spotify"] move to workspace $ws10
 for_window [class="Pulseeffects"] move to workspace $ws10
-for_window [class="zoom"] move to workspace $ws9
 
 ###############################
 #            MISC             #
@@ -307,7 +306,16 @@ exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /Telegram/ {pri
 
 for_window [class="Telegram" title="Media viewer"] fullscreen enable;
 for_window [class="Telegram" title="Media viewer"] scratchpad show;
-for_window [class="zoom"] floating enable
+
+###
+### Zoom meetings
+###
+# Set Zoom notification window to floating with no focus
+for_window [title="^zoom\s?$"] floating enable
+no_focus [title="^zoom\s?$"]
+# For meetings that you have joined via a link
+for_window [title="^join\?action=join.*$"] floating enable
+no_focus [title="^join\?action=join.*$"]
 
 # Applications au démarrage
 exec --no-startup-id redshift-gtk -c /home/gary/.config/redshift/redshift.conf
@@ -321,7 +329,9 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id thunderbird
 exec --no-startup-id pamac-tray
 exec --no-startup-id 'xinput --set-prop "SynPS/2 Synaptics TouchPad"  "libinput Natural Scrolling Enabled" 1'
-exec_always --no-startup-id "killall picom; picom"
+
+# exec_always --no-startup-id "killall picom; picom"
+exec_always --no-startup-id "killall xcompmgr; xcompmgr"
 
 # requires python-i3-py and xorg-util-macros
 
