@@ -318,7 +318,7 @@ for_window [title="^join\?action=join.*$"] floating enable
 no_focus [title="^join\?action=join.*$"]
 
 # Applications au démarrage
-exec --no-startup-id redshift-gtk -c /home/gary/.config/redshift/redshift.conf
+exec --no-startup-id redshift-gtk -c /home/gary/.config/redshift.conf
 exec --no-startup-id tmux new-session -d -s i3
 exec --no-startup-id nextcloud --background
 exec --no-startup-id insync start
