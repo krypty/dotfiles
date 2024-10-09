@@ -47,3 +47,5 @@
     navigate = true  # use n and N to move between diff sections
     line-numbers = true
     syntax-theme = gruvbox-light
+[init]
+	defaultBranch = master
