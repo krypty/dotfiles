@@ -14,7 +14,15 @@ alias v="$EDITOR"
 alias glow="glow -p"
 alias xsel="xsel --clipboard"
 alias cal="cal -w -m"
-alias fe="yazi"
+
+function fe() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 function fd {
     (which fdfind &> /dev/null && fdfind "$@") || $(which fd 2>/dev/null) "$@"
