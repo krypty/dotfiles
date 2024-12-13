@@ -14,6 +14,7 @@ alias v="$EDITOR"
 alias glow="glow -p"
 alias xsel="xsel --clipboard"
 alias cal="cal -w -m"
+alias fe="yazi"
 
 function fd {
     (which fdfind &> /dev/null && fdfind "$@") || $(which fd 2>/dev/null) "$@"
