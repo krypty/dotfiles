@@ -125,3 +125,10 @@ if [ ! -S ~/.ssh/ssh_auth_sock ]; then
 fi
 export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 ssh-add -l > /dev/null || ssh-add
+
+if which uv &>/dev/null; then
+    eval "$(uv generate-shell-completion bash)"
+fi
+if which uvx &>/dev/null; then
+    eval "$(uvx --generate-shell-completion bash)"
+fi
