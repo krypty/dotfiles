@@ -86,10 +86,10 @@ keymap("v", "p", '"_dP', opts) -- don't replace replaced content in the clipboar
 keymap("x", "<C-J>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<C-K>", ":move '<-2<CR>gv-gv", opts)
 
--- Telescope
-keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>rg", ":Telescope live_grep<CR>", opts)
-keymap("n", "tf", ":Telescope buffers<CR>", opts)
+-- Fzf
+keymap("n", "<C-p>", ":Fzf files<CR>", opts)
+keymap("n", "<leader>rg", ":Fzf live_grep<CR>", opts)
+keymap("n", "tf", ":Fzf buffers<CR>", opts)
 
 -- Nvim-tree
 keymap("n", "<F2>", ":Neotree toggle<CR>", opts)

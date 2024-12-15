@@ -39,6 +39,25 @@ if true then
         -- Show hidden file in neo-tree
         {
             "nvim-neo-tree/neo-tree.nvim",
+            dependencies = {
+                {
+                    "ten3roberts/window-picker.nvim",
+                    name = "window-picker",
+                    config = function()
+                        local picker = require("window-picker")
+                        picker.setup()
+                        picker.pick_window = function()
+                            return picker.select({ hl = "WindowPicker", prompt = "Pick window: " }, function(winid)
+                                if not winid then
+                                    return nil
+                                else
+                                    return winid
+                                end
+                            end)
+                        end
+                    end,
+                },
+            },
             opts = {
                 filesystem = {
                     filtered_items = {
@@ -171,41 +190,6 @@ return {
         opts = function(_, opts)
             table.insert(opts.sources, { name = "emoji" })
         end,
-    },
-
-    -- change some telescope options and a keymap to browse plugin files
-    {
-        "nvim-telescope/telescope.nvim",
-        keys = {
-            -- add a keymap to browse plugin files
-            -- stylua: ignore
-            {
-                "<leader>fp",
-                function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
-                desc = "Find Plugin File",
-            },
-        },
-        -- change some options
-        opts = {
-            defaults = {
-                layout_strategy = "horizontal",
-                layout_config = { prompt_position = "top" },
-                sorting_strategy = "ascending",
-                winblend = 0,
-            },
-        },
-    },
-
-    -- add telescope-fzf-native
-    {
-        "telescope.nvim",
-        dependencies = {
-            "nvim-telescope/telescope-fzf-native.nvim",
-            build = "make",
-            config = function()
-                require("telescope").load_extension("fzf")
-            end,
-        },
     },
 
     -- add pyright to lspconfig
