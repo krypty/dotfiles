@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+playerctl metadata --player=playerctld --format "{{ emoji(status) }} {{ artist }} - {{ title }}" --follow
