@@ -178,16 +178,19 @@ context = ctrl+shift+period
 # Otherwise the "#" and following would be interpreted as a comment.
 background = "#282828"
 foreground = "#fabd2f"
+highlight = "#fabd2f"
 timeout = 8
 
 [urgency_normal]
 background = "#282828"
 foreground = "#fabd2f"
+highlight = "#fabd2f"
 timeout = 8
 
 [urgency_critical]
 background = "#282828"
 foreground = "#fabd2f"
+highlight = "#fabd2f"
 timeout = 0
 
 
