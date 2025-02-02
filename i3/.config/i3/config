@@ -56,7 +56,7 @@ floating_modifier $mod
 
 # start a terminal
 # set $term /home/gary/.local/bin/run-kitty
-set $term kitty
+set $term wezterm
 bindsym $mod+Return exec $term
 
 # start a file explorer
@@ -282,7 +282,7 @@ for_window [class="quick_math"] floating enable
 for_window [class="quick_math"] resize set 800 300
 for_window [class="quick_math"] move scratchpad
 for_window [class="quick_math"] border pixel 5
-exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /quick_math/ {print $1}'); do wmctrl -ic $win; done; $term --class quick_math -e python3 -q"
+exec_always --no-startup-id "for win in $(wmctrl -lx | awk '$3 ~ /quick_math/ {print $1}'); do wmctrl -ic $win; done; $term start --class quick_math -e python3 -q"
 
 # Quick Telegram window
 bindsym $mod+t [class="Telegram"] scratchpad show; [class="Telegram"] move position center
