@@ -10,6 +10,7 @@ local config = wezterm.config_builder()
 -- config.color_scheme = 'Gruvbox light, medium (base16)'
 config.color_scheme = 'Gruvbox (Gogh)'
 
+config.harfbuzz_features = {"calt=0", "clig=0", "liga=0"}
 
 config.enable_tab_bar = false
 
