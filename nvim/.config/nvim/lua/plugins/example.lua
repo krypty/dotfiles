@@ -23,6 +23,16 @@ if true then
             lazy = true,
             event = "BufEnter *.cpp"
         },
+        {
+            "mfussenegger/nvim-lint",
+            opts = {
+                linters = {
+                    ["markdownlint-cli2"] = {
+                        args = { "--config", "/home/gary/dotfiles/markdownlint-cli2/.markdownlint-cli2.yaml", "--" },
+                    },
+                },
+            },
+        },
 
         -- { "justinmk/vim-sneak" },
 
