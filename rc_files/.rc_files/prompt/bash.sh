@@ -1,38 +1,37 @@
 # regular colors
-fgblack="\[\033[0;30m\]"    # black
-fgred="\[\033[0;31m\]"    # red
-fggreen="\[\033[0;32m\]"    # green
-fgyellow="\[\033[0;33m\]"    # yellow
+fgblack="\[\033[0;30m\]"   # black
+fgred="\[\033[0;31m\]"     # red
+fggreen="\[\033[0;32m\]"   # green
+fgyellow="\[\033[0;33m\]"  # yellow
 fgblue="\[\033[0;34m\]"    # blue
-fgmagenta="\[\033[0;35m\]"    # magenta
+fgmagenta="\[\033[0;35m\]" # magenta
 fgcyan="\[\033[0;36m\]"    # cyan
-fgwhite="\[\033[0;37m\]"    # white
+fgwhite="\[\033[0;37m\]"   # white
 
-bfgblack="\[\033[1;30m\]"    # black
-bfgred="\[\033[1;31m\]"    # red
-bfggreen="\[\033[1;32m\]"    # green
-bfgyellow="\[\033[1;33m\]"    # yellow
+bfgblack="\[\033[1;30m\]"   # black
+bfgred="\[\033[1;31m\]"     # red
+bfggreen="\[\033[1;32m\]"   # green
+bfgyellow="\[\033[1;33m\]"  # yellow
 bfgblue="\[\033[1;34m\]"    # blue
-bfgmagenta="\[\033[1;35m\]"    # magenta
+bfgmagenta="\[\033[1;35m\]" # magenta
 bfgcyan="\[\033[1;36m\]"    # cyan
-bfgwhite="\[\033[1;37m\]"    # white
+bfgwhite="\[\033[1;37m\]"   # white
 
 fgreset="\[\033[m\]"
 
 p_cwd() {
-  pwd | sed "s|/home/$USER|~|"
+    pwd | sed "s|/home/$USER|~|"
 }
 
 eval_virtual_env() {
-  # Add python virtual env to prompt
-  if [[ "$VIRTUAL_ENV" != "" ]]
-      then
+    # Add python virtual env to prompt
+    if [[ "$VIRTUAL_ENV" != "" ]]; then
         # Strip out the path and just leave the env name
         echo "(${VIRTUAL_ENV##*/}) "
-  else
+    else
         # In case you don't have one activated
         echo ""
-  fi
+    fi
 }
 
 source ~/.rc_files/prompt/git.sh
@@ -40,12 +39,12 @@ source ~/.rc_files/prompt/git.sh
 p_symbol="${fggreen}\$${fgreset}"
 
 eval_jobs() {
-  n_jobs=$(jobs -l | wc -l)
-  if [[ $n_jobs -eq 0 ]]; then
-    echo -n ""
-    return
-  fi
-  echo -n "${fgcyan}[$n_jobs]${fgreset}"
+    n_jobs=$(jobs -l | wc -l)
+    if [[ $n_jobs -eq 0 ]]; then
+        echo -n ""
+        return
+    fi
+    echo -n "${fgcyan}[$n_jobs]${fgreset}"
 }
 
 prompt_cmd() {
@@ -69,4 +68,3 @@ prompt_cmd() {
     # fi
 }
 PROMPT_COMMAND='prompt_cmd; history -a'
-
