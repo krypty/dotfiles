@@ -49,15 +49,24 @@ eval_jobs() {
 }
 
 prompt_cmd() {
-if [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-  p_user="${bfgwhite}${USER}${fgreset}"
-  p_host="${bfggreen}${HOSTNAME}${fgreset}"
+    last_exit_code=$?
 
-  export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(eval_jobs)$(eval_virtual_env) $(parse_git_branch)${p_symbol} ${fgreset}"
+    exit_code="$(echo -n "${fgred}!$last_exit_code${fgreset}") "
 
-else
-  export PS1="${fgreset}$(eval_jobs)$(eval_virtual_env)$(parse_git_branch)$(p_cwd) ${p_symbol} ${fgreset}"
-fi
+    if [ "$last_exit_code" -eq "0" ]; then
+        exit_code=""
+    fi
+
+    # if [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    #   p_user="${bfgwhite}${USER}${fgreset}"
+    #   p_host="${bfggreen}${HOSTNAME}${fgreset}"
+    #
+    #   export PS1="${p_user}@${p_host} ${bfgwhite}\$(p_cwd)${fgreset} \n$(eval_jobs)$(eval_virtual_env) $(parse_git_branch)${p_symbol} ${fgreset}"
+    #
+    # else
+
+    export PS1="${fgreset}$(eval_jobs)$(eval_virtual_env)$(parse_git_branch)$(p_cwd) ${exit_code}${p_symbol} ${fgreset}"
+    # fi
 }
 PROMPT_COMMAND='prompt_cmd; history -a'
 
