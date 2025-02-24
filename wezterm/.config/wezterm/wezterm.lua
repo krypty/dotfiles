@@ -21,6 +21,8 @@ config.window_padding = {
     bottom = 0,
 }
 
+config.font_size = 11.0
+
 -- Key bindings for increasing and decreasing font size
 config.keys = {
     {
