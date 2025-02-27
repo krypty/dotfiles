@@ -5,6 +5,8 @@ if true then
         -- add gruvbox
         { "ellisonleao/gruvbox.nvim" },
 
+        { "Morozzzko/git_browse.nvim" },
+
         -- add robot framework syntax highlight
         { "seeamkhan/robotframework-vim" },
 
