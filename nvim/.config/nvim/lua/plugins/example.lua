@@ -13,6 +13,27 @@ if true then
         -- Helpers for UNIX (e.g. SudoWrite)
         { "tpope/vim-eunuch" },
 
+        {
+            "rachartier/tiny-inline-diagnostic.nvim",
+            opts = {
+                event = "VeryLazy", -- Or `LspAttach`
+                priority = 1000,    -- needs to be loaded in first
+                config = function()
+                    require('tiny-inline-diagnostic').setup()
+                    vim.diagnostic.config({ virtual_text = false }) -- Only if needed in your configuration, if you already have native LSP diagnostics
+                end
+            },
+        },
+
+        {
+            "nvim-lspconfig",
+            opts = {
+                diagnostics = {
+                    virtual_text = false,
+                },
+            },
+        },
+
         -- EditorConfig
         { "gpanders/editorconfig.nvim" },
 
