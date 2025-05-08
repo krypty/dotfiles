@@ -10,7 +10,9 @@ local config = wezterm.config_builder()
 -- config.color_scheme = 'Gruvbox light, medium (base16)'
 config.color_scheme = 'Gruvbox (Gogh)'
 
-config.harfbuzz_features = {"calt=0", "clig=0", "liga=0"}
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+
+config.window_close_confirmation = "NeverPrompt"
 
 config.enable_tab_bar = false
 
@@ -41,6 +43,23 @@ config.keys = {
         action = wezterm.action.ResetFontSize,
     },
 };
+
+local act = wezterm.action
+-- disable all default mouse assignments and only define ours
+config.disable_default_mouse_bindings = true
+-- from documentation: You can bypass the mouse reporting capture by holding
+-- down the SHIFT key; that will prevent the event from being passed to the
+-- application and allow matching it against your assignments as though the
+-- SHIFT key were not pressed.
+--
+-- Make Shift-Click open hyperlinks (Shift is implied)
+config.mouse_bindings = {
+    {
+        event = { Up = { streak = 1, button = 'Left' } },
+        mods = 'NONE',
+        action = act.OpenLinkAtMouseCursor,
+    },
+}
 
 -- and finally, return the configuration to wezterm
 return config
