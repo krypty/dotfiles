@@ -1,6 +1,7 @@
 gui:
-  confirmOnQuit: true
-  reporting: "on"
   showCommandLog: true
   showFileTree: false # for rendering changes files in a tree format
 promptToReturnFromSubprocess: false
+confirmOnQuit: false
+git:
+  overrideGpg: true
