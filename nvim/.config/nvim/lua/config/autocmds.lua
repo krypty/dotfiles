@@ -5,7 +5,7 @@
 local jenkinsfile_linter = require("jenkinsfile_linter")
 
 vim.api.nvim_create_autocmd({ "BufWritePost", "BufWinEnter" }, {
-  pattern = "*",
+  pattern = "Jenkinsfile",
   callback = function()
     if vim.bo.filetype ~= "groovy" then
       return
