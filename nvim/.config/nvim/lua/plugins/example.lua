@@ -93,6 +93,7 @@ if true then
             },
             opts = {
                 filesystem = {
+                    bind_to_cwd = true, -- true creates a 2-way binding between vim's cwd and neo-tree's root
                     filtered_items = {
                         visible = true,
                         never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
