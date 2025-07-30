@@ -105,14 +105,14 @@ if [[ -z "$SSH_AUTH_SOCK" ]]; then
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-if which pyenv >/dev/null 2>&1; then
-  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
+# fix slow startup of pyenv, see: https://github.com/pyenv/pyenv/issues/2918
+pyenv() {
+    export PYENV_ROOT="$HOME/.pyenv"
+    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(command pyenv init -)" || echo "warning: pyenv not installed"
+
+    pyenv "$@" || echo "warning: pyenv not installed"
+}
 
 if which direnv >/dev/null 2>&1; then
   eval "$(direnv hook bash)"
