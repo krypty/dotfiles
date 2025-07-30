@@ -5,12 +5,6 @@
 source input/bash_input.sh
 
 #
-# PROMPT
-#
-source prompt/bash.sh
-
-
-#
 # ALIASES
 #
 for a in aliases/*
@@ -34,4 +28,4 @@ source chpwd/hooks.sh
 source default.sh
 
 # Start with tmux
-[ -z "$TMUX"  ] && exec tmux new-session -c $HOME && exit;
+[ -z "$TMUX" ] && exec tmux new-session -c $HOME && exit;

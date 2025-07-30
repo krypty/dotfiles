@@ -1,0 +1,151 @@
+"$schema" = "https://starship.rs/config-schema.json"
+format = "$jobs$git_branch$git_commit$git_state$git_status$username$hostname$directory$python$cmd_duration$status$time$character"
+right_format = ""
+continuation_prompt = "[∙](bright-black) "
+scan_timeout = 30
+command_timeout = 500
+add_newline = false
+follow_symlinks = true
+
+[character]
+format = "$symbol "
+success_symbol = "[\\$](green)"
+error_symbol = "[\\$](red)"
+disabled = false
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+fish_style_pwd_dir_length = 0
+use_logical_path = true
+format = "[$path]($style)[$read_only]($read_only_style) "
+repo_root_format = "[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+style = "cyan bold"
+disabled = false
+read_only = "🔒"
+read_only_style = "red"
+truncation_symbol = ""
+home_symbol = "~"
+use_os_path_sep = true
+
+[git_branch]
+format = "[\\[$symbol$branch(:$remote_branch)\\]]($style)"
+symbol = ""
+style = "bold purple"
+truncation_length = 25
+truncation_symbol = "…"
+only_attached = false
+always_show_remote = false
+ignore_branches = []
+disabled = false
+
+[git_commit]
+commit_hash_length = 7
+format = '[\($hash$tag\)]($style) '
+style = "green bold"
+only_detached = true
+disabled = false
+tag_symbol = " 🏷  "
+tag_disabled = true
+tag_max_candidates = 0
+
+[git_state]
+rebase = "REBASING"
+merge = "MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style = "bold yellow"
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+disabled = false
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style)) '
+style = "gray bold"
+stashed = ""
+ahead = "↑"
+behind = "↓"
+up_to_date = ""
+diverged = "↑↓"
+conflicted = "="
+deleted = "X"
+renamed = "R"
+modified = "!"
+staged = "+"
+untracked = "?"
+typechanged = "T"
+ignore_submodules = false
+disabled = false
+use_git_executable = false
+
+[hostname]
+ssh_only = true
+ssh_symbol = "🌐 "
+trim_at = "."
+detect_env_vars = []
+format = "[$ssh_symbol$hostname]($style) in "
+style = "green dimmed bold"
+disabled = false
+
+[hostname.aliases]
+
+[jobs]
+threshold = 1
+symbol_threshold = 1
+number_threshold = 1
+format = "[\\[$number\\]]($style)"
+symbol = ""
+style = "bold blue"
+disabled = false
+
+[python]
+pyenv_version_name = false
+pyenv_prefix = "pyenv "
+python_binary = [
+    ["python"],
+    ["python3"],
+    ["python2"],
+]
+format = '[\(${pyenv_prefix}(${version} )(\($virtualenv\))\)]($style) '
+version_format = "v${raw}"
+style = "yellow bold"
+symbol = "🐍 "
+disabled = false
+detect_extensions = []
+detect_files = [
+    ".python-version",
+    "pyproject.toml",
+]
+detect_folders = []
+detect_env_vars = ["VIRTUAL_ENV"]
+
+[status]
+format = "[$symbol$status]($style) "
+symbol = "!"
+success_symbol = ""
+not_executable_symbol = "🚫"
+not_found_symbol = "🔍"
+sigint_symbol = "🧱"
+signal_symbol = "⚡"
+style = "red"
+map_symbol = false
+recognize_signal_code = true
+pipestatus = false
+pipestatus_separator = "|"
+pipestatus_format = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$maybe_int]($style) '
+disabled = false
+
+[username]
+detect_env_vars = []
+format = "[$user]($style) in "
+style_root = "red bold"
+style_user = "yellow bold"
+show_always = false
+disabled = false
+
+[username.aliases]
+
+[custom]
+
