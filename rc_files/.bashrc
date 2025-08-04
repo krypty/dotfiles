@@ -3,6 +3,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export PATH=/home/gary/.local/bin:$PATH
+export PATH=/home/gary/go/bin:$PATH
+
 if which starship >/dev/null 2>&1; then
     eval "$(starship init bash)"
     starship_precmd  # required with wezterm
