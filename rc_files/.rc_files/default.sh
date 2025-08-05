@@ -24,9 +24,6 @@ export FZF_CTRL_T_OPTS="
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 # Set up fzf key bindings and fuzzy completion
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-eval "$(fzf --bash)"
-
 # Base16 Gruvbox dark, hard
 # Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
@@ -78,9 +75,9 @@ _gen_fzf_default_opts() {
   #  --color info:$yellow,prompt:$yellow,pointer:$base03,marker:$base03,spinner:$yellow
   #"
 }
-_gen_fzf_default_opts
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+_gen_fzf_default_opts
+eval "$(fzf --bash)"
 
 
 # Make nnn preview escape colors correctly, also set insensitive search for less
@@ -95,8 +92,6 @@ export NNN_OPTS="H"
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 
 export BAT_THEME=gruvbox-light
-
-_gen_fzf_default_opts
 
 if [[ -z "$SSH_AUTH_SOCK" ]]; then
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
