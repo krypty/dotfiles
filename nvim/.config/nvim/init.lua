@@ -187,6 +187,40 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- show virtual_text everywhere
+vim.diagnostic.config({
+  virtual_text = true,
+  virtual_lines = false, -- keep off by default
+  update_in_insert = false,
+})
+
+-- toggle behavior: when cursor moves, show virtual_lines only on current line and hide virtual_text for that line
+local ns = vim.api.nvim_create_namespace("diag_current_line")
+local function show_current_line_virtual_lines()
+  vim.diagnostic.config({ virtual_text = false })
+  -- let the plugin rachartier/tiny-inline-diagnostic.nvim handle the single-line diags
+end
+
+local function restore_virtual_text()
+  -- hide our per-buffer virtual_lines and restore global virtual_text
+  pcall(vim.diagnostic.hide, ns, 0)
+  vim.diagnostic.config({ virtual_text = true })
+end
+
+vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+  callback = function()
+    -- show wrapped virtual_lines for cursor line if there are diagnostics; else restore text
+    local bufnr = vim.api.nvim_get_current_buf()
+    local lnum = vim.api.nvim_win_get_cursor(0)[1] - 1
+    local diagnostics = vim.diagnostic.get(bufnr, { lnum = lnum })
+    if diagnostics and #diagnostics > 0 then
+      show_current_line_virtual_lines()
+    else
+      restore_virtual_text()
+    end
+  end,
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -615,6 +649,7 @@ require('lazy').setup({
             [vim.diagnostic.severity.HINT] = '󰌶 ',
           },
         } or {},
+
         virtual_text = {
           source = 'if_many',
           spacing = 2,
@@ -1111,6 +1146,14 @@ require('lazy').setup({
     config = function()
       require 'alpha'.setup(require 'alpha.themes.startify'.config)
     end
+  },
+
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+    opts = {
+      event = "VeryLazy", -- Or `LspAttach`
+      priority = 1000,    -- needs to be loaded in first
+    },
   },
 
 }, {
