@@ -132,6 +132,7 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.antialias: rgba
 Xft.rgba: rgb
+! Xft.dpi: rgb
 
 URxvt.intensityStyles: false
 URxvt*skipBuiltinGlyphs: true
