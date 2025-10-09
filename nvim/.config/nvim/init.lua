@@ -1156,6 +1156,13 @@ require('lazy').setup({
     },
   },
 
+  {
+    "brenoprata10/nvim-highlight-colors",
+    config = function()
+      require('nvim-highlight-colors').setup({})
+    end
+  },
+
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
