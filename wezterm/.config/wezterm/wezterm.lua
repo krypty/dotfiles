@@ -18,7 +18,7 @@ config.enable_tab_bar = false
 
 -- FIXME: remove this
 -- custom build: I reverted https://github.com/wezterm/wezterm/pull/6508/files
--- config.enable_wayland = false
+config.enable_wayland = false
 
 config.window_padding = {
 	left = 2,
