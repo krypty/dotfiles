@@ -744,6 +744,7 @@ require('lazy').setup({
         'shellcheck',
         'shfmt',
         'yamllint',
+        'biome',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -802,6 +803,7 @@ require('lazy').setup({
         sql = { 'pg_format' },
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'black' },
+        jsonc = { 'biome' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
