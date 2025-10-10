@@ -6,6 +6,7 @@ alias calc="loffice --calc"
 alias jp="jupyter-notebook"
 alias fd="fd -H"
 alias i3c="$EDITOR ~/.config/i3/config"
+alias swc="$EDITOR ~/.config/sway/config"
 alias m="make"
 alias wtr="curl 'http://wttr.in/lausanne?lang=fr'"
 alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
@@ -16,23 +17,22 @@ alias xsel="xsel --clipboard"
 alias cal="cal -w -m"
 
 function fe() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }
 
 function fd {
-    (which fdfind &> /dev/null && fdfind "$@") || $(which fd 2>/dev/null) "$@"
+    (which fdfind &>/dev/null && fdfind "$@") || $(which fd 2>/dev/null) "$@"
 }
 
 # Setup NNN
 alias update-nnn-plugs="curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh"
 
-n ()
-{
+n() {
     # Block nesting of nnn in subshells
     if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
         echo "nnn is already running"
@@ -52,8 +52,8 @@ n ()
     nnn -e -P p "$@"
 
     if [ -f "$NNN_TMPFILE" ]; then
-            . "$NNN_TMPFILE"
-            rm -f "$NNN_TMPFILE" > /dev/null
+        . "$NNN_TMPFILE"
+        rm -f "$NNN_TMPFILE" >/dev/null
     fi
 }
 
