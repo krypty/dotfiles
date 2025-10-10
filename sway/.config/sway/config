@@ -282,6 +282,7 @@ for_window [class="FUGE-LC"] floating enable
 for_window [class="keepassxc"] floating enable
 for_window [app_id="spotify"] move to workspace $ws10
 for_window [class="Pulseeffects"] move to workspace $ws10
+for_window [app_id="pritunl"] floating enable
 
 ###############################
 #            MISC             #
