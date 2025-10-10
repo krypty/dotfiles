@@ -275,26 +275,11 @@ bindsym $mod+Shift+0 move workspace 10
 #   APPLICATION SPECIFIC      #
 ###############################
 
-# tip: use xprop to find out the class (WM_CLASS)
-for_window [class="Gitg"] floating enable
-for_window [class="Thunderbird"] floating enable
-for_window [class="FUGE-LC"] floating enable
-for_window [class="keepassxc"] floating enable
+# tip: use `swaymsg -t get_tree` to find out the class (app_id)
 for_window [app_id="spotify"] move to workspace $ws10
-for_window [class="Pulseeffects"] move to workspace $ws10
 for_window [app_id="pritunl"] floating enable
 
-###############################
-#            MISC             #
-###############################
-
-# Scratchpad Thunderbird
-bindsym $mod+m [title="Inbox.*" class="Thunderbird"] scratchpad show; [title="Inbox.*" class="Thunderbird"] move position center
-for_window [title="Inbox.*" class="Thunderbird"] floating enable
 for_window [class="VirtualBox Machine"] floating enable
-for_window [class="Thunderbird"] resize set 1600 900
-for_window [title="Inbox.*" class="Thunderbird"] move scratchpad
-for_window [title="Inbox.*" class="Thunderbird"] border pixel 5
 
 # Quick math terminal
 bindsym $mod+c [app_id="quick_math"] scratchpad show; [app_id="quick_math"] move position center
@@ -329,11 +314,10 @@ no_focus [title="^join\?action=join.*$"]
 exec --no-startup-id wlsunset -l 46.55 -L 6.62
 exec --no-startup-id tmux new-session -d -s i3
 exec --no-startup-id nextcloud --background
-exec --no-startup-id dbus-launch nm-applet
+exec_always --no-startup-id "killall nm-applet; nm-applet"
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# exec --no-startup-id "xfce4-panel -d"
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
+exec_always --no-startup-id "killall pamac-tray-plasma; pamac-tray-plasma"
 exec --no-startup-id 'xinput --set-prop "SynPS/2 Synaptics TouchPad"  "libinput Natural Scrolling Enabled" 1'
 
 # requires python-i3-py and xorg-util-macros
@@ -345,9 +329,7 @@ gaps inner 10
 smart_borders on
 smart_gaps on
 
-# Redémarre polybar quand on redémarre i3
-# exec_always --no-startup-id "killall polybar;polybar -r center & polybar -r left & polybar -r right"
+# Redémarre waybar quand on redémarre sway
 exec_always --no-startup-id "source ~/.profile"
-exec_always --no-startup-id "bash ~/.config/polybar/run_polybar.sh"
 exec_always --no-startup-id "killall dunst; dunst"
 exec_always --no-startup-id "killall waybar; waybar"
