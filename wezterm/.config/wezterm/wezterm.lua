@@ -18,49 +18,62 @@ config.enable_tab_bar = false
 
 -- FIXME: remove this
 -- custom build: I reverted https://github.com/wezterm/wezterm/pull/6508/files
-config.enable_wayland = false
+function getHostname()
+    local f = io.popen("/bin/hostname")
+    local hostname = f:read("*a") or ""
+    f:close()
+    hostname = string.gsub(hostname, "\n$", "")
+    return hostname
+end
+
+local hostname = getHostname()
+if hostname == "thinkpad-archlinux" then
+    config.enable_wayland = true
+else
+    config.enable_wayland = false
+end
 
 config.window_padding = {
-	left = 2,
-	right = 2,
-	top = 0,
-	bottom = 0,
+    left = 2,
+    right = 2,
+    top = 0,
+    bottom = 0,
 }
 
 config.font_size = 12
 config.font = wezterm.font_with_fallback({
-	"DejaVu Sans Mono",
+    "DejaVu Sans Mono",
 })
 config.font_rules = {
-	{
-		intensity = "Bold",
-		italic = false,
-		font = wezterm.font("DejaVu Sans Mono", { weight = "Bold", stretch = "Normal", style = "Normal" }),
-	},
-	{
-		intensity = "Bold",
-		italic = true,
-		font = wezterm.font("DejaVu Sans Mono", { weight = "Bold", stretch = "Normal", style = "Italic" }),
-	},
+    {
+        intensity = "Bold",
+        italic = false,
+        font = wezterm.font("DejaVu Sans Mono", { weight = "Bold", stretch = "Normal", style = "Normal" }),
+    },
+    {
+        intensity = "Bold",
+        italic = true,
+        font = wezterm.font("DejaVu Sans Mono", { weight = "Bold", stretch = "Normal", style = "Italic" }),
+    },
 }
 
 -- Key bindings for increasing and decreasing font size
 config.keys = {
-	{
-		key = "PageUp",
-		mods = "ALT",
-		action = wezterm.action.IncreaseFontSize,
-	},
-	{
-		key = "PageDown",
-		mods = "ALT",
-		action = wezterm.action.DecreaseFontSize,
-	},
-	{
-		key = "0",
-		mods = "ALT",
-		action = wezterm.action.ResetFontSize,
-	},
+    {
+        key = "PageUp",
+        mods = "ALT",
+        action = wezterm.action.IncreaseFontSize,
+    },
+    {
+        key = "PageDown",
+        mods = "ALT",
+        action = wezterm.action.DecreaseFontSize,
+    },
+    {
+        key = "0",
+        mods = "ALT",
+        action = wezterm.action.ResetFontSize,
+    },
 }
 
 local act = wezterm.action
@@ -73,11 +86,11 @@ config.disable_default_mouse_bindings = true
 --
 -- Make Shift-Click open hyperlinks (Shift is implied)
 config.mouse_bindings = {
-	{
-		event = { Up = { streak = 1, button = "Left" } },
-		mods = "NONE",
-		action = act.OpenLinkAtMouseCursor,
-	},
+    {
+        event = { Up = { streak = 1, button = "Left" } },
+        mods = "NONE",
+        action = act.OpenLinkAtMouseCursor,
+    },
 }
 
 -- and finally, return the configuration to wezterm
