@@ -158,19 +158,21 @@
         "interface": "en*",
         "interval": 2,
         "format-wifi": "",
-        "format-ethernet": "({ifname}) [{ipaddr}/{cidr}]  {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "format-ethernet": "({ifname}) {ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
         "format-disconnected": "", //An empty format will hide the module.
         "tooltip": true,
-        "max-length": 50
+        "max-length": 50,
+        "align": 1, // right
     },
     "network#wifi": {
         "interface": "wl*",
         "interval": 2,
-        "format-wifi": "({ifname}) [{ipaddr}/{cidr}] {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "format-wifi": "({ifname}) {ipaddr} {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
         "format-ethernet": "",
         "format-disconnected": "", //An empty format will hide the module.
         "tooltip": true,
-        "max-length": 50
+        "max-length": 50,
+        "align": 1, // right
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
