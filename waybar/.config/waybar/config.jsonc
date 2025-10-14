@@ -6,8 +6,8 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/power", "sway/workspaces", "sway/mode"],
-    "modules-center": ["custom/media"],
+    "modules-left": ["custom/power", "sway/workspaces", "sway/mode", "custom/media"],
+    "modules-center": [],
     "modules-right": [
         "network#wired",
         "network#wifi",
@@ -157,28 +157,28 @@
     "network#wired": {
         "interface": "en*",
         "interval": 2,
-        "format-wifi": "({ifname}) [{ipaddr}/{cidr}] {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "format-wifi": "",
         "format-ethernet": "({ifname}) [{ipaddr}/{cidr}]  {bandwidthDownBytes}  {bandwidthUpBytes}",
-        "format-disconnected": "<not wired>", //An empty format will hide the module.
-        "tooltip": false,
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip": true,
         "max-length": 50
     },
     "network#wifi": {
         "interface": "wl*",
         "interval": 2,
         "format-wifi": "({ifname}) [{ipaddr}/{cidr}] {essid}  {bandwidthDownBytes}  {bandwidthUpBytes}",
-        "format-ethernet": "({ifname}) [{ipaddr}/{cidr}]  {bandwidthDownBytes}  {bandwidthUpBytes}",
-        "format-disconnected": "<no wifi>", //An empty format will hide the module.
-        "tooltip": false,
+        "format-ethernet": "",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip": true,
         "max-length": 50
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "[muted] {format_source}",
-        "format-source": "{volume}% ",
+        "format-muted": "[muted]",
+        "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
