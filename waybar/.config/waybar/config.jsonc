@@ -55,7 +55,7 @@
     },
     "clock": {
         "locale": "fr_CH.UTF-8",
-        "format": "{:L%a %b %d %Y W%V - %R}",
+        "format": "{:L%a %d.%m.%Y - %R}",
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "interval": 60,
         "calendar": {
