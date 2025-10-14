@@ -4,6 +4,9 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
+# You need these programs:
+# paru -S waybar sway swaylock-effects swaytools wdisplays grim nwg-look wl-clipboard swaybg
+
 
 set $mod Mod4
 set $alt Mod1
