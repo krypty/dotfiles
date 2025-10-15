@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 # You need these programs:
-# paru -S waybar sway swaylock-effects swaytools wdisplays grim nwg-look wl-clipboard swaybg wlsunset
+# paru -S waybar sway swaylock-effects swaytools wdisplays grim nwg-look wl-clipboard swaybg wlsunset pamac-tray-icon-plasma
 
 
 set $mod Mod4
