@@ -172,6 +172,16 @@ vim.keymap.set("n", "<leader>ld", ":lua vim.diagnostic.open_float()<CR>", { nore
 vim.keymap.set("n", "/", "/\\v", { noremap = true, silent = true })
 vim.keymap.set("c", "%s", "%s/\\v", { noremap = true, silent = true })
 
+-- Filetype
+-- help: https://neovim.io/doc/user/lua.html#vim.filetype.add%28%29
+vim.filetype.add({
+  extension = {
+    service = 'systemd',
+    timer = 'systemd',
+    target = 'systemd',
+  }
+})
+
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -745,6 +755,7 @@ require('lazy').setup({
         'shfmt',
         'yamllint',
         'biome',
+        'systemd-language-server'
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
