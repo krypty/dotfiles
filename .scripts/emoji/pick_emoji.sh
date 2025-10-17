@@ -5,13 +5,13 @@
 # Shows the selected character in dunst if running.
 
 # Must have xclip installed to even show menu.
-xclip -h >/dev/null || notify-send "[pick_emoji] xclip not found"
+wl-copy -h >/dev/null || notify-send "[pick_emoji] wl-copy not found"
 
-scriptdir=`dirname "$BASH_SOURCE"`
+scriptdir=$(dirname "$BASH_SOURCE")
 chosen=$(grep -v "#" $scriptdir/emoji | rofi -dmenu)
 
 [ "$chosen" != "" ] || exit
 
 c=$(echo "$chosen" | sed "s/ .*//")
-echo "$c" | tr -d '\n' | xclip -selection clipboard
+echo "$c" | tr -d '\n' | wl-copy
 notify-send "'$c' copied to clipboard." &
