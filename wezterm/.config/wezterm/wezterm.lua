@@ -27,10 +27,10 @@ function getHostname()
 end
 
 local hostname = getHostname()
-if hostname == "thinkpad-archlinux" then
-    config.enable_wayland = true
-else
+if hostname == "tower" then
     config.enable_wayland = false
+else
+    config.enable_wayland = true
 end
 
 config.window_padding = {
