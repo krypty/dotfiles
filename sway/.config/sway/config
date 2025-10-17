@@ -214,9 +214,8 @@ bindsym XF86AudioNext  exec playerctl --player playerctld next
 bindsym $mod+$alt+F12  exec playerctl --player playerctld next
 bindsym XF86AudioPrev  exec playerctl --player playerctld previous
 bindsym $mod+$alt+F10  exec playerctl --player playerctld previous
-# Capture d'écran
-# FIXME: always focus a single monitor
-bindsym Print exec flameshot gui
+# Screen shot (requires `grim`, `slurp` and `swappy`)
+bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ # increase screen brightness
