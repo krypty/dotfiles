@@ -13,7 +13,6 @@
         "network#wifi",
         "idle_inhibitor",
         "pulseaudio",
-        "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
