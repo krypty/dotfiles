@@ -29,8 +29,10 @@ end
 local hostname = getHostname()
 if hostname == "tower" then
     config.enable_wayland = false
+    FONT_SIZE = 12
 else
     config.enable_wayland = true
+    FONT_SIZE = 10
 end
 
 config.window_padding = {
@@ -40,7 +42,7 @@ config.window_padding = {
     bottom = 0,
 }
 
-config.font_size = 12
+config.font_size = FONT_SIZE
 config.font = wezterm.font_with_fallback({
     "DejaVu Sans Mono",
 })
