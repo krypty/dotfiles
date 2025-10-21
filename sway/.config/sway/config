@@ -335,7 +335,7 @@ for_window [title="^join\?action=join.*$"] floating enable
 no_focus [title="^join\?action=join.*$"]
 
 # Applications au démarrage
-exec_always --no-startup-id "killall wlsunset; wlsunset -l 46.55 -L 6.62"
+exec_always --no-startup-id "killall wlsunset; wlsunset -l 46.55 -L 6.62 -T 5400"
 exec --no-startup-id tmux new-session -d -s i3
 exec --no-startup-id nextcloud --background
 exec_always --no-startup-id "killall nm-applet; nm-applet"
