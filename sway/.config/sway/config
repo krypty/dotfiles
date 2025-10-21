@@ -13,9 +13,30 @@ set $mod Mod4
 set $alt Mod1
 
 set $term wezterm
-seat seat0 xcursor_theme Adwaita 32
+
+# GTK
+# This is the only place where you must set GTK scaling
+# set $system_theme 'Arc-Dark'
+# set $system_icons 'Numix-Square'
+# set $system_dpi_scaling_factor 2.6
+set $cursor_size 24
+set $cursor_theme Adwaita
+# set $titlebar_font Cantarell
+set $gnome-schema org.gnome.desktop.interface
 
 include ~/.config/sway/config.d/`hostname`.conf
+
+exec_always {
+  # gsettings set $gnome-schema gtk-theme $system_theme
+  # gsettings set $gnome-schema icon-theme $system_icons
+  # gsettings set $gnome-schema text-scaling-factor $system_dpi_scaling_factor
+  gsettings set $gnome-schema cursor-theme $cursor_theme
+  gsettings set $gnome-schema cursor-size $cursor_size
+}
+
+# Mouse
+seat seat0 xcursor_theme $cursor_theme $cursor_size
+
 
 
 # i3 config file (v4)
