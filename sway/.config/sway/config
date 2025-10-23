@@ -6,7 +6,7 @@
 #
 # You need these programs:
 # note: gruvbox-theme-git is https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme
-# paru -S waybar sway swaylock-effects swaytools wdisplays grim nwg-look wl-clipboard swaybg wlsunset pamac-tray-icon-plasma gruvbox-theme-git font-awesome-5 ttf-dejavu otf-font-awesome
+# paru -S waybar sway swaylock-effects swaytools wdisplays grim nwg-look wl-clipboard swaybg wlsunset pamac-tray-icon-plasma gruvbox-theme-git font-awesome-5 ttf-dejavu otf-font-awesome swappy slurp
 
 
 set $mod Mod4
