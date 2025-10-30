@@ -59,8 +59,8 @@ config.font_rules = {
     },
 }
 
--- Key bindings for increasing and decreasing font size
 config.keys = {
+    -- Key bindings for increasing and decreasing font size
     {
         key = "PageUp",
         mods = "ALT",
@@ -76,6 +76,17 @@ config.keys = {
         mods = "ALT",
         action = wezterm.action.ResetFontSize,
     },
+    -- -- Key bindings to scroll up/down to the previous/next prompt
+    -- {
+    --     key = "UpArrow",
+    --     mods = "SHIFT",
+    --     action = wezterm.action.ScrollToPrompt(-1),
+    -- },
+    -- {
+    --     key = "DownArrow",
+    --     mods = "SHIFT",
+    --     action = wezterm.action.ScrollToPrompt(1),
+    -- },
 }
 
 local act = wezterm.action
@@ -93,6 +104,10 @@ config.mouse_bindings = {
         mods = "NONE",
         action = act.OpenLinkAtMouseCursor,
     },
+    -- {
+    --     event = { Down = { streak = 3, button = "Left" } },
+    --     action = wezterm.action.SelectTextAtMouseCursor("SemanticZone"),
+    -- },
 }
 
 -- and finally, return the configuration to wezterm
