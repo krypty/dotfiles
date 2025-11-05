@@ -12,7 +12,7 @@
 set $mod Mod4
 set $alt Mod1
 
-set $term wezterm
+set $term foot
 
 # GTK
 # This is the only place where you must set GTK scaling
@@ -308,10 +308,10 @@ for_window [class="VirtualBox Machine"] floating enable
 # Quick math terminal
 bindsym $mod+c [app_id="quick_math"] scratchpad show; [app_id="quick_math"] move position center
 for_window [app_id="quick_math"] floating enable
-for_window [app_id="quick_math"] resize set 800 300
+for_window [app_id="quick_math"] resize set 1200 900
 for_window [app_id="quick_math"] move scratchpad
 for_window [app_id="quick_math"] border pixel 5
-exec_always --no-startup-id "swaymsg \[app_id="quick_math"\] kill ; $term start --class quick_math -e python3 -q"
+exec_always --no-startup-id "swaymsg \[app_id="quick_math"\] kill ; $term --app-id quick_math -e python3 -q"
 
 # Quick Telegram window
 bindsym $mod+t [title="Telegram"] scratchpad show; [title="Telegram"] move position center

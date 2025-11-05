@@ -8,7 +8,7 @@ export PATH=/home/gary/go/bin:$PATH
 
 if which starship >/dev/null 2>&1; then
     eval "$(starship init bash)"
-    starship_precmd  # required with wezterm
+    starship_precmd  # required with wezterm and foot
 fi
 
 cd /home/gary/.rc_files; source entrypoint.sh; cd - > /dev/null
