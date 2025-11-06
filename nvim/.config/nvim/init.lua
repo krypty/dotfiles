@@ -18,7 +18,7 @@ end)
 -- Enable break indent
 vim.o.breakindent = true
 
-vim.opt.listchars = "tab:|-,trail:·,multispace:·,extends:▶,precedes:◀,nbsp:‿"
+vim.opt.listchars = 'tab:|-,trail:·,multispace:·,extends:▶,precedes:◀,nbsp:‿'
 vim.opt.list = true
 
 -- Preview substitutions live, as you type!
@@ -33,10 +33,10 @@ vim.opt.backup = false -- creates a backup file
 --vim.opt.cmdheight = 2  -- more space in the neovim command line for displaying messages
 -- vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0       -- so that `` is visible in markdown files
-vim.opt.fileencoding = "utf-8" -- the encoding written to a file
+vim.opt.fileencoding = 'utf-8' -- the encoding written to a file
 vim.opt.hlsearch = true        -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true      -- ignore case in search pattern
-vim.opt.mouse = "a"            -- allow the mouse to be used in neovim
+vim.opt.mouse = 'a'            -- allow the mouse to be used in neovim
 vim.opt.pumheight = 10         -- pop up menu height
 vim.opt.showmode = false       -- we don't need to see things like -- INSERT -- anymore
 vim.opt.showtabline = 2        -- always show tabs
@@ -57,7 +57,7 @@ vim.opt.cursorline = true      -- highlight the current line
 vim.opt.number = true          -- set numbered lines
 vim.opt.relativenumber = true  -- set relative numbered lines
 vim.opt.numberwidth = 4        -- set number column width
-vim.opt.signcolumn = "yes"     -- always show the sign column, otherwise it would shift the text each time
+vim.opt.signcolumn = 'yes'     -- always show the sign column, otherwise it would shift the text each time
 vim.opt.wrap = true            -- wrap line if too long
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 10
@@ -65,17 +65,17 @@ vim.opt.sidescrolloff = 10
 vim.opt.showmatch = true -- highlight matching [{()}]
 vim.opt.hidden = true    -- allow switching unsaved files in buffers
 vim.opt.colorcolumn = { 80, 100 }
-vim.opt.background = "light"
+vim.opt.background = 'light'
 
 vim.g.autoformat = false
 
-vim.opt.listchars = "tab:|-,trail:·,multispace:·,extends:▶,precedes:◀,nbsp:‿"
+vim.opt.listchars = 'tab:|-,trail:·,multispace:·,extends:▶,precedes:◀,nbsp:‿'
 vim.opt.list = true
 
-vim.opt.shortmess:append("c")
+vim.opt.shortmess:append 'c'
 
-vim.cmd("set whichwrap+=<,>,[,],h,l")
-vim.cmd([[set iskeyword+=-]]) -- consider kebab-case words as one
+vim.cmd 'set whichwrap+=<,>,[,],h,l'
+vim.cmd [[set iskeyword+=-]] -- consider kebab-case words as one
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -105,83 +105,82 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window', noremap = true, silent = true })
 
 -- Make j and k keys go up normally instead of to the previous line number
-vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
-vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
+vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
+vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
 
 -- Toggle spellcheck
-vim.keymap.set("n", "<F7>", ":setlocal spell! spelllang=en_us<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<F7>', ':setlocal spell! spelllang=en_us<CR>', { noremap = true, silent = true })
 
 -- Close buffer without closing its window
-vim.keymap.set("n", "<leader>q", ":Bdelete<CR>", { desc = '[q]uit buffer', noremap = true, silent = true })
+vim.keymap.set('n', '<leader>q', ':Bdelete<CR>', { desc = '[q]uit buffer', noremap = true, silent = true })
 
 -- Close all buffers, but the focused one
-vim.keymap.set("n", "<leader>Q", ":%bd|e#|bd#<CR>",
+vim.keymap.set('n', '<leader>Q', ':%bd|e#|bd#<CR>',
   { desc = '[Q]uit all but focused buffer', noremap = true, silent = true })
 
 -- Navigate buffers
-vim.keymap.set("n", "tj", ":bnext<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "tk", ":bprevious<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "tl", ":blast<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "th", ":bfirst<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', 'tj', ':bnext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'tk', ':bprevious<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'tl', ':blast<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', 'th', ':bfirst<CR>', { noremap = true, silent = true })
 
 -- Resize panes
 -- <A> is the alt key...
-vim.keymap.set("n", "<A-j>", ":resize +5<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<A-k>", ":resize -5<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<A-h>", ":vertical resize -5<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<A-l>", ":vertical resize +5<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<A-j>', ':resize +5<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-k>', ':resize -5<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-h>', ':vertical resize -5<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-l>', ':vertical resize +5<CR>', { noremap = true, silent = true })
 
 -- Remove trailing spaces
-vim.keymap.set("n", "<leader>rts", ":%s/\\s\\+$//e<CR>",
+vim.keymap.set('n', '<leader>rts', ':%s/\\s\\+$//e<CR>',
   { desc = '[r]emove [t]railing [s]paces', noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { desc = '[l]azy [g]it', noremap = true, silent = true })
+vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = '[l]azy [g]it', noremap = true, silent = true })
 
 -- Insert --
 -- Press jj fast to exit insert mode
-vim.keymap.set("i", "jj", "<ESC>", { noremap = true, silent = true })
+vim.keymap.set('i', 'jj', '<ESC>', { noremap = true, silent = true })
 
 -- Ctrl-Backspace removes last word in insert mode
-vim.keymap.set("i", "<C-H>", "<C-W>", { noremap = true, silent = true })
+vim.keymap.set('i', '<C-H>', '<C-W>', { noremap = true, silent = true })
 
 -- Visual --
 -- Keep selected text selected when fixing indentation
-vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
-vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
+vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 
 -- Move text up and down
-vim.keymap.set("v", "<C-J>", ":m .+1<CR>==", { noremap = true, silent = true })
-vim.keymap.set("v", "<C-K>", ":m .-2<CR>==", { noremap = true, silent = true })
-vim.keymap.set("v", "p", '"_dP', { noremap = true, silent = true }) -- don't replace replaced content in the clipboard
+vim.keymap.set('v', '<C-J>', ':m .+1<CR>==', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-K>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.keymap.set('v', 'p', '"_dP', { noremap = true, silent = true }) -- don't replace replaced content in the clipboard
 
 -- Visual Block --
 -- Move text up and down
-vim.keymap.set("x", "<C-J>", ":move '>+1<CR>gv-gv", { noremap = true, silent = true })
-vim.keymap.set("x", "<C-K>", ":move '<-2<CR>gv-gv", { noremap = true, silent = true })
+vim.keymap.set('x', '<C-J>', ":move '>+1<CR>gv-gv", { noremap = true, silent = true })
+vim.keymap.set('x', '<C-K>', ":move '<-2<CR>gv-gv", { noremap = true, silent = true })
 
 -- Nvim-tree
-vim.keymap.set("n", "<F2>", ":Neotree toggle<CR>", { noremap = true, silent = true })
-vim.keymap.set("i", "<F2>", ":Neotree toggle<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader><F2>", ":Neotree reveal<CR>", { noremap = true, silent = true })
-vim.keymap.set("i", "<leader><F2>", ":Neotree reveal<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<F2>', ':Neotree toggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<F2>', ':Neotree toggle<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader><F2>', ':Neotree reveal<CR>', { noremap = true, silent = true })
+vim.keymap.set('i', '<leader><F2>', ':Neotree reveal<CR>', { noremap = true, silent = true })
 
 -- LSP
-vim.keymap.set("n", "<leader>ld", ":lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ld', ':lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
 
 -- Vim's very magic regex
-vim.keymap.set("n", "/", "/\\v", { noremap = true, silent = true })
-vim.keymap.set("c", "%s", "%s/\\v", { noremap = true, silent = true })
+vim.keymap.set('n', '/', '/\\v', { noremap = true, silent = true })
+vim.keymap.set('c', '%s', '%s/\\v', { noremap = true, silent = true })
 
 -- Filetype
 -- help: https://neovim.io/doc/user/lua.html#vim.filetype.add%28%29
-vim.filetype.add({
+vim.filetype.add {
   extension = {
     service = 'systemd',
     timer = 'systemd',
     target = 'systemd',
-  }
-})
-
+  },
+}
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -198,26 +197,26 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- show virtual_text everywhere
-vim.diagnostic.config({
+vim.diagnostic.config {
   virtual_text = true,
   virtual_lines = false, -- keep off by default
   update_in_insert = false,
-})
+}
 
 -- toggle behavior: when cursor moves, show virtual_lines only on current line and hide virtual_text for that line
-local ns = vim.api.nvim_create_namespace("diag_current_line")
+local ns = vim.api.nvim_create_namespace 'diag_current_line'
 local function show_current_line_virtual_lines()
-  vim.diagnostic.config({ virtual_text = false })
+  vim.diagnostic.config { virtual_text = false }
   -- let the plugin rachartier/tiny-inline-diagnostic.nvim handle the single-line diags
 end
 
 local function restore_virtual_text()
   -- hide our per-buffer virtual_lines and restore global virtual_text
   pcall(vim.diagnostic.hide, ns, 0)
-  vim.diagnostic.config({ virtual_text = true })
+  vim.diagnostic.config { virtual_text = true }
 end
 
-vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
   callback = function()
     -- show wrapped virtual_lines for cursor line if there are diagnostics; else restore text
     local bufnr = vim.api.nvim_get_current_buf()
@@ -286,19 +285,19 @@ require('lazy').setup({
       --   changedelete = { text = '~' },
       -- },
       signs = {
-        add = { text = "▎" },
-        change = { text = "▎" },
-        delete = { text = "" },
-        topdelete = { text = "" },
-        changedelete = { text = "▎" },
-        untracked = { text = "▎" },
+        add = { text = '▎' },
+        change = { text = '▎' },
+        delete = { text = '' },
+        topdelete = { text = '' },
+        changedelete = { text = '▎' },
+        untracked = { text = '▎' },
       },
       signs_staged = {
-        add = { text = "▎" },
-        change = { text = "▎" },
-        delete = { text = "" },
-        topdelete = { text = "" },
-        changedelete = { text = "▎" },
+        add = { text = '▎' },
+        change = { text = '▎' },
+        delete = { text = '' },
+        topdelete = { text = '' },
+        changedelete = { text = '▎' },
       },
     },
   },
@@ -755,7 +754,7 @@ require('lazy').setup({
         'shfmt',
         'yamllint',
         'biome',
-        'systemd-language-server'
+        'systemd-language-server',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -928,20 +927,20 @@ require('lazy').setup({
 
   {
     'akinsho/bufferline.nvim',
-    version = "*",
+    version = '*',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-      require("bufferline").setup {}
-    end
+      require('bufferline').setup {}
+    end,
   },
 
   {
     'ellisonleao/gruvbox.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
-      require("gruvbox").setup({
+      require('gruvbox').setup {
         transparent_mode = false,
-      })
+      }
       vim.cmd.colorscheme 'gruvbox'
     end,
   },
@@ -1069,9 +1068,9 @@ require('lazy').setup({
     dependencies = {
       {
         'ten3roberts/window-picker.nvim',
-        "nvim-lua/plenary.nvim",
-        "MunifTanjim/nui.nvim",
-        "nvim-tree/nvim-web-devicons", -- optional, but recommended
+        'nvim-lua/plenary.nvim',
+        'MunifTanjim/nui.nvim',
+        'nvim-tree/nvim-web-devicons', -- optional, but recommended
         name = 'window-picker',
         config = function()
           local picker = require 'window-picker'
@@ -1127,17 +1126,17 @@ require('lazy').setup({
     },
   },
   -- Kill a buffer without closing its window
-  { "moll/vim-bbye" },
+  { 'moll/vim-bbye' },
 
   {
-    "ckipp01/nvim-jenkinsfile-linter",
+    'ckipp01/nvim-jenkinsfile-linter',
     config = function()
-      local jenkinsfile_linter = require("jenkinsfile_linter")
+      local jenkinsfile_linter = require 'jenkinsfile_linter'
 
-      vim.api.nvim_create_autocmd({ "BufWritePost", "BufWinEnter" }, {
-        pattern = "Jenkinsfile",
+      vim.api.nvim_create_autocmd({ 'BufWritePost', 'BufWinEnter' }, {
+        pattern = 'Jenkinsfile',
         callback = function()
-          if vim.bo.filetype ~= "groovy" then
+          if vim.bo.filetype ~= 'groovy' then
             return
           end
           vim.schedule(jenkinsfile_linter.validate)
@@ -1145,43 +1144,44 @@ require('lazy').setup({
       })
     end,
     dependencies = {
-      "nvim-lua/plenary.nvim",
-    }
+      'nvim-lua/plenary.nvim',
+    },
   },
   {
-    "ibhagwan/fzf-lua",
+    'ibhagwan/fzf-lua',
     dependencies = {
-      "nvim-tree/nvim-web-devicons",
+      'nvim-tree/nvim-web-devicons',
       config = function()
         -- Fzf
-        vim.keymap.set("n", "<C-p>", ":Fzf files<CR>", { noremap = true, silent = true })
-        vim.keymap.set("n", "<leader>rg", ":Fzf live_grep<CR>", { noremap = true, silent = true })
-        vim.keymap.set("n", "tf", ":Fzf buffers<CR>", { noremap = true, silent = true })
-      end
-    }
+        vim.keymap.set('n', '<C-p>', ':Fzf files<CR>', { noremap = true, silent = true })
+        vim.keymap.set('n', '<leader>rg', ':Fzf live_grep<CR>', { noremap = true, silent = true })
+        vim.keymap.set('n', 'tf', ':Fzf buffers<CR>', { noremap = true, silent = true })
+      end,
+    },
   },
 
   {
     'goolord/alpha-nvim',
     dependencies = { 'echasnovski/mini.icons' },
     config = function()
-      require 'alpha'.setup(require 'alpha.themes.startify'.config)
-    end
+      require('alpha').setup(require('alpha.themes.startify').config)
+    end,
   },
 
   {
-    "rachartier/tiny-inline-diagnostic.nvim",
+    'rachartier/tiny-inline-diagnostic.nvim',
     opts = {
-      event = "VeryLazy", -- Or `LspAttach`
+      event = 'VeryLazy', -- Or `LspAttach`
       priority = 1000,    -- needs to be loaded in first
     },
   },
 
   {
-    "brenoprata10/nvim-highlight-colors",
+    'brenoprata10/nvim-highlight-colors',
     config = function()
-      require('nvim-highlight-colors').setup({})
-    end
+      require('nvim-highlight-colors').setup {}
+    end,
+  },
   {
     'folke/flash.nvim',
     event = 'VeryLazy',
