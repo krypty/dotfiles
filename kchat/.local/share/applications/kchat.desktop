@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=kChat
+Exec=env DESKTOPINTEGRATION=false ELECTRON_OZONE_PLATFORM_HINT=auto /usr/bin/kchat   %U
+Terminal=false
+Type=Application
+Icon=kchat-desktop
+StartupWMClass=kChat
+X-AppImage-Version=3.3.3
+MimeType=x-sheme-handler/ktalk;x-scheme-handler/kchat;
+Comment=kChat
+Categories=Network;InstantMessaging;

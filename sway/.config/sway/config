@@ -337,6 +337,9 @@ no_focus [title="^zoom\s?$"]
 for_window [title="^join\?action=join.*$"] floating enable
 no_focus [title="^join\?action=join.*$"]
 
+# Disable urgency for the program kChat
+for_window [app_id="com.infomaniak.chat"] urgency none
+
 # Applications au démarrage
 exec_always --no-startup-id "killall wlsunset; wlsunset -l 46.55 -L 6.62 -T 5400"
 exec --no-startup-id tmux new-session -d -s i3
