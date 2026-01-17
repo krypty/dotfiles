@@ -930,7 +930,18 @@ require('lazy').setup({
     version = '*',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
-      require('bufferline').setup {}
+      require('bufferline').setup {
+        options = {
+
+          -- don't show quickfix buffer in bufferline
+          custom_filter = function(buf_number, _)
+            if vim.bo[buf_number].filetype == 'qf' then
+              return false
+            end
+            return true
+          end,
+        },
+      }
     end,
   },
 
