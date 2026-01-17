@@ -446,14 +446,14 @@ require('lazy').setup({
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[s]earch [h]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[s]earch [k]eymaps' })
-      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[s]earch [f]iles' })
+      vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = 'search files' })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[s]earch [s]elect telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[s]earch current [w]ord' })
-      vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[s]earch by [g]rep' })
+      vim.keymap.set('n', '<leader>rg', builtin.live_grep, { desc = '[s]earch by [g]rep' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[s]earch [d]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[s]earch [r]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[s]earch recent files ("." for repeat)' })
-      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] find existing buffers' })
+      vim.keymap.set('n', 'tf', builtin.buffers, { desc = '[ ] find existing buffers' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
@@ -1159,19 +1159,6 @@ require('lazy').setup({
     },
   },
   {
-    'ibhagwan/fzf-lua',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-      config = function()
-        -- Fzf
-        vim.keymap.set('n', '<C-p>', ':Fzf files<CR>', { noremap = true, silent = true })
-        vim.keymap.set('n', '<leader>rg', ':Fzf live_grep<CR>', { noremap = true, silent = true })
-        vim.keymap.set('n', 'tf', ':Fzf buffers<CR>', { noremap = true, silent = true })
-      end,
-    },
-  },
-
-  {
     'goolord/alpha-nvim',
     dependencies = { 'echasnovski/mini.icons' },
     config = function()
@@ -1200,7 +1187,7 @@ require('lazy').setup({
     ---@type render.md.UserConfig
     opts = {},
     keys = {
-      { '<leader>mp', '<cmd>RenderMarkdown preview<CR>',  desc = 'Markdown Preview'  },
+      { '<leader>mp', '<cmd>RenderMarkdown preview<CR>', desc = 'Markdown Preview' },
     },
   },
   {
