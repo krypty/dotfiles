@@ -1187,7 +1187,7 @@ require('lazy').setup({
     ---@type render.md.UserConfig
     opts = {},
     keys = {
-      { '<leader>mp', '<cmd>RenderMarkdown preview<CR>', desc = 'Markdown Preview' },
+      { '<leader>mP', '<cmd>RenderMarkdown preview<CR>', desc = 'Markdown Preview' },
     },
   },
   {
