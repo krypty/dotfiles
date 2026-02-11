@@ -981,6 +981,8 @@ require('lazy').setup({
 
       require('mini.indentscope').setup()
 
+      require('mini.git').setup()
+
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
@@ -995,6 +997,10 @@ require('lazy').setup({
       statusline.section_location = function()
         return '%2l:%-2v'
       end
+
+      -- statusline.section_git = function ()
+      --  return { trunc_width = 30 }
+      -- end
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
