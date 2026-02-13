@@ -349,6 +349,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id "killall pamac-tray-plasma; pamac-tray-plasma"
 exec --no-startup-id 'xinput --set-prop "SynPS/2 Synaptics TouchPad"  "libinput Natural Scrolling Enabled" 1'
+exec_always --no-startup-id "killall netbird-ui; netbird-ui"
 
 # requires python-i3-py and xorg-util-macros
 
