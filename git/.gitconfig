@@ -49,3 +49,8 @@
     syntax-theme = gruvbox-light
 [init]
 	defaultBranch = master
+
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:ecorobotix/**"]
+
+# Edit this line to point to your alternative configuration file
+path = ~/.gitconfig-gitlab
