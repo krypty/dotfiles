@@ -734,8 +734,7 @@ require('lazy').setup({
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'basedpyright',
-        'isort',
+        'pyrefly',
         'lua-language-server',
         'ruff',
         'stylua', -- Used to format Lua code
@@ -748,7 +747,6 @@ require('lazy').setup({
         'cmake-language-server',
         'docformatter',
         'docker-language-server',
-        'pylint',
         'robotframework-lsp',
         'shellcheck',
         'shfmt',
