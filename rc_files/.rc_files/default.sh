@@ -123,6 +123,8 @@ if which uvx &>/dev/null; then
     eval "$(uvx --generate-shell-completion bash)"
 fi
 
+eval "$(zoxide init bash)"
+
 if [[ -v TMUX ]]; then
     # inside tmux, we don't know if Sway got restarted
     swaymsg() {
