@@ -1,0 +1,7 @@
+theme = "gruvbox-light"
+
+appearance = "system"
+theme_dark = "gruvbox-dark"
+theme_light = "gruvbox-light"
+
+wrap = true
