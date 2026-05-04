@@ -1,0 +1,23 @@
+profile docked {
+    output DP-3 enable mode 1920x1080 position 0,0
+    output DP-4 enable mode 1920x1080 position 1920,0
+    output eDP-1 disable
+
+    exec ~/dotfiles/.scripts/modes/modes//docked.sh
+}
+
+profile laptop {
+    output eDP-1 enable mode 1920x1200 position 0,0
+
+    exec ~/dotfiles/.scripts/modes/modes/laptop.sh
+}
+
+profile mirror-hdmi {
+    output eDP-1 enable mode 1920x1080 position 0,0
+    output HDMI-A-1 enable mode 1920x1080 position 1920,0
+    exec killall wl-present
+    exec rm -f /run/user/1000/pipectl.1000.wl-present.pipe
+    exec wl-present mirror eDP-1 --fullscreen-output HDMI-A-1 --fullscreen
+
+    exec ~/dotfiles/.scripts/modes/modes/laptop.sh
+}
