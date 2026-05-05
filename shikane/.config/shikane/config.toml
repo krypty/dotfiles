@@ -40,3 +40,29 @@ transform = "normal"
 adaptive_sync = false
 exec = ["swayws range --numeric 6 10 $SHIKANE_OUTPUT_NAME"]
 
+[[profile]]
+name = "present"
+
+[[profile.output]]
+enable = true
+search = ["m=0x403D", "s=", "v=Lenovo Group Limited"]
+mode = "1920x1080@60Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile.output]]
+enable = true
+search = ["m=SyncMaster", "s=H1AK500000", "v=Samsung Electric Company"]
+mode = "1920x1080@30Hz"
+position = "1920,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+exec = [
+    "killall wl-present",
+    "rm -f /run/user/1000/pipectl.1000.wl-present.pipe",
+    "wl-present mirror eDP-1 --fullscreen-output $SHIKANE_OUTPUT_NAME --fullscreen"
+]
+
