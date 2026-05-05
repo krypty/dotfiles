@@ -40,7 +40,8 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 # Mouse
 seat seat0 xcursor_theme $cursor_theme $cursor_size
 
-exec_always --no-startup-id "killall kanshi; kanshi"
+# exec_always --no-startup-id "killall kanshi; kanshi"
+exec_always --no-startup-id "killall shikane; shikane; shikanectl reload"
 
 
 # i3 config file (v4)
