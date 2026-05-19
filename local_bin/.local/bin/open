@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 set -euo pipefail
 
-gio open ${@:-}
+gio open ${@:-} 2>/dev/null
