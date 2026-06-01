@@ -66,3 +66,29 @@ exec = [
     "wl-present mirror eDP-1 --fullscreen-output $SHIKANE_OUTPUT_NAME --fullscreen"
 ]
 
+[[profile]]
+name = "ecurie"
+
+[[profile.output]]
+enable = true
+search = ["m=0x403D", "s=", "v=Lenovo Group Limited"]
+mode = "1920x1080@60.026Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+
+[[profile.output]]
+enable = true
+search = ["m=Beyond TV", "s=0x00010000", "v=XXX"]
+mode = "1920x1080@30Hz"
+position = "0,0"
+scale = 1.0
+transform = "normal"
+adaptive_sync = false
+exec = [
+    "killall wl-present",
+    "rm -f /run/user/1000/pipectl.1000.wl-present.pipe",
+    "wl-present mirror eDP-1 --fullscreen-output $SHIKANE_OUTPUT_NAME --fullscreen"
+]
+
