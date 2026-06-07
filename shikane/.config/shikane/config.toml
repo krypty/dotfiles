@@ -14,7 +14,7 @@ exec = ["swayws range --numeric 1 10 $SHIKANE_OUTPUT_NAME"]
 
 [[profile]]
 name = "docked"
-exec = ["~/dotfiles/.scripts/modes/modes/docked.sh"]
+exec = []
 
 [[profile.output]]
 enable = false
@@ -28,7 +28,12 @@ position = "0,0"
 scale = 1.0
 transform = "normal"
 adaptive_sync = false
-exec = ["swayws range --numeric 1 5 $SHIKANE_OUTPUT_NAME"]
+exec = [
+    "sleep 5",
+    "swayws range --numeric 1 5 $SHIKANE_OUTPUT_NAME",
+    "swayws range --numeric 1 5 eDP-1 --away",
+    "swaybg -o $SHIKANE_OUTPUT_NAME -i /home/gary/Pictures/left.jpg -m fill &"
+]
 
 [[profile.output]]
 enable = true
@@ -38,7 +43,12 @@ position = "1920,0"
 scale = 1.0
 transform = "normal"
 adaptive_sync = false
-exec = ["swayws range --numeric 6 10 $SHIKANE_OUTPUT_NAME"]
+exec = [
+    "sleep 5",
+    "swayws range --numeric 6 10 $SHIKANE_OUTPUT_NAME",
+    "swayws range --numeric 6 10 eDP-1 --away",
+    "swaybg -o $SHIKANE_OUTPUT_NAME -i /home/gary/Pictures/right.jpg -m fill &"
+]
 
 [[profile]]
 name = "present"
