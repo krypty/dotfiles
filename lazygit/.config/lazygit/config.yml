@@ -5,8 +5,8 @@ promptToReturnFromSubprocess: false
 confirmOnQuit: false
 git:
   overrideGpg: true
-  pagers:
-    - pager: delta --light --paging=never
+  diffRenderers:
+    - command: delta --light --paging=never
   # obsolete starting at version 0.56.0
   paging:
     colorArg: always
