@@ -123,6 +123,10 @@ if which uvx &>/dev/null; then
     eval "$(uvx --generate-shell-completion bash)"
 fi
 
+if which mise &>/dev/null; then
+    eval "$(mise activate bash)"
+fi
+
 eval "$(zoxide init bash)"
 
 if [[ -v TMUX ]]; then
