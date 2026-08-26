@@ -109,11 +109,11 @@ if which direnv >/dev/null 2>&1; then
 fi
 
 # Automatically setup ssh-agent at login, only once.
-if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-    eval $(ssh-agent)
-    ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+# See also: ssh-agent.service in dotfiles.
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+if [ ! -S "$XDG_RUNTIME_DIR/ssh-agent.socket" ] ; then
+    eval "$(ssh-agent)"
 fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 ssh-add -l >/dev/null || ssh-add
 
 if which uv &>/dev/null; then
