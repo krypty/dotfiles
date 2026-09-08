@@ -2,7 +2,9 @@ timeout = 3
 
 [[profile]]
 name = "laptop"
-exec = ["~/dotfiles/.scripts/modes/modes/laptop.sh"]
+exec = [
+  "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""
+]
 
 [[profile.output]]
 enable = true
@@ -12,11 +14,17 @@ position = "0,0"
 scale = 1.0
 transform = "normal"
 adaptive_sync = false
-exec = ["swayws range --numeric 1 10 $SHIKANE_OUTPUT_NAME"]
+exec = [
+  "sleep 5",
+  "swayws range --numeric 1 10 $SHIKANE_OUTPUT_NAME",
+  "swaybg -o $SHIKANE_OUTPUT_NAME -i /home/gary/Pictures/left.jpg -m fill &"
+]
 
 [[profile]]
 name = "docked"
-exec = []
+exec = [
+  "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""
+]
 
 [[profile.output]]
 enable = false
@@ -31,10 +39,9 @@ scale = 1.0
 transform = "normal"
 adaptive_sync = false
 exec = [
-    "sleep 5",
-    "swayws range --numeric 1 5 $SHIKANE_OUTPUT_NAME",
-    "swayws range --numeric 1 5 eDP-1 --away",
-    "swaybg -o $SHIKANE_OUTPUT_NAME -i /home/gary/Pictures/left.jpg -m fill &"
+  "sleep 5",
+  "swayws range --numeric 1 5 $SHIKANE_OUTPUT_NAME",
+  "swaybg -o $SHIKANE_OUTPUT_NAME -i /home/gary/Pictures/left.jpg -m fill &"
 ]
 
 [[profile.output]]
@@ -46,14 +53,16 @@ scale = 1.0
 transform = "normal"
 adaptive_sync = false
 exec = [
-    "sleep 5",
-    "swayws range --numeric 6 10 $SHIKANE_OUTPUT_NAME",
-    "swayws range --numeric 6 10 eDP-1 --away",
-    "swaybg -o $SHIKANE_OUTPUT_NAME -i /home/gary/Pictures/right.jpg -m fill &"
+  "sleep 5",
+  "swayws range --numeric 6 10 $SHIKANE_OUTPUT_NAME",
+  "swaybg -o $SHIKANE_OUTPUT_NAME -i /home/gary/Pictures/right.jpg -m fill &"
 ]
 
 [[profile]]
 name = "present"
+exec = [
+  "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""
+]
 
 [[profile.output]]
 enable = true
@@ -73,13 +82,16 @@ scale = 1.0
 transform = "normal"
 adaptive_sync = false
 exec = [
-    "killall wl-present",
-    "rm -f /run/user/1000/pipectl.1000.wl-present.pipe",
-    "wl-present mirror eDP-1 --fullscreen-output $SHIKANE_OUTPUT_NAME --fullscreen"
+  "killall wl-present",
+  "rm -f /run/user/1000/pipectl.1000.wl-present.pipe",
+  "wl-present mirror eDP-1 --fullscreen-output $SHIKANE_OUTPUT_NAME --fullscreen"
 ]
 
 [[profile]]
 name = "ecurie"
+exec = [
+  "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""
+]
 
 [[profile.output]]
 enable = true
@@ -106,15 +118,23 @@ adaptive_sync = false
 
 [[profile]]
 name = "docked-home"
+exec = [
+  "notify-send shikane \"Profile $SHIKANE_PROFILE_NAME has been applied\""
+]
 
 [[profile.output]]
 enable = true
 search = ["m=DELL S2725QS", "s=FVWF364", "v=Dell Inc."]
 mode = "3840x2160@60Hz"
-position = "1920,0"
+position = "0,0"
 scale = 1.25
 transform = "normal"
 adaptive_sync = false
+exec = [
+  "sleep 5",
+  "swayws range --numeric 1 5 $SHIKANE_OUTPUT_NAME",
+  "swaybg -o $SHIKANE_OUTPUT_NAME -i /home/gary/Pictures/left.jpg -m fill &"
+]
 
 [[profile.output]]
 enable = false
@@ -124,7 +144,12 @@ search = ["m=0x403D", "s=", "v=Lenovo Group Limited"]
 enable = true
 search = ["m=DELL S2725QS", "s=JYPF364", "v=Dell Inc."]
 mode = "3840x2160@60Hz"
-position = "4992,0"
+position = "3072,0"
 scale = 1.25
 transform = "normal"
 adaptive_sync = false
+exec = [
+  "sleep 5",
+  "swayws range --numeric 6 10 $SHIKANE_OUTPUT_NAME",
+  "swaybg -o $SHIKANE_OUTPUT_NAME -i /home/gary/Pictures/right.jpg -m fill &"
+]
