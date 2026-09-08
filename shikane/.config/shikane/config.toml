@@ -1,3 +1,5 @@
+timeout = 3
+
 [[profile]]
 name = "laptop"
 exec = ["~/dotfiles/.scripts/modes/modes/laptop.sh"]
@@ -96,9 +98,33 @@ position = "0,0"
 scale = 1.0
 transform = "normal"
 adaptive_sync = false
-exec = [
-    "killall wl-present",
-    "rm -f /run/user/1000/pipectl.1000.wl-present.pipe",
-    "wl-present mirror eDP-1 --fullscreen-output $SHIKANE_OUTPUT_NAME --fullscreen"
-]
+# exec = [
+#     "killall wl-present",
+#     "rm -f /run/user/1000/pipectl.1000.wl-present.pipe",
+#     "wl-present mirror eDP-1 --fullscreen-output $SHIKANE_OUTPUT_NAME --fullscreen"
+# ]
 
+[[profile]]
+name = "docked-home"
+
+[[profile.output]]
+enable = true
+search = ["m=DELL S2725QS", "s=FVWF364", "v=Dell Inc."]
+mode = "3840x2160@60Hz"
+position = "1920,0"
+scale = 1.25
+transform = "normal"
+adaptive_sync = false
+
+[[profile.output]]
+enable = false
+search = ["m=0x403D", "s=", "v=Lenovo Group Limited"]
+
+[[profile.output]]
+enable = true
+search = ["m=DELL S2725QS", "s=JYPF364", "v=Dell Inc."]
+mode = "3840x2160@60Hz"
+position = "4992,0"
+scale = 1.25
+transform = "normal"
+adaptive_sync = false
