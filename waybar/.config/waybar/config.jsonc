@@ -10,6 +10,7 @@
     "modules-center": [],
     "modules-right": [
         "network#enp4",
+        "network#enp0",
         "network#en",
         "network#wl",
         "idle_inhibitor",
@@ -150,6 +151,16 @@
     },
     "network#enp4": {
         "interface": "enp4*",
+        "interval": 2,
+        "format-wifi": "",
+        "format-ethernet": "({ifname}) {ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip": true,
+        "max-length": 50,
+        "align": 1, // right
+    },
+    "network#enp0": {
+        "interface": "enp0*",
         "interval": 2,
         "format-wifi": "",
         "format-ethernet": "({ifname}) {ipaddr}  {bandwidthDownBytes}  {bandwidthUpBytes}",
