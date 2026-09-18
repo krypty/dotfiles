@@ -23,6 +23,7 @@
         "battery",
         "battery#bat2",
         "clock",
+        "custom/bedrock",
         "tray"
     ],
     "keyboard-state": {
@@ -214,6 +215,17 @@
         "max-length": 80,
         "escape": true,
         "exec": "$HOME/.local/bin/polybar-now-playing 2> /dev/null" // Script in resources folder
+    },
+    "custom/bedrock": {
+        "format": "💰 {text}",
+        "return-type": "json",
+        "escape": true,
+        "exec": "JSON=1 $HOME/.claude/hooks/bedrock-budget.sh",
+        // these two options enable refresh-on-click
+        "on-click": "/bin/true",
+        "exec-on-event": true,
+        "interval": 600,
+        "hide-empty-text": true
     },
     "custom/power": {
         "format": "[P]",
