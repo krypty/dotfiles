@@ -51,6 +51,9 @@
 [init]
 	defaultBranch = master
 
+[credential "https://gitlab.com"]
+    helper = !/usr/bin/glab auth git-credential
+
 [includeIf "hasconfig:remote.*.url:git@gitlab.com:ecorobotix/**"]
 
 # Edit this line to point to your alternative configuration file
