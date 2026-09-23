@@ -4,6 +4,7 @@
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     stash-all = stash save --include-untracked
+    stash-prune = reflog expire --expire=3.months refs/stash
     reset-origin = reset --hard @{u}
 [color]
     ui = auto
