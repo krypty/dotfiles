@@ -17,6 +17,7 @@ alias v="$EDITOR"
 alias glow="glow -p"
 alias xsel="xsel --clipboard"
 alias cal="cal -w -m"
+alias oc="opencode"
 
 function fe() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
