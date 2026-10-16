@@ -13,6 +13,14 @@ shopt -s histappend        # append to history, don't overwrite it
 export HISTCONTROL=ignoredups:erasedups
 shopt -s cmdhist # use one command per line
 
+# LSCOLORS
+if which vivid &>/dev/null; then
+    export LS_COLORS="$(vivid generate gruvbox-light)"
+    printenv LS_COLORS > /tmp/cached_ls_colors.txt
+else
+    echo "Warning: vivid package not found, LC_COLORS not set".
+fi
+
 ### FZF
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden -g '!.git'"
 export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
