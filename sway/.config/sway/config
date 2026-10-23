@@ -310,6 +310,9 @@ for_window [app_id="pritunl"] floating enable
 
 for_window [class="VirtualBox Machine"] floating enable
 
+for_window [app_id="blue-recorder"] floating enable
+for_window [app_id="blue-recorder"] resize set 1200 800
+
 # Quick math terminal
 bindsym $mod+c [app_id="quick_math"] scratchpad show; [app_id="quick_math"] move position center
 for_window [app_id="quick_math"] floating enable
