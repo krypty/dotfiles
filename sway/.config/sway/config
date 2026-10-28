@@ -332,6 +332,11 @@ exec_always --no-startup-id "Telegram"
 for_window [class="Telegram" title="Media viewer"] fullscreen enable;
 for_window [class="Telegram" title="Media viewer"] scratchpad show;
 
+
+for_window [class="jetbrains-clion"] move to workspace 7
+for_window [class="jetbrains-idea-ce"] move to workspace 8
+
+
 ###
 ### Zoom meetings
 ###
