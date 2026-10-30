@@ -3,3 +3,7 @@ show_hidden = true
 
 [preview]
 wrap = "yes"
+
+[[plugin.prepend_previewers]]
+mime = "image/{jpeg,png,webp}"
+run  = "zoom 20"
