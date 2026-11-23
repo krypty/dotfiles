@@ -13,4 +13,6 @@ set surround
 set commentary
 set highlightedyank
 
+set relativenumber
+
 noremap gd :action GotoDeclaration<CR>
